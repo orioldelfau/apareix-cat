@@ -1,11 +1,11 @@
 # Apareix
 
-Apareix ajuda restaurants a gestionar Google Maps i Google Business Profile amb auditoria, posts, ressenyes i informes mensuals.
+Apareix ajuda restaurants a mantenir Google Maps i Google Business Profile actius amb posts, ressenyes i informes mensuals per 50 EUR/mes.
 
 ## Servei
 
 - Nixo: restaurants independents i petits grups locals.
-- Oferta: auditoria inicial, optimitzacio de fitxa, posts setmanals, gestio de ressenyes i informe mensual.
+- Oferta: subscripcio mensual de 50 EUR amb configuracio inicial, optimitzacio de fitxa, posts setmanals, revisio de ressenyes i informe mensual.
 - Objectiu: ajudar restaurants a tenir mes visibilitat local i convertir millor les cerques a Google Maps.
 
 ## Articles

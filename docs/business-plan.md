@@ -46,41 +46,37 @@ Problemes concrets:
 
 ## Oferta
 
-### Apareix Local Starter
+### Apareix Maps
 
-Per restaurants que volen tenir una fitxa viva, cuidada i mes competitiva.
+Per restaurants que volen tenir una fitxa viva, cuidada i mes competitiva sense dedicar-hi hores cada setmana.
 
 Inclou:
 
-- Auditoria inicial de Google Business Profile.
+- Configuracio inicial de Google Business Profile.
 - Optimitzacio de dades publiques.
 - 4 posts mensuals.
-- Monitoratge de ressenyes.
+- Revisio setmanal de ressenyes.
 - Respostes suggerides a ressenyes.
 - Informe mensual PDF.
 - Recomanacions mensuals.
 
-Preu orientatiu:
+Preu:
 
-- Setup: 199-399 EUR.
-- Mensualitat: 99-149 EUR/mes.
+- Setup: inclos.
+- Mensualitat: 50 EUR/mes.
+- Permanencia: sense permanencia.
 
-### Apareix Local Pro
+### Extres futurs
 
-Per restaurants que volen creixer de forma mes activa.
+Per no confondre la proposta inicial, no es mostren paquets publics. Els extres es pressuposten a part quan el client ja esta actiu.
 
-Inclou tot Starter, mes:
+Possibles extres:
 
-- Respostes a ressenyes gestionades.
-- Calendari mensual de contingut local.
 - Analisi de competidors.
 - Sistema de captacio de ressenyes amb QR o link.
 - Revisio mensual de fotos, carta, serveis i atributs.
-
-Preu orientatiu:
-
-- Setup: 399-699 EUR.
-- Mensualitat: 199-299 EUR/mes.
+- Gestio de multiples ubicacions.
+- Trucada mensual estrategica.
 
 ## Posicionament
 
@@ -110,8 +106,8 @@ Validar el producte amb 5 restaurants pagant.
 Condicions recomanades:
 
 - Contracte mensual simple.
-- Permanencia minima de 3 mesos.
-- Setup reduit si accepten ser cas d'estudi.
+- Sense permanencia.
+- Setup inclos per reduir friccio d'entrada.
 - Acces a dades abans/despres.
 - Autoritzacio per usar resultats anonimitzats.
 

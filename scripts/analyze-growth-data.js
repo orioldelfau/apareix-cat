@@ -86,7 +86,7 @@ function analyzeAds(rows) {
       action:
         conversions === 0 && cost > 25
           ? "Pausar o moure a contingut informatiu abans de seguir invertint"
-          : "Mantenir test i comparar CPA amb valor del pilot"
+          : "Mantenir test i comparar CPA amb valor de la subscripcio"
     };
   });
 }

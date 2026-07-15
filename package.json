@@ -2,7 +2,7 @@
   "name": "apareix-cat",
   "version": "0.1.0",
   "private": true,
-  "description": "Apareix public static site and internal MVP tools.",
+  "description": "Apareix public site and internal operations tools.",
   "scripts": {
     "build": "node scripts/apply-site-config.js && node scripts/build-blog.js && node scripts/build-public-site.js",
     "build:blog": "node scripts/build-blog.js",

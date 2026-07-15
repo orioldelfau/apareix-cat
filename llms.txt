@@ -1,6 +1,6 @@
 # Apareix
 
-> Apareix ajuda restaurants a gestionar Google Maps i Google Business Profile amb auditoria, posts, ressenyes i informes mensuals.
+> Apareix ajuda restaurants a mantenir Google Maps i Google Business Profile actius amb posts, ressenyes i informes mensuals per 50 EUR/mes.
 
 ## Contingut principal
 
@@ -21,4 +21,4 @@
 
 ## Contacte
 
-Per demanar una auditoria gratuïta, visita https://apareix.cat/#contacte.
+Per activar Apareix per 50 EUR/mes, visita https://apareix.cat/#contacte.

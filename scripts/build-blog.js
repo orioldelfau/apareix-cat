@@ -135,9 +135,9 @@ function renderPost(post) {
         ${sectionHtml}
         ${faqHtml}
         <aside class="article-cta">
-          <h2>Vols saber com esta la fitxa del teu restaurant?</h2>
+          <h2>Vols tenir Google Maps actiu cada setmana?</h2>
           <p>${escapeHtml(post.cta)}</p>
-          <a class="button primary" href="../../index.html#contacte" data-conversion="blog_cta_click">Demanar auditoria gratis</a>
+          <a class="button primary" href="../../index.html#contacte" data-conversion="blog_cta_click">Començar per 50 EUR/mes</a>
         </aside>
       </article>`
   });
@@ -170,9 +170,9 @@ function basePage({ title, description, canonical, body, structuredData, depth }
       <a class="brand" href="${rootPrefix}index.html"><span>A</span><strong>Apareix</strong></a>
       <nav>
         <a href="${rootPrefix}index.html#servei">Servei</a>
-        <a href="${rootPrefix}index.html#pilot">Pilot</a>
+        <a href="${rootPrefix}index.html#preu">Preu</a>
         <a href="${blogHref}">Blog</a>
-        <a href="${rootPrefix}index.html#contacte">Auditoria</a>
+        <a href="${rootPrefix}index.html#contacte">Començar</a>
       </nav>
     </header>
     <main>
@@ -237,12 +237,12 @@ ${items
 function renderLlmsFull(items) {
   return `# Apareix
 
-Apareix ajuda restaurants a gestionar Google Maps i Google Business Profile amb auditoria, posts, ressenyes i informes mensuals.
+Apareix ajuda restaurants a mantenir Google Maps i Google Business Profile actius amb posts, ressenyes i informes mensuals per 50 EUR/mes.
 
 ## Servei
 
 - Nixo: restaurants independents i petits grups locals.
-- Oferta: auditoria inicial, optimitzacio de fitxa, posts setmanals, gestio de ressenyes i informe mensual.
+- Oferta: subscripcio mensual de 50 EUR amb configuracio inicial, optimitzacio de fitxa, posts setmanals, revisio de ressenyes i informe mensual.
 - Objectiu: ajudar restaurants a tenir mes visibilitat local i convertir millor les cerques a Google Maps.
 
 ## Articles

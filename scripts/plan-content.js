@@ -30,12 +30,12 @@ function buildIdeas(startDate, weeks) {
       title,
       targetAudience: seeds.audience,
       language: seeds.language,
-      intent: "educar restaurant i portar-lo cap a auditoria gratuita",
+      intent: "educar restaurant i portar-lo cap a la subscripcio Apareix de 50 EUR/mes",
       brief: [
         "Explicar el problema amb exemples de restauracio.",
         "Donar passos practics que el propietari pugui aplicar.",
         "Incloure criteris d'Apareix basats en experiencia operativa.",
-        "Tancar amb invitacio a demanar auditoria gratis."
+        "Tancar amb invitacio a activar Apareix per 50 EUR/mes."
       ],
       qualityGate: [
         "Aporta experiencia o criteri propi, no nomes resum generic.",

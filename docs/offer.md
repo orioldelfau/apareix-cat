@@ -2,9 +2,9 @@
 
 ## Producte
 
-Apareix Local per Restaurants.
+Apareix Maps per Restaurants.
 
-Una gestio mensual de Google Maps i Google Business Profile per restaurants que volen mes visibilitat local, mes accions de clients i una fitxa mes cuidada.
+Una subscripcio mensual de Google Maps i Google Business Profile per restaurants que volen una fitxa activa, mes clara i mes orientada a generar accions locals.
 
 ## Missatge Principal
 
@@ -19,76 +19,36 @@ Restaurant independent amb:
 - Rating entre 3,8 i 4,7.
 - Fotos o informacio desactualitzada.
 - Poca activitat recent a la fitxa.
-- Capacitat per pagar 150-300 EUR/mes si veu valor.
+- Capacitat per pagar 50 EUR/mes sense aprovacions lentes.
 
-## Oferta Pilot
+## Oferta Principal
 
-### Pilot de 90 Dies
+### Apareix Maps
 
 Objectiu:
 
-Validar si una gestio recurrent de la fitxa millora la visibilitat, la percepcio i les accions locals del restaurant.
+Mantenir Google Maps actiu cada setmana sense carregar l'equip del restaurant.
 
 Inclou:
 
-- Auditoria inicial de Google Maps.
+- Configuracio inicial de Google Maps.
 - Optimitzacio de dades publiques.
-- Calendari de 12 posts.
 - 4 posts mensuals.
-- Seguiment de ressenyes.
+- Revisio setmanal de ressenyes.
 - Respostes suggerides a ressenyes.
-- Recomanacions mensuals.
-- Informe PDF cada mes.
-- Comparativa abans/despres.
+- Informe PDF mensual.
+- Recomanacions concretes per millorar la fitxa.
 
-Preu recomanat:
+Preu:
 
-- Setup pilot: 149 EUR.
-- Quota mensual: 149 EUR/mes.
-- Permanencia: 3 mesos.
+- Setup: inclos.
+- Quota mensual: 50 EUR/mes.
+- Permanencia: sense permanencia.
 
-Variant mes agressiva per tancar primers casos:
+Condicio comercial:
 
-- Setup: 0 EUR.
-- Quota mensual: 149 EUR/mes.
-- Permanencia: 3 mesos.
-- Condicio: autoritzacio per usar resultats com a cas d'estudi anonimitzat.
-
-## Paquets Futurs
-
-### Starter
-
-Per restaurants petits que volen manteniment basic.
-
-- 4 posts mensuals.
-- Respostes suggerides.
-- Informe mensual.
-- Revisio mensual de fitxa.
-
-Preu: 99-149 EUR/mes.
-
-### Pro
-
-Per restaurants que volen creixement local actiu.
-
-- Tot Starter.
-- Gestio de ressenyes.
-- Analisi de competidors.
-- Captacio de ressenyes amb QR.
-- Recomanacions setmanals.
-
-Preu: 199-299 EUR/mes.
-
-### Multi Local
-
-Per grups de restaurants.
-
-- Gestio de multiples ubicacions.
-- Informes per local i grup.
-- Comparativa interna.
-- Calendari de contingut per marca.
-
-Preu: a partir de 399 EUR/mes.
+- Servei pensat per restaurants amb una sola ubicacio.
+- Extres com multiples locals, sessions estrategiques o captacio avancada de ressenyes es pressuposten a part.
 
 ## Que Rep el Client
 
@@ -109,7 +69,7 @@ No garantir posicions ni reserves.
 
 Garantia recomanada:
 
-"Si durant el primer mes no tens clar que la fitxa esta millor gestionada i que tens mes control sobre Google Maps, parem el servei sense renovar el segon mes."
+"Si durant el primer mes no tens clar que la fitxa esta millor gestionada i que tens mes control sobre Google Maps, pots cancel.lar sense renovar el segon mes."
 
 ## Objeccions Habituals
 
