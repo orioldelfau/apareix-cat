@@ -1,0 +1,48 @@
+name: Blog automation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-blog-post:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate blog post
+        run: npm run generate:blog
+
+      - name: Build public site
+        run: npm run build
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: automation/blog-post
+          delete-branch: true
+          title: "Add automated blog post"
+          commit-message: "Add automated blog post"
+          body: |
+            Automated Apareix blog draft.
+
+            Review checklist:
+            - The article is useful for restaurant owners.
+            - It does not promise guaranteed Google Maps positions.
+            - The CTA points to Apareix Maps at 50 EUR/month.
+            - The tone sounds specific, not generic.
