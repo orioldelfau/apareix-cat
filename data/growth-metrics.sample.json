@@ -1,0 +1,50 @@
+{
+  "searchConsole": [
+    {
+      "query": "com respondre ressenyes restaurant",
+      "page": "https://apareix.cat/blog/posts/ressenyes-google-restaurants-com-respondre.html",
+      "clicks": 8,
+      "impressions": 420,
+      "ctr": 0.019,
+      "position": 11.4
+    },
+    {
+      "query": "posts google business profile restaurant",
+      "page": "https://apareix.cat/blog/posts/posts-google-business-profile-restaurants.html",
+      "clicks": 4,
+      "impressions": 260,
+      "ctr": 0.015,
+      "position": 14.2
+    }
+  ],
+  "analytics": [
+    {
+      "page": "https://apareix.cat/blog/posts/ressenyes-google-restaurants-com-respondre.html",
+      "sessions": 120,
+      "auditClicks": 5,
+      "engagementRate": 0.54
+    },
+    {
+      "page": "https://apareix.cat/",
+      "sessions": 300,
+      "auditClicks": 18,
+      "engagementRate": 0.61
+    }
+  ],
+  "ads": [
+    {
+      "campaign": "Auditoria Google Maps Restaurants",
+      "keyword": "google maps restaurant",
+      "cost": 48.2,
+      "clicks": 31,
+      "conversions": 1
+    },
+    {
+      "campaign": "Auditoria Google Maps Restaurants",
+      "keyword": "seo restaurants",
+      "cost": 35.4,
+      "clicks": 24,
+      "conversions": 0
+    }
+  ]
+}

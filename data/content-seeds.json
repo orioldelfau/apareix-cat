@@ -1,0 +1,44 @@
+{
+  "audience": "propietaris i gerents de restaurants independents",
+  "market": "Catalunya",
+  "language": "ca",
+  "cadence": "1 article setmanal",
+  "pillars": [
+    {
+      "name": "Google Maps per restaurants",
+      "angles": [
+        "errors habituals a la fitxa",
+        "optimitzacio de dades basiques",
+        "com aparèixer millor en cerques locals",
+        "horaris especials i temporada"
+      ]
+    },
+    {
+      "name": "Ressenyes i reputacio",
+      "angles": [
+        "com respondre ressenyes negatives",
+        "com demanar ressenyes sense molestar",
+        "plantilles de resposta",
+        "queixes recurrents en restauracio"
+      ]
+    },
+    {
+      "name": "Posts i contingut local",
+      "angles": [
+        "idees de posts setmanals",
+        "menu de migdia",
+        "plats de temporada",
+        "contingut per reserves i grups"
+      ]
+    },
+    {
+      "name": "Informes i metriques",
+      "angles": [
+        "trucades i indicacions",
+        "clics a web i reserves",
+        "comparativa mensual",
+        "com saber si Google Maps porta clients"
+      ]
+    }
+  ]
+}

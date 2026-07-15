@@ -1,0 +1,33 @@
+# Apareix
+
+Apareix ajuda restaurants a gestionar Google Maps i Google Business Profile amb auditoria, posts, ressenyes i informes mensuals.
+
+## Servei
+
+- Nixo: restaurants independents i petits grups locals.
+- Oferta: auditoria inicial, optimitzacio de fitxa, posts setmanals, gestio de ressenyes i informe mensual.
+- Objectiu: ajudar restaurants a tenir mes visibilitat local i convertir millor les cerques a Google Maps.
+
+## Articles
+
+### Google Maps per restaurants: la guia basica per no tenir la fitxa abandonada
+
+URL: https://apareix.cat/blog/posts/google-maps-restaurants-guia-basica.html
+Categoria: Google Maps
+Resposta curta: Un restaurant ha de revisar Google Maps cada setmana perquè la fitxa influeix en trucades, indicacions, reserves i confiança abans de la visita.
+Entitats: Google Maps, Google Business Profile, restaurants, SEO local, ressenyes
+
+### Com respondre ressenyes de Google si tens un restaurant
+
+URL: https://apareix.cat/blog/posts/ressenyes-google-restaurants-com-respondre.html
+Categoria: Ressenyes
+Resposta curta: Un restaurant ha de respondre ressenyes amb un to huma, breu i professional, diferenciant positives, neutres i negatives.
+Entitats: ressenyes de Google, reputacio online, restaurants, Google Business Profile
+
+### Idees de posts per Google Business Profile en restaurants
+
+URL: https://apareix.cat/blog/posts/posts-google-business-profile-restaurants.html
+Categoria: Contingut
+Resposta curta: Els posts de Google Business Profile ajuden un restaurant a mostrar activitat, plats, reserves i moments de temporada dins de la seva fitxa.
+Entitats: Google Business Profile, posts de Google, restaurants, contingut local
+

@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-07-15T17:00:55.435Z",
+  "source": "data/growth-metrics.sample.json",
+  "searchOpportunities": [
+    {
+      "query": "com respondre ressenyes restaurant",
+      "page": "https://apareix.cat/blog/posts/ressenyes-google-restaurants-com-respondre.html",
+      "impressions": 420,
+      "clicks": 8,
+      "ctr": 0.019,
+      "position": 11.4,
+      "isGeoQuery": true,
+      "action": "Millorar title, intro i resposta directa; afegir bloc pregunta-resposta GEO"
+    },
+    {
+      "query": "posts google business profile restaurant",
+      "page": "https://apareix.cat/blog/posts/posts-google-business-profile-restaurants.html",
+      "impressions": 260,
+      "clicks": 4,
+      "ctr": 0.015,
+      "position": 14.2,
+      "isGeoQuery": false,
+      "action": "Millorar title, intro i resposta directa"
+    }
+  ],
+  "contentOpportunities": [
+    {
+      "page": "https://apareix.cat/blog/posts/ressenyes-google-restaurants-com-respondre.html",
+      "sessions": 120,
+      "auditClicks": 5,
+      "auditClickRate": 0.041666666666666664,
+      "engagementRate": 0.54,
+      "action": "Mantenir i buscar variants del tema"
+    },
+    {
+      "page": "https://apareix.cat/",
+      "sessions": 300,
+      "auditClicks": 18,
+      "auditClickRate": 0.06,
+      "engagementRate": 0.61,
+      "action": "Mantenir i buscar variants del tema"
+    }
+  ],
+  "adsOpportunities": [
+    {
+      "campaign": "Auditoria Google Maps Restaurants",
+      "keyword": "google maps restaurant",
+      "cost": 48.2,
+      "clicks": 31,
+      "conversions": 1,
+      "cpa": 48.2,
+      "action": "Mantenir test i comparar CPA amb valor del pilot"
+    },
+    {
+      "campaign": "Auditoria Google Maps Restaurants",
+      "keyword": "seo restaurants",
+      "cost": 35.4,
+      "clicks": 24,
+      "conversions": 0,
+      "cpa": null,
+      "action": "Pausar o moure a contingut informatiu abans de seguir invertint"
+    }
+  ]
+}

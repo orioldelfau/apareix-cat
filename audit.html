@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apareix Auditoria | Google Maps per restaurants</title>
+    <meta
+      name="description"
+      content="Eina interna per generar auditories rapides de Google Maps per restaurants."
+    />
+    <link rel="stylesheet" href="audit.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="dashboard.html" aria-label="Apareix Ops">
+        <span>A</span>
+        <strong>Apareix Auditoria</strong>
+      </a>
+      <nav>
+        <a href="index.html">Landing</a>
+        <a href="dashboard.html">Panell</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Auditoria gratis</p>
+          <h1>Genera una auditoria de Google Maps en menys de 20 minuts.</h1>
+          <p>
+            Puntuem la fitxa, detectem oportunitats i preparem un text comercial amb 5 millores concretes per enviar al restaurant.
+          </p>
+        </div>
+        <aside class="score-card" aria-label="Puntuacio actual">
+          <span id="score">0</span>
+          <p id="score-label">Sense dades</p>
+        </aside>
+      </section>
+
+      <section class="layout">
+        <form id="audit-form" class="panel form-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Restaurant</p>
+              <h2>Dades basiques</h2>
+            </div>
+            <button class="ghost" type="button" id="load-demo">Demo</button>
+          </div>
+
+          <div class="fields">
+            <label>
+              Nom del restaurant
+              <input name="name" type="text" placeholder="Restaurant Exemple" required />
+            </label>
+            <label>
+              Zona o barri
+              <input name="area" type="text" placeholder="Gracia, Barcelona" required />
+            </label>
+            <label>
+              Tipus de cuina
+              <input name="cuisine" type="text" placeholder="Mediterrania, brasa, sushi..." required />
+            </label>
+            <label>
+              URL Google Maps
+              <input name="mapsUrl" type="url" placeholder="https://maps.google.com/..." />
+            </label>
+            <label>
+              Rating
+              <input name="rating" type="number" min="1" max="5" step="0.1" placeholder="4.3" />
+            </label>
+            <label>
+              Nombre de ressenyes
+              <input name="reviewCount" type="number" min="0" step="1" placeholder="148" />
+            </label>
+          </div>
+
+          <div class="score-grid">
+            <label>
+              Informacio basica
+              <input name="basicInfo" type="range" min="0" max="15" value="8" />
+              <span data-value-for="basicInfo">8/15</span>
+            </label>
+            <label>
+              Categories i serveis
+              <input name="categories" type="range" min="0" max="15" value="7" />
+              <span data-value-for="categories">7/15</span>
+            </label>
+            <label>
+              Fotos i carta
+              <input name="photosMenu" type="range" min="0" max="15" value="6" />
+              <span data-value-for="photosMenu">6/15</span>
+            </label>
+            <label>
+              Ressenyes
+              <input name="reviews" type="range" min="0" max="20" value="9" />
+              <span data-value-for="reviews">9/20</span>
+            </label>
+            <label>
+              Activitat i posts
+              <input name="activity" type="range" min="0" max="15" value="4" />
+              <span data-value-for="activity">4/15</span>
+            </label>
+            <label>
+              Conversio
+              <input name="conversion" type="range" min="0" max="10" value="5" />
+              <span data-value-for="conversion">5/10</span>
+            </label>
+            <label>
+              Competencia local
+              <input name="competition" type="range" min="0" max="10" value="5" />
+              <span data-value-for="competition">5/10</span>
+            </label>
+          </div>
+
+          <label>
+            Observacions concretes
+            <textarea
+              name="notes"
+              rows="5"
+              placeholder="Ex: no publica posts, fotos antigues, ressenyes negatives sense resposta, competidor X te millor categoria..."
+            ></textarea>
+          </label>
+
+          <div class="actions">
+            <button class="button primary" type="submit">Generar auditoria</button>
+            <button class="button secondary" type="button" id="copy-output">Copiar text</button>
+          </div>
+        </form>
+
+        <aside class="panel output-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Sortida</p>
+              <h2>Informe per enviar</h2>
+            </div>
+          </div>
+          <textarea id="audit-output" rows="24" placeholder="L'auditoria apareixera aqui."></textarea>
+        </aside>
+      </section>
+
+      <section class="panel history-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Historial</p>
+            <h2>Auditories recents</h2>
+          </div>
+          <button class="ghost" type="button" id="clear-history">Netejar</button>
+        </div>
+        <div id="history-list" class="history-list"></div>
+      </section>
+    </main>
+
+    <script src="audit.js"></script>
+  </body>
+</html>

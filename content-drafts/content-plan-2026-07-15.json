@@ -1,0 +1,178 @@
+[
+  {
+    "status": "draft_brief",
+    "publishDate": "2026-07-15",
+    "pillar": "Google Maps per restaurants",
+    "angle": "errors habituals a la fitxa",
+    "title": "Errors habituals a la fitxa a Google Maps si tens un restaurant",
+    "targetAudience": "propietaris i gerents de restaurants independents",
+    "language": "ca",
+    "intent": "educar restaurant i portar-lo cap a auditoria gratuita",
+    "brief": [
+      "Explicar el problema amb exemples de restauracio.",
+      "Donar passos practics que el propietari pugui aplicar.",
+      "Incloure criteris d'Apareix basats en experiencia operativa.",
+      "Tancar amb invitacio a demanar auditoria gratis."
+    ],
+    "qualityGate": [
+      "Aporta experiencia o criteri propi, no nomes resum generic.",
+      "No promet posicions concretes a Google Maps.",
+      "Inclou exemples aplicables a restaurants.",
+      "Ha estat revisat abans de publicar."
+    ]
+  },
+  {
+    "status": "draft_brief",
+    "publishDate": "2026-07-22",
+    "pillar": "Ressenyes i reputacio",
+    "angle": "com respondre ressenyes negatives",
+    "title": "Com respondre ressenyes negatives: guia practica per restaurants",
+    "targetAudience": "propietaris i gerents de restaurants independents",
+    "language": "ca",
+    "intent": "educar restaurant i portar-lo cap a auditoria gratuita",
+    "brief": [
+      "Explicar el problema amb exemples de restauracio.",
+      "Donar passos practics que el propietari pugui aplicar.",
+      "Incloure criteris d'Apareix basats en experiencia operativa.",
+      "Tancar amb invitacio a demanar auditoria gratis."
+    ],
+    "qualityGate": [
+      "Aporta experiencia o criteri propi, no nomes resum generic.",
+      "No promet posicions concretes a Google Maps.",
+      "Inclou exemples aplicables a restaurants.",
+      "Ha estat revisat abans de publicar."
+    ]
+  },
+  {
+    "status": "draft_brief",
+    "publishDate": "2026-07-29",
+    "pillar": "Posts i contingut local",
+    "angle": "idees de posts setmanals",
+    "title": "Idees de posts setmanals per mantenir activa la fitxa de Google",
+    "targetAudience": "propietaris i gerents de restaurants independents",
+    "language": "ca",
+    "intent": "educar restaurant i portar-lo cap a auditoria gratuita",
+    "brief": [
+      "Explicar el problema amb exemples de restauracio.",
+      "Donar passos practics que el propietari pugui aplicar.",
+      "Incloure criteris d'Apareix basats en experiencia operativa.",
+      "Tancar amb invitacio a demanar auditoria gratis."
+    ],
+    "qualityGate": [
+      "Aporta experiencia o criteri propi, no nomes resum generic.",
+      "No promet posicions concretes a Google Maps.",
+      "Inclou exemples aplicables a restaurants.",
+      "Ha estat revisat abans de publicar."
+    ]
+  },
+  {
+    "status": "draft_brief",
+    "publishDate": "2026-08-05",
+    "pillar": "Informes i metriques",
+    "angle": "trucades i indicacions",
+    "title": "Trucades i indicacions: que hauria de mirar un restaurant cada mes",
+    "targetAudience": "propietaris i gerents de restaurants independents",
+    "language": "ca",
+    "intent": "educar restaurant i portar-lo cap a auditoria gratuita",
+    "brief": [
+      "Explicar el problema amb exemples de restauracio.",
+      "Donar passos practics que el propietari pugui aplicar.",
+      "Incloure criteris d'Apareix basats en experiencia operativa.",
+      "Tancar amb invitacio a demanar auditoria gratis."
+    ],
+    "qualityGate": [
+      "Aporta experiencia o criteri propi, no nomes resum generic.",
+      "No promet posicions concretes a Google Maps.",
+      "Inclou exemples aplicables a restaurants.",
+      "Ha estat revisat abans de publicar."
+    ]
+  },
+  {
+    "status": "draft_brief",
+    "publishDate": "2026-08-12",
+    "pillar": "Google Maps per restaurants",
+    "angle": "optimitzacio de dades basiques",
+    "title": "Optimitzacio de dades basiques a Google Maps si tens un restaurant",
+    "targetAudience": "propietaris i gerents de restaurants independents",
+    "language": "ca",
+    "intent": "educar restaurant i portar-lo cap a auditoria gratuita",
+    "brief": [
+      "Explicar el problema amb exemples de restauracio.",
+      "Donar passos practics que el propietari pugui aplicar.",
+      "Incloure criteris d'Apareix basats en experiencia operativa.",
+      "Tancar amb invitacio a demanar auditoria gratis."
+    ],
+    "qualityGate": [
+      "Aporta experiencia o criteri propi, no nomes resum generic.",
+      "No promet posicions concretes a Google Maps.",
+      "Inclou exemples aplicables a restaurants.",
+      "Ha estat revisat abans de publicar."
+    ]
+  },
+  {
+    "status": "draft_brief",
+    "publishDate": "2026-08-19",
+    "pillar": "Ressenyes i reputacio",
+    "angle": "com demanar ressenyes sense molestar",
+    "title": "Com demanar ressenyes sense molestar: guia practica per restaurants",
+    "targetAudience": "propietaris i gerents de restaurants independents",
+    "language": "ca",
+    "intent": "educar restaurant i portar-lo cap a auditoria gratuita",
+    "brief": [
+      "Explicar el problema amb exemples de restauracio.",
+      "Donar passos practics que el propietari pugui aplicar.",
+      "Incloure criteris d'Apareix basats en experiencia operativa.",
+      "Tancar amb invitacio a demanar auditoria gratis."
+    ],
+    "qualityGate": [
+      "Aporta experiencia o criteri propi, no nomes resum generic.",
+      "No promet posicions concretes a Google Maps.",
+      "Inclou exemples aplicables a restaurants.",
+      "Ha estat revisat abans de publicar."
+    ]
+  },
+  {
+    "status": "draft_brief",
+    "publishDate": "2026-08-26",
+    "pillar": "Posts i contingut local",
+    "angle": "menu de migdia",
+    "title": "Menu de migdia per mantenir activa la fitxa de Google",
+    "targetAudience": "propietaris i gerents de restaurants independents",
+    "language": "ca",
+    "intent": "educar restaurant i portar-lo cap a auditoria gratuita",
+    "brief": [
+      "Explicar el problema amb exemples de restauracio.",
+      "Donar passos practics que el propietari pugui aplicar.",
+      "Incloure criteris d'Apareix basats en experiencia operativa.",
+      "Tancar amb invitacio a demanar auditoria gratis."
+    ],
+    "qualityGate": [
+      "Aporta experiencia o criteri propi, no nomes resum generic.",
+      "No promet posicions concretes a Google Maps.",
+      "Inclou exemples aplicables a restaurants.",
+      "Ha estat revisat abans de publicar."
+    ]
+  },
+  {
+    "status": "draft_brief",
+    "publishDate": "2026-09-02",
+    "pillar": "Informes i metriques",
+    "angle": "clics a web i reserves",
+    "title": "Clics a web i reserves: que hauria de mirar un restaurant cada mes",
+    "targetAudience": "propietaris i gerents de restaurants independents",
+    "language": "ca",
+    "intent": "educar restaurant i portar-lo cap a auditoria gratuita",
+    "brief": [
+      "Explicar el problema amb exemples de restauracio.",
+      "Donar passos practics que el propietari pugui aplicar.",
+      "Incloure criteris d'Apareix basats en experiencia operativa.",
+      "Tancar amb invitacio a demanar auditoria gratis."
+    ],
+    "qualityGate": [
+      "Aporta experiencia o criteri propi, no nomes resum generic.",
+      "No promet posicions concretes a Google Maps.",
+      "Inclou exemples aplicables a restaurants.",
+      "Ha estat revisat abans de publicar."
+    ]
+  }
+]

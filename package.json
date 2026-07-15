@@ -1,0 +1,14 @@
+{
+  "name": "apareix-cat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Apareix public static site and internal MVP tools.",
+  "scripts": {
+    "build": "node scripts/apply-site-config.js && node scripts/build-blog.js && node scripts/build-public-site.js",
+    "build:blog": "node scripts/build-blog.js",
+    "plan:content": "node scripts/plan-content.js",
+    "analyze:growth": "node scripts/analyze-growth-data.js",
+    "serve": "python3 -m http.server 4173 -d dist",
+    "serve:workspace": "python3 -m http.server 4173"
+  }
+}
