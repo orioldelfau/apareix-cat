@@ -22,6 +22,7 @@ Fer que el restaurant aparegui millor, comuniqui millor i converteixi millor qua
 - [package.json](package.json): scripts de build, blog, planificacio i servei local.
 - [dist](dist): carpeta generada per publicar al domini. No editar manualment.
 - [docs/deployment.md](docs/deployment.md): com desplegar i connectar `apareix.cat`.
+- [docs/hostinger-domain.md](docs/hostinger-domain.md): opcions per connectar el domini comprat a Hostinger.
 - [index.html](index.html): primera landing publica per captar auditories de restaurants.
 - [styles.css](styles.css): estils de la landing.
 - [assets/apareix-restaurant-hero.png](assets/apareix-restaurant-hero.png): imatge hero generada per la landing.
