@@ -179,6 +179,252 @@
         }
       ],
       "cta": "Apareix envia un informe mensual simple per entendre que ha passat a Google Maps i que cal fer despres."
+    },
+    {
+      "slug": "fitxa-google-business-restaurant-nou",
+      "title": "Com preparar la fitxa de Google Business d'un restaurant nou",
+      "seoTitle": "Fitxa Google Business per restaurant nou",
+      "metaDescription": "Checklist per crear o ordenar la fitxa de Google Business d'un restaurant nou abans d'obrir portes.",
+      "focusKeyphrase": "fitxa Google Business restaurant nou",
+      "category": "Google Maps",
+      "intent": "setup",
+      "imageTitle": "Fitxa nova",
+      "imageAlt": "Checklist per preparar la fitxa de Google Business d'un restaurant nou",
+      "directAnswer": "Un restaurant nou hauria de preparar la fitxa de Google Business abans d'obrir amb categories correctes, horaris, web, reserva, fotos inicials i descripcio clara.",
+      "sections": [
+        {
+          "heading": "Reclamar o crear la fitxa abans d'obrir",
+          "body": "Esperar al dia d'obertura fa perdre temps. La fitxa pot quedar pendent de verificacio i Google pot trigar a mostrar canvis importants."
+        },
+        {
+          "heading": "Triar be la categoria principal",
+          "body": "La categoria principal ha de descriure el negoci real. Un restaurant de sushi, una pizzeria o un bar de tapes no haurien de quedar com a restaurant generic si hi ha una opcio millor."
+        },
+        {
+          "heading": "Preparar fotos basiques",
+          "body": "Abans d'obrir ja es poden tenir fotos de sala, facana, carta, plats prova i equip. La fitxa no hauria de sortir buida quan els primers clients busquin el local."
+        },
+        {
+          "heading": "Afegir accions de conversio",
+          "body": "Telefon, web, reserva, carta i indicacions han d'estar revisats. La fitxa no nomes ha d'informar: ha de facilitar que el client faci el pas."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Es pot crear Google Business abans d'obrir el restaurant?",
+          "answer": "Si, pero cal configurar be la data, els horaris i la verificacio per evitar confusio als primers clients."
+        },
+        {
+          "question": "Quantes fotos inicials necessita una fitxa?",
+          "answer": "No hi ha una xifra exacta, pero una base de 10 a 20 fotos bones pot donar molta mes confiança que una fitxa buida."
+        }
+      ],
+      "cta": "Apareix pot preparar la base de la fitxa i mantenir-la activa cada mes per 50€/mes."
+    },
+    {
+      "slug": "seo-local-restaurants-barcelona",
+      "title": "SEO local per restaurants a Barcelona: per on començar",
+      "seoTitle": "SEO local per restaurants a Barcelona",
+      "metaDescription": "Guia inicial de SEO local per restaurants de Barcelona: Google Maps, web, ressenyes, barris i contingut útil.",
+      "focusKeyphrase": "SEO local restaurants Barcelona",
+      "category": "SEO local",
+      "intent": "guide",
+      "imageTitle": "SEO local Barcelona",
+      "imageAlt": "Mapa editorial sobre SEO local per restaurants a Barcelona",
+      "directAnswer": "El SEO local d'un restaurant a Barcelona comença per una fitxa de Google Maps completa, coherencia de dades, ressenyes actives, contingut local i una web que expliqui be zona, cuina i proposta.",
+      "sections": [
+        {
+          "heading": "Google Maps com a punt central",
+          "body": "Per molts restaurants, Google Maps es la primera pantalla de decisio. Abans de pensar en contingut avançat, la fitxa ha d'estar completa i viva."
+        },
+        {
+          "heading": "Treballar barri i intencio",
+          "body": "Barcelona no es una sola cerca. Les cerques per Gracia, Eixample, Poblenou o Sants poden tenir necessitats diferents i s'han de reflectir en textos, posts i pagina web."
+        },
+        {
+          "heading": "Coherencia de dades",
+          "body": "Nom, adreca, telefon, horaris, carta i links han de coincidir entre Google, web i directoris. Les contradiccions resten confiança."
+        },
+        {
+          "heading": "Contingut que ajudi a decidir",
+          "body": "El contingut ha de respondre preguntes reals: tipus de cuina, opcions per grups, menu, terrassa, reserves, accessibilitat i moments de consum."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "El SEO local serveix si el restaurant ja te Instagram?",
+          "answer": "Si. Instagram ajuda a marca i comunitat, pero Google Maps captura demanda directa quan el client esta buscant on menjar."
+        },
+        {
+          "question": "Quant tarda el SEO local a notar-se?",
+          "answer": "Depen de la competencia i l'estat inicial. Normalment cal mirar tendencia mensual, no resultats d'un sol dia."
+        }
+      ],
+      "cta": "Apareix converteix el SEO local en una rutina mensual clara per restaurants."
+    },
+    {
+      "slug": "fotos-google-maps-restaurant",
+      "title": "Quines fotos hauria de tenir un restaurant a Google Maps",
+      "seoTitle": "Fotos per Google Maps en restaurants",
+      "metaDescription": "Llista de fotos recomanades per millorar la fitxa de Google Maps d'un restaurant: plats, sala, facana, equip i carta.",
+      "focusKeyphrase": "fotos Google Maps restaurant",
+      "category": "Google Maps",
+      "intent": "checklist",
+      "imageTitle": "Fotos per Maps",
+      "imageAlt": "Checklist de fotos recomanades per Google Maps en restaurants",
+      "directAnswer": "Un restaurant hauria de tenir a Google Maps fotos recents de facana, sala, plats, carta, terrassa si en te, equip i detalls que expliquin l'experiencia real.",
+      "sections": [
+        {
+          "heading": "La facana ajuda a arribar",
+          "body": "Una foto clara de l'entrada redueix dubtes i ajuda els clients a identificar el local quan ja son a prop."
+        },
+        {
+          "heading": "Els plats han de semblar reals",
+          "body": "No cal una sessio perfecta, pero si fotos netes, recents i coherents amb el que el client trobarà a taula."
+        },
+        {
+          "heading": "La sala ven ambient",
+          "body": "Un client vol saber si el lloc encaixa per parella, grup, familia, feina o dinar rapid. La sala explica aquesta decisio."
+        },
+        {
+          "heading": "Actualitzar millor que acumular",
+          "body": "Una fitxa amb fotos noves cada mes transmet activitat. Es millor una actualitzacio constant que una carrega massiva i despres silenci."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Les fotos de clients ajuden o perjudiquen?",
+          "answer": "Poden ajudar, pero el restaurant hauria de compensar-les amb fotos propies bones i actualitzades."
+        },
+        {
+          "question": "Cada quan cal pujar fotos noves?",
+          "answer": "Un ritme mensual ja pot ser suficient per demostrar activitat i mantenir la fitxa fresca."
+        }
+      ],
+      "cta": "Apareix inclou revisio i planificacio de fotos dins la gestio mensual de Google Maps."
+    },
+    {
+      "slug": "respondre-ressenyes-negatives-restaurant",
+      "title": "Com respondre ressenyes negatives d'un restaurant",
+      "seoTitle": "Respondre ressenyes negatives restaurant",
+      "metaDescription": "Guia per respondre ressenyes negatives d'un restaurant amb calma, criteri i sense empitjorar la conversa.",
+      "focusKeyphrase": "respondre ressenyes negatives restaurant",
+      "category": "Ressenyes",
+      "intent": "how-to",
+      "imageTitle": "Ressenyes negatives",
+      "imageAlt": "Guia visual per respondre ressenyes negatives d'un restaurant",
+      "directAnswer": "Una ressenya negativa s'ha de respondre amb calma, agraint el comentari, reconeixent el problema si toca i oferint un canal directe sense discutir en public.",
+      "sections": [
+        {
+          "heading": "No respondre en calent",
+          "body": "La resposta queda visible per futurs clients. Si el to surt defensiu, pot fer mes mal que la ressenya original."
+        },
+        {
+          "heading": "Separar fets i emocio",
+          "body": "Cal entendre que critica exactament el client: servei, espera, menjar, preu, reserva o tracte. Cada cas demana una resposta diferent."
+        },
+        {
+          "heading": "Resposta curta i professional",
+          "body": "No cal escriure una defensa llarga. Un missatge clar, huma i respectuos sol transmetre millor control."
+        },
+        {
+          "heading": "Aprendre patrons",
+          "body": "Una ressenya pot ser anecdòtica. Tres ressenyes repetint el mateix indiquen una oportunitat real de millora del negoci."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "S'han de respondre totes les ressenyes negatives?",
+          "answer": "Si sempre que sigui possible. La resposta tambe parla als futurs clients que estan llegint."
+        },
+        {
+          "question": "Es pot demanar que Google elimini una ressenya?",
+          "answer": "Nomes si incompleix politiques. Una ressenya negativa pero real normalment no s'elimina."
+        }
+      ],
+      "cta": "Apareix ajuda a respondre ressenyes amb criteri i a detectar patrons mensuals."
+    },
+    {
+      "slug": "carta-restaurant-google-maps",
+      "title": "Carta del restaurant a Google Maps: errors i bones practiques",
+      "seoTitle": "Carta restaurant Google Maps",
+      "metaDescription": "Com revisar la carta d'un restaurant a Google Maps: links, fotos, preus, plats destacats i coherencia amb la web.",
+      "focusKeyphrase": "carta restaurant Google Maps",
+      "category": "Google Maps",
+      "intent": "checklist",
+      "imageTitle": "Carta a Maps",
+      "imageAlt": "Checklist de carta de restaurant a Google Maps",
+      "directAnswer": "La carta d'un restaurant a Google Maps ha de ser facil de trobar, estar actualitzada, carregar be en mobil i coincidir amb la web o el sistema de reserves.",
+      "sections": [
+        {
+          "heading": "El link ha de funcionar en mobil",
+          "body": "Moltes consultes venen del telefon. Si la carta pesa massa, no carrega o obre malament, el client pot abandonar."
+        },
+        {
+          "heading": "Preus i plats actualitzats",
+          "body": "Una carta antiga crea frustracio. Si hi ha canvis frequents, cal definir una rutina de revisio."
+        },
+        {
+          "heading": "Fotos de plats clau",
+          "body": "No tota la carta necessita foto, pero els plats mes representatius ajuden a explicar l'estil del restaurant."
+        },
+        {
+          "heading": "Coherencia entre canals",
+          "body": "Google Maps, web, Instagram i plataformes de reserva no haurien de donar informacio contradictoria sobre la carta."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Es millor carta en PDF o pagina web?",
+          "answer": "Una pagina web sol ser mes rapida i facil d'actualitzar. Un PDF pot funcionar si es lleuger i esta ben adaptat al mobil."
+        },
+        {
+          "question": "Cal posar preus a Google Maps?",
+          "answer": "Quan sigui possible, ajuda a filtrar expectatives i evita consultes poc qualificades."
+        }
+      ],
+      "cta": "Apareix revisa mensualment links, carta i coherencia de la fitxa."
+    },
+    {
+      "slug": "competencia-google-maps-restaurant",
+      "title": "Com analitzar la competència d'un restaurant a Google Maps",
+      "seoTitle": "Analitzar competència restaurant Google Maps",
+      "metaDescription": "Apren a comparar restaurants competidors a Google Maps revisant categories, ressenyes, fotos, posts i posicionament local.",
+      "focusKeyphrase": "competencia Google Maps restaurant",
+      "category": "Competencia",
+      "intent": "analysis",
+      "imageTitle": "Competencia local",
+      "imageAlt": "Comparativa visual de competidors de restaurant a Google Maps",
+      "directAnswer": "Per analitzar la competència a Google Maps cal mirar quins restaurants apareixen per cerques clau, com tenen la fitxa, quantes ressenyes reben, quines fotos mostren i quina proposta comuniquen.",
+      "sections": [
+        {
+          "heading": "Buscar com buscaria un client",
+          "body": "No cal començar amb eines complexes. Cerques com restaurant prop meu, menu migdia o tipus de cuina mes barri ja donen pistes."
+        },
+        {
+          "heading": "Comparar fitxes, no nomes posicions",
+          "body": "Una posicio alta no explica tot. Cal mirar fotos, ressenyes, resposta del propietari, categories i accions disponibles."
+        },
+        {
+          "heading": "Detectar oportunitats",
+          "body": "Si els competidors no publiquen posts, tenen fotos antigues o no responen ressenyes, hi ha espai per diferenciar-se."
+        },
+        {
+          "heading": "Fer seguiment mensual",
+          "body": "La competència canvia. Un informe mensual ajuda a no decidir per sensacions i a veure quines accions tenen sentit."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Cal copiar el que fan els competidors?",
+          "answer": "No. L'objectiu es entendre el mercat local i trobar buits, no imitar sense criteri."
+        },
+        {
+          "question": "Quants competidors hauria de revisar un restaurant?",
+          "answer": "Per començar, entre 3 i 7 competidors directes de zona i proposta semblant solen ser suficients."
+        }
+      ],
+      "cta": "Apareix inclou analisi basica de competidors per prioritzar millor cada mes."
     }
   ]
 }

@@ -41,7 +41,7 @@ node scripts/build-blog.js
 - GA4 Measurement ID: `G-Q2CNN7YK1V`.
 - GA4 Property ID: `532726049`.
 - Search Console property: `https://apareix.cat/`.
-- Google Ads encara no esta connectat.
+- Google Ads API esta preparat tecnicament, pero pausat fins que el compte tingui permisos complets.
 
 Important: Site Kit esta connectat al WordPress, pero l'automatitzacio no pot llegir dades amb Application Password de WordPress. Per automatitzar decisions editorials cal una connexio API propia amb Google.
 
@@ -160,15 +160,14 @@ Important:
 
 ### Estat actual
 
-Google Ads encara no esta connectat.
+Google Ads API esta parcialment configurat:
 
-Site Kit retorna:
+- Hi ha customer ID configurat.
+- Hi ha manager account configurat.
+- Hi ha OAuth i developer token guardats a GitHub Secrets.
+- L'API respon, pero encara retorna `USER_PERMISSION_DENIED`.
 
-- `conversionID`: buit.
-- `customerID`: buit.
-- `extCustomerID`: buit.
-
-Per tant, encara no podem llegir Keyword Planner ni conversions d'Ads.
+Per tant, encara no podem llegir Keyword Planner ni conversions d'Ads fins que es resolgui l'acces del compte o es generi un nou refresh token valid despres d'acceptar l'enllaç del manager.
 
 ### Pipeline preparat
 
@@ -190,6 +189,8 @@ També hi ha un workflow:
 ```text
 .github/workflows/google-ads-keyword-ideas.yml
 ```
+
+Aquest workflow queda nomes manual fins que Google Ads API estigui desbloquejat. No s'executa en programacio setmanal per evitar errors recurrents.
 
 ### Secrets necessaris
 
@@ -251,10 +252,9 @@ npm run ads:keywords
 
 ## Decisions Pendents
 
-Necessito de tu:
+Per desbloquejar automatitzacio completa falten:
 
-- ID de verificacio Search Console.
-- ID GA4 `G-...`.
-- Property ID GA4 numeric.
-- ID de conversio Ads `AW-...`, si vols Ads des del principi.
-- Conversion label Ads, quan existeixi.
+- `GOOGLE_SERVICE_ACCOUNT_JSON` amb acces de lectura a Search Console i GA4.
+- Acces basic de Google Ads API aprovat.
+- Refresh token nou de Google Ads generat despres d'acceptar l'enllaç del manager.
+- ID de conversio Ads `AW-...` i conversion label quan activem campanyes.
