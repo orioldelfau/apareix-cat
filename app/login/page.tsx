@@ -6,6 +6,8 @@ export const metadata = {
   title: "Entrar | Apareix"
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function LoginPage({
   searchParams
 }: {
