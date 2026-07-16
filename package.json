@@ -4,12 +4,29 @@
   "private": true,
   "description": "Apareix public site and internal operations tools.",
   "scripts": {
-    "build": "node scripts/apply-site-config.js && node scripts/build-blog.js && node scripts/build-public-site.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "build:static": "node scripts/apply-site-config.js && node scripts/build-blog.js && node scripts/build-public-site.js",
     "build:blog": "node scripts/build-blog.js",
     "generate:blog": "node scripts/generate-blog-post.js",
     "plan:content": "node scripts/plan-content.js",
     "analyze:growth": "node scripts/analyze-growth-data.js",
     "serve": "python3 -m http.server 4173 -d dist",
     "serve:workspace": "python3 -m http.server 4173"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.6.1",
+    "@supabase/supabase-js": "^2.75.0",
+    "next": "^15.5.20",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "resend": "^6.17.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "typescript": "5.8.2"
   }
 }

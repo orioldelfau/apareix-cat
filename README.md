@@ -46,6 +46,7 @@ Fer que el restaurant aparegui millor, comuniqui millor i converteixi millor qua
 - [scripts/analyze-growth-data.js](scripts/analyze-growth-data.js): converteix dades de GSC, GA4 i Ads en oportunitats.
 - [docs/content-automation.md](docs/content-automation.md): flux recomanat d'automatitzacio de contingut.
 - [docs/blog-automation.md](docs/blog-automation.md): workflow setmanal per generar articles amb OpenAI i obrir PRs.
+- [docs/saas-setup.md](docs/saas-setup.md): configuracio de Supabase, Resend i Vercel per activar el portal SaaS.
 - [docs/geo-strategy.md](docs/geo-strategy.md): estrategia GEO per consultes conversacionals i motors generatius.
 - [docs/google-integrations.md](docs/google-integrations.md): configuracio de Search Console, Analytics i Ads.
 - [docs/business-plan.md](docs/business-plan.md): enfoc comercial, client ideal, oferta i pricing.

@@ -198,6 +198,12 @@ h3 {
   background: rgba(255, 250, 240, 0.08);
 }
 
+.button.secondary.dark {
+  color: var(--forest);
+  border-color: rgba(39, 72, 59, 0.22);
+  background: rgba(39, 72, 59, 0.06);
+}
+
 .proof-band {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -610,6 +616,266 @@ textarea:focus {
   color: rgba(255, 250, 240, 0.72);
 }
 
+.blog-page,
+.auth-page,
+.portal-page {
+  min-height: 100vh;
+  padding: clamp(24px, 4vw, 54px);
+}
+
+.blog-header {
+  position: static;
+  padding: 0;
+  color: var(--ink);
+}
+
+.dark-brand {
+  color: var(--ink);
+}
+
+.blog-hero,
+.auth-shell,
+.portal-hero {
+  width: min(1040px, 100%);
+  margin: clamp(58px, 9vw, 112px) auto clamp(34px, 6vw, 72px);
+}
+
+.blog-hero h1,
+.auth-shell h1,
+.portal-hero h1 {
+  max-width: 900px;
+  font-size: clamp(44px, 7vw, 82px);
+}
+
+.blog-hero p,
+.auth-shell p,
+.portal-hero p {
+  max-width: 720px;
+  color: rgba(24, 33, 29, 0.7);
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.post-grid {
+  display: grid;
+  width: min(1120px, 100%);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 0 auto;
+}
+
+.post-card,
+.portal-card,
+.setup-warning {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 250, 240, 0.82);
+  box-shadow: 0 18px 54px rgba(24, 33, 29, 0.08);
+}
+
+.post-card {
+  padding: 26px;
+}
+
+.post-card h2 {
+  font-size: 30px;
+}
+
+.post-card p,
+.article p,
+.portal-card p,
+.task-list,
+.table-list,
+.setup-warning p {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.read-link,
+.back-link,
+.portal-nav a {
+  color: var(--forest);
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.article {
+  width: min(820px, 100%);
+  margin: clamp(58px, 8vw, 96px) auto;
+}
+
+.article-header h1 {
+  margin-top: 16px;
+  font-size: clamp(42px, 7vw, 78px);
+}
+
+.entity-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.entity-list li,
+.status-pill {
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: var(--forest);
+  background: rgba(80, 120, 96, 0.12);
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-weight: 800;
+}
+
+.direct-answer,
+.article-cta,
+.faq-block {
+  margin: 32px 0;
+  padding: 24px;
+  border-radius: 18px;
+  background: var(--porcelain);
+}
+
+.faq-block details {
+  border-top: 1px solid var(--line);
+  padding: 14px 0;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+.auth-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1fr);
+  gap: clamp(30px, 6vw, 80px);
+  align-items: start;
+}
+
+.auth-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.portal-card,
+.setup-warning {
+  padding: 24px;
+}
+
+.portal-card h2,
+.setup-warning h2 {
+  margin-bottom: 16px;
+  color: var(--forest);
+}
+
+.form-error,
+.success-banner {
+  width: min(1040px, 100%);
+  margin: 0 auto 18px;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-weight: 800;
+}
+
+.form-error {
+  color: #8b1d1d;
+  background: rgba(214, 79, 50, 0.12);
+}
+
+.success-banner {
+  color: var(--forest);
+  background: rgba(80, 120, 96, 0.14);
+}
+
+.portal-header {
+  display: flex;
+  width: min(1180px, 100%);
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.portal-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.ghost-button {
+  border: 0;
+  color: var(--forest);
+  background: transparent;
+  font: inherit;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.portal-grid {
+  display: grid;
+  width: min(1180px, 100%);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0 auto;
+}
+
+.wide-card {
+  grid-column: 1 / -1;
+}
+
+.onboarding-form {
+  display: grid;
+  width: min(1040px, 100%);
+  gap: 18px;
+  margin: 0 auto clamp(40px, 8vw, 88px);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.checkbox-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  background: rgba(255, 250, 240, 0.7);
+}
+
+.task-list {
+  display: grid;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.task-list .done {
+  color: var(--leaf);
+  font-weight: 900;
+}
+
+.table-list {
+  display: grid;
+  gap: 10px;
+}
+
+.table-list > div {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) repeat(3, minmax(90px, auto));
+  gap: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
 @media (max-width: 900px) {
   .site-header {
     position: absolute;
@@ -636,7 +902,12 @@ textarea:focus {
   .blog-preview,
   .process-grid,
   .fit-grid,
-  .services-grid {
+  .services-grid,
+  .post-grid,
+  .auth-shell,
+  .portal-grid,
+  .form-grid,
+  .checkbox-grid {
     grid-template-columns: 1fr;
   }
 
@@ -646,6 +917,10 @@ textarea:focus {
 
   .proof-band {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .table-list > div {
+    grid-template-columns: 1fr;
   }
 }
 
