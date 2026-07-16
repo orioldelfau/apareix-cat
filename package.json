@@ -12,6 +12,8 @@
     "generate:blog": "node scripts/generate-blog-post.js",
     "wp:draft": "node scripts/create-wp-editorial-draft.js",
     "wp:draft:dry-run": "node scripts/create-wp-editorial-draft.js --dry-run",
+    "google:insights": "node scripts/google-growth-insights.js",
+    "google:insights:dry-run": "node scripts/google-growth-insights.js --dry-run",
     "plan:content": "node scripts/plan-content.js",
     "analyze:growth": "node scripts/analyze-growth-data.js",
     "serve": "python3 -m http.server 4173 -d dist",

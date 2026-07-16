@@ -1,0 +1,46 @@
+name: Google growth insights
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 6 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  analyze-google-data:
+    runs-on: ubuntu-latest
+    env:
+      GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate Google credentials
+        run: test -n "$GOOGLE_SERVICE_ACCOUNT_JSON"
+
+      - name: Generate Google growth insights
+        run: npm run google:insights
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: automation/google-growth-insights
+          delete-branch: true
+          title: "Update Google growth insights"
+          commit-message: "Update Google growth insights"
+          body: |
+            Automated Search Console and GA4 insight report.
+
+            Review:
+            - Top queries with high impressions and low CTR.
+            - Pages around positions 8-20.
+            - Recommended content updates before changing the editorial queue.

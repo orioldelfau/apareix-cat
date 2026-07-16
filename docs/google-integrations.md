@@ -34,6 +34,80 @@ Despres d'omplir aquests valors:
 node scripts/build-blog.js
 ```
 
+## Estat actual Apareix
+
+- Search Console esta connectat a WordPress via Site Kit.
+- GA4 esta connectat a WordPress via Site Kit.
+- GA4 Measurement ID: `G-Q2CNN7YK1V`.
+- GA4 Property ID: `532726049`.
+- Search Console property: `https://apareix.cat/`.
+- Google Ads encara no esta connectat.
+
+Important: Site Kit esta connectat al WordPress, pero l'automatitzacio no pot llegir dades amb Application Password de WordPress. Per automatitzar decisions editorials cal una connexio API propia amb Google.
+
+## Connexio API per automatitzacio
+
+El script:
+
+```bash
+npm run google:insights
+```
+
+Llegeix:
+
+- Search Console `searchAnalytics.query`.
+- GA4 Data API `properties.runReport`.
+
+I genera:
+
+```text
+reports/google-growth-insights.json
+reports/google-growth-insights.md
+```
+
+### Credencials necessaries
+
+Opcio recomanada: Google service account.
+
+Secrets/variables:
+
+```text
+GOOGLE_SERVICE_ACCOUNT_JSON
+```
+
+Alternativa local:
+
+```text
+GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account.json
+```
+
+### Permisos necessaris
+
+Afegir el `client_email` del service account a:
+
+- Google Search Console property `https://apareix.cat/` amb permis de lectura.
+- GA4 property `532726049` com a Viewer o Analyst.
+
+Scopes utilitzats:
+
+```text
+https://www.googleapis.com/auth/webmasters.readonly
+https://www.googleapis.com/auth/analytics.readonly
+```
+
+### Prova de configuracio
+
+```bash
+GOOGLE_SERVICE_ACCOUNT_JSON='{"type":"service_account",...}' npm run google:insights:dry-run
+```
+
+Si la configuracio es valida, mostrara:
+
+- Search Console property.
+- GA4 property ID.
+- Email del service account.
+- Rang de dates que consultara.
+
 ## Events Recomanats
 
 Events a mesurar:
