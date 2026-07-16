@@ -1,0 +1,184 @@
+{
+  "cadence": "daily-drafts",
+  "language": "ca",
+  "audience": "propietaris i gerents de restaurants independents a Catalunya",
+  "qualityGate": {
+    "status": "draft",
+    "requiresHumanReview": true,
+    "minimumSections": 4,
+    "requiresFeaturedImage": true,
+    "requiresYoastFields": true,
+    "requiresInternalLinks": true,
+    "requiresCta": true
+  },
+  "topics": [
+    {
+      "slug": "errors-fitxa-google-maps-restaurant",
+      "title": "Errors a la fitxa de Google Maps que fan perdre clients a un restaurant",
+      "seoTitle": "Errors a Google Maps que fan perdre clients al restaurant",
+      "metaDescription": "Revisa els errors mes habituals a Google Maps en restaurants: horaris, carta, fotos, ressenyes i links de reserva.",
+      "focusKeyphrase": "errors Google Maps restaurant",
+      "category": "Google Maps",
+      "intent": "problem-aware",
+      "imageTitle": "Errors a Google Maps",
+      "imageAlt": "Checklist visual d'errors habituals a la fitxa de Google Maps d'un restaurant",
+      "directAnswer": "Els errors que mes perjudiquen un restaurant a Google Maps solen ser horaris incorrectes, carta desactualitzada, fotos pobres, ressenyes sense respondre i links de reserva trencats.",
+      "sections": [
+        {
+          "heading": "Horaris i dies especials sense actualitzar",
+          "body": "Un client que arriba i troba el restaurant tancat perd confiança. Els horaris especials, festius, vacances i canvis de temporada s'han de revisar abans que aparegui el problema."
+        },
+        {
+          "heading": "Carta, web o reserva amb enllaços trencats",
+          "body": "Google Maps sovint es consulta en el moment de decisio. Si el link de reserva, la carta o la web fallen, el client no espera: compara amb un altre restaurant proper."
+        },
+        {
+          "heading": "Fotos que no venen l'experiencia real",
+          "body": "Les fotos han de mostrar plats, sala, entrada i ambient. Una fitxa amb fotos antigues o poc clares pot fer semblar que el restaurant esta menys cuidat del que realment esta."
+        },
+        {
+          "heading": "Ressenyes pendents de resposta",
+          "body": "No respondre ressenyes deixa una conversa oberta davant de futurs clients. Les respostes no han de ser llargues, pero han de mostrar que hi ha algu atent al darrere."
+        },
+        {
+          "heading": "Categories massa generiques",
+          "body": "La categoria principal i les secundaries ajuden Google a entendre quan mostrar la fitxa. Si son massa generiques o no encaixen amb l'oferta real, es poden perdre cerques locals concretes."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Cada quan hauria de revisar Google Maps un restaurant?",
+          "answer": "Com a minim un cop per setmana per ressenyes i posts, i un cop al mes per revisar fotos, carta, horaris, serveis i metriques."
+        },
+        {
+          "question": "Un error a Google Maps pot fer perdre reserves?",
+          "answer": "Si. Un horari incorrecte, un link de reserva trencat o una carta desactualitzada pot fer que el client triï una altra opcio."
+        }
+      ],
+      "cta": "Apareix revisa aquests punts cada mes i manté la fitxa activa per 50€/mes."
+    },
+    {
+      "slug": "com-demanar-ressenyes-google-restaurant",
+      "title": "Com demanar ressenyes de Google en un restaurant sense molestar",
+      "seoTitle": "Com demanar ressenyes de Google en restaurants",
+      "metaDescription": "Guia practica per demanar ressenyes de Google en restaurants sense pressionar clients ni sonar artificial.",
+      "focusKeyphrase": "demanar ressenyes Google restaurant",
+      "category": "Ressenyes",
+      "intent": "how-to",
+      "imageTitle": "Demanar ressenyes",
+      "imageAlt": "Targeta visual sobre com demanar ressenyes de Google en un restaurant",
+      "directAnswer": "Un restaurant pot demanar ressenyes de Google de forma natural si ho fa en el moment adequat, amb un missatge curt i sense oferir incentius.",
+      "sections": [
+        {
+          "heading": "El millor moment per demanar una ressenya",
+          "body": "El moment ideal es quan el client acaba de tenir una bona experiencia: despres d'un comentari positiu, al pagar o en un missatge posterior si ja hi ha relacio."
+        },
+        {
+          "heading": "Missatge curt i huma",
+          "body": "No cal vendre res. Un missatge simple com 'Si us ha agradat, una ressenya a Google ens ajuda molt' funciona millor que una plantilla llarga."
+        },
+        {
+          "heading": "Evitar incentius i pressio",
+          "body": "No s'han d'oferir descomptes a canvi d'una ressenya ni insistir massa. L'objectiu es facilitar el gest, no manipular l'opinio."
+        },
+        {
+          "heading": "Fer-ho facil",
+          "body": "Un QR a la caixa, un link curt o una targeta discreta pot reduir friccio. El client no hauria de buscar la fitxa manualment."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Es poden oferir descomptes per aconseguir ressenyes?",
+          "answer": "No es recomanable. Les ressenyes han de ser honestes i sense incentius que condicionin l'opinio."
+        },
+        {
+          "question": "Quantes ressenyes hauria de tenir un restaurant?",
+          "answer": "No hi ha una xifra universal. Importa la quantitat, pero tambe la recurrencia, la qualitat i les respostes del restaurant."
+        }
+      ],
+      "cta": "Apareix ajuda a convertir les ressenyes en una rutina mensual sense carregar l'equip del restaurant."
+    },
+    {
+      "slug": "posts-google-maps-menu-migdia-restaurant",
+      "title": "Posts de Google Maps per promocionar el menu de migdia d'un restaurant",
+      "seoTitle": "Posts de Google Maps per menu de migdia",
+      "metaDescription": "Idees de posts per promocionar el menu de migdia d'un restaurant a Google Maps i captar clients de proximitat.",
+      "focusKeyphrase": "posts Google Maps menu migdia",
+      "category": "Contingut",
+      "intent": "content-ideas",
+      "imageTitle": "Menu de migdia",
+      "imageAlt": "Mockup editorial d'un post de Google Maps sobre el menu de migdia d'un restaurant",
+      "directAnswer": "El menu de migdia pot funcionar molt be a Google Maps si es publica amb frequencia, preu clar, plats destacats i una crida a reservar o trucar.",
+      "sections": [
+        {
+          "heading": "Per que el menu de migdia encaixa amb Google Maps",
+          "body": "Moltes cerques de migdia son locals i immediates. El client vol saber si el restaurant esta obert, que ofereix, quant costa i si pot reservar rapid."
+        },
+        {
+          "heading": "Que ha d'incloure el post",
+          "body": "Un bon post ha d'incloure plat o proposta destacada, dies disponibles, preu si es rellevant, zona i una accio clara: trucar, reservar o veure carta."
+        },
+        {
+          "heading": "Errors habituals",
+          "body": "Publicar una foto sense context, no actualitzar el menu o fer posts massa generics redueix el valor. El contingut ha de semblar viu i concret."
+        },
+        {
+          "heading": "Ritme recomanat",
+          "body": "Un post setmanal pot ser suficient. Si el menu canvia cada dia, es millor destacar patrons o plats representatius que intentar publicar-ho tot."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Cal publicar el menu de migdia cada dia?",
+          "answer": "No sempre. Per començar, un post setmanal ben fet pot mantenir activitat sense generar massa feina."
+        },
+        {
+          "question": "Els posts de Google Maps ajuden al SEO local?",
+          "answer": "Ajuden sobretot a mostrar activitat i context. No garanteixen posicions, pero poden millorar la percepcio i la conversio de la fitxa."
+        }
+      ],
+      "cta": "Apareix prepara 4 posts mensuals per mantenir Google Maps actiu sense improvisar cada setmana."
+    },
+    {
+      "slug": "trucades-indicacions-google-maps-restaurant",
+      "title": "Trucades i indicacions a Google Maps: que ha de mirar un restaurant",
+      "seoTitle": "Trucades i indicacions a Google Maps per restaurants",
+      "metaDescription": "Apren que indiquen les trucades, indicacions i clics de Google Maps i com usar aquestes dades en un restaurant.",
+      "focusKeyphrase": "trucades indicacions Google Maps restaurant",
+      "category": "Metriques",
+      "intent": "analytics",
+      "imageTitle": "Metriques de Maps",
+      "imageAlt": "Quadre visual amb trucades, indicacions i clics de Google Maps per restaurants",
+      "directAnswer": "Les trucades, indicacions i clics de Google Maps ajuden a veure si la fitxa genera accions reals, no nomes visites o impressions.",
+      "sections": [
+        {
+          "heading": "Diferenciar visibilitat i accio",
+          "body": "Tenir impressions no sempre vol dir tenir clients. Les trucades, indicacions i clics mostren si la gent fa un pas despres de veure la fitxa."
+        },
+        {
+          "heading": "Que pot indicar una pujada de trucades",
+          "body": "Pot indicar mes demanda, millor presencia local o canvis de temporada. Cal comparar-ho amb horaris, posts, ressenyes i campanyes actives."
+        },
+        {
+          "heading": "Quan les indicacions son importants",
+          "body": "Les indicacions solen ser mes valuoses per restaurants amb clientela de proximitat o turisme. Si pugen, convé revisar quines fotos i textos estan ajudant."
+        },
+        {
+          "heading": "Informe mensual simple",
+          "body": "Un bon informe no ha de ser llarg. Ha de resumir accions fetes, evolucio de metriques i una prioritat clara per al mes seguent."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Quina metrica de Google Maps importa mes?",
+          "answer": "Depen del restaurant, pero trucades, indicacions i clics solen ser mes accionables que mirar nomes impressions."
+        },
+        {
+          "question": "Es pot saber quants clients venen de Google Maps?",
+          "answer": "Es pot aproximar combinant trucades, indicacions, reserves, preguntes al client i dades de la web, pero no sempre es pot atribuir tot al 100%."
+        }
+      ],
+      "cta": "Apareix envia un informe mensual simple per entendre que ha passat a Google Maps i que cal fer despres."
+    }
+  ]
+}
