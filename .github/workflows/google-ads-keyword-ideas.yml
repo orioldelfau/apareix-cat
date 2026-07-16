@@ -1,0 +1,58 @@
+name: Google Ads keyword ideas
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 6 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-keyword-ideas:
+    runs-on: ubuntu-latest
+    env:
+      GOOGLE_ADS_DEVELOPER_TOKEN: ${{ secrets.GOOGLE_ADS_DEVELOPER_TOKEN }}
+      GOOGLE_ADS_CLIENT_ID: ${{ secrets.GOOGLE_ADS_CLIENT_ID }}
+      GOOGLE_ADS_CLIENT_SECRET: ${{ secrets.GOOGLE_ADS_CLIENT_SECRET }}
+      GOOGLE_ADS_REFRESH_TOKEN: ${{ secrets.GOOGLE_ADS_REFRESH_TOKEN }}
+      GOOGLE_ADS_CUSTOMER_ID: ${{ secrets.GOOGLE_ADS_CUSTOMER_ID }}
+      GOOGLE_ADS_LOGIN_CUSTOMER_ID: ${{ secrets.GOOGLE_ADS_LOGIN_CUSTOMER_ID }}
+      GOOGLE_ADS_LANGUAGE_ID: ${{ vars.GOOGLE_ADS_LANGUAGE_ID }}
+      GOOGLE_ADS_GEO_TARGET_CONSTANTS: ${{ vars.GOOGLE_ADS_GEO_TARGET_CONSTANTS }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate Google Ads credentials
+        run: |
+          test -n "$GOOGLE_ADS_DEVELOPER_TOKEN"
+          test -n "$GOOGLE_ADS_CLIENT_ID"
+          test -n "$GOOGLE_ADS_CLIENT_SECRET"
+          test -n "$GOOGLE_ADS_REFRESH_TOKEN"
+          test -n "$GOOGLE_ADS_CUSTOMER_ID"
+
+      - name: Generate keyword ideas
+        run: npm run ads:keywords
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: automation/google-ads-keywords
+          delete-branch: true
+          title: "Update Google Ads keyword ideas"
+          commit-message: "Update Google Ads keyword ideas"
+          body: |
+            Automated Google Ads Keyword Planner report.
+
+            Review:
+            - High-volume restaurant/local SEO keywords.
+            - Keywords with commercial intent from CPC ranges.
+            - Editorial recommendations before updating the WordPress draft queue.

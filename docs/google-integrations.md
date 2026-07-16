@@ -158,6 +158,84 @@ Important:
 
 - Per Google Ads API cal configuracio mes delicada: compte Ads, OAuth, developer token i permisos. Per començar, n'hi ha prou amb Google tag + conversio.
 
+### Estat actual
+
+Google Ads encara no esta connectat.
+
+Site Kit retorna:
+
+- `conversionID`: buit.
+- `customerID`: buit.
+- `extCustomerID`: buit.
+
+Per tant, encara no podem llegir Keyword Planner ni conversions d'Ads.
+
+### Pipeline preparat
+
+El script:
+
+```bash
+npm run ads:keywords
+```
+
+Genera idees de keywords amb Google Ads API `KeywordPlanIdeaService.GenerateKeywordIdeas` i desa:
+
+```text
+reports/google-ads-keyword-ideas.json
+reports/google-ads-keyword-ideas.md
+```
+
+També hi ha un workflow:
+
+```text
+.github/workflows/google-ads-keyword-ideas.yml
+```
+
+### Secrets necessaris
+
+```text
+GOOGLE_ADS_DEVELOPER_TOKEN
+GOOGLE_ADS_CLIENT_ID
+GOOGLE_ADS_CLIENT_SECRET
+GOOGLE_ADS_REFRESH_TOKEN
+GOOGLE_ADS_CUSTOMER_ID
+```
+
+Opcional si el compte penja d'un manager account:
+
+```text
+GOOGLE_ADS_LOGIN_CUSTOMER_ID
+```
+
+Variables opcionals:
+
+```text
+GOOGLE_ADS_LANGUAGE_ID
+GOOGLE_ADS_GEO_TARGET_CONSTANTS
+GOOGLE_ADS_KEYWORD_SEEDS
+GOOGLE_ADS_PAGE_URL
+```
+
+Els seeds base viuen a:
+
+```text
+data/google-ads-seeds.json
+```
+
+### Prova
+
+Sense credencials, nomes valida configuracio:
+
+```bash
+npm run ads:keywords:dry-run
+```
+
+Amb credencials, genera informe:
+
+```bash
+npm run ads:keywords
+```
+
 ## Rutina Setmanal
 
 1. Revisar Search Console.
