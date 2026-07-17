@@ -63,9 +63,10 @@
       "area": "product",
       "priority": 5,
       "title": "Portal minim d'onboarding per client pilot",
-      "status": "todo",
+      "status": "done",
       "why": "Redueix friccio quan hi hagi el primer client.",
-      "definitionOfDone": "Formulari/portal per recollir dades, links, fotos, competidors i objectius."
+      "definitionOfDone": "Formulari/portal per recollir dades, links, fotos, competidors i objectius.",
+      "progress": "Portal ampliat amb links de conversio, estat d'acces a Google Business Profile, briefing operatiu, prioritats del primer mes, normes de contingut i materials."
     }
   ],
   "later": [

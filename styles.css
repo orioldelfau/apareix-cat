@@ -852,6 +852,15 @@ textarea:focus {
   background: rgba(255, 250, 240, 0.7);
 }
 
+.checkbox-card input {
+  width: auto;
+  min-height: auto;
+}
+
+.portal-card > label {
+  margin-top: 16px;
+}
+
 .task-list {
   display: grid;
   gap: 10px;

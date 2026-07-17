@@ -43,7 +43,7 @@ export async function submitOnboarding(formData: FormData) {
     signature_dishes: value(formData, "signature_dishes"),
     services: value(formData, "services"),
     competitors: value(formData, "competitors"),
-    notes: value(formData, "notes"),
+    notes: buildOperationalBrief(formData),
     assets_url: value(formData, "assets_url")
   };
 
@@ -58,31 +58,53 @@ export async function submitOnboarding(formData: FormData) {
   await notifyOwner({
     restaurantName: savedRestaurant.name,
     area: savedRestaurant.area,
-    email: user.email || restaurant.contact_email || ""
+    email: user.email || restaurant.contact_email || "",
+    phone: restaurant.contact_phone,
+    googleMapsUrl: restaurant.google_maps_url,
+    accessStatus: value(formData, "google_access_status"),
+    firstMonthPriority: value(formData, "first_month_priority")
   });
 
   revalidatePath("/portal");
   redirect("/portal?onboarding=completed");
 }
 
-async function notifyOwner(input: { restaurantName: string; area: string; email: string }) {
+async function notifyOwner(input: {
+  restaurantName: string;
+  area: string;
+  email: string;
+  phone: string;
+  googleMapsUrl: string;
+  accessStatus: string;
+  firstMonthPriority: string;
+}) {
   const resend = getResend();
   if (!resend) return;
 
-  await resend.emails.send({
-    from: site.resendFrom,
-    to: site.ownerEmail,
-    subject: `Nou onboarding Apareix: ${input.restaurantName}`,
-    text: [
-      "Nou onboarding completat.",
-      "",
-      `Restaurant: ${input.restaurantName}`,
-      `Zona: ${input.area}`,
-      `Client: ${input.email}`,
-      "",
-      "Revisa el panell intern d'Apareix per preparar el calendari inicial."
-    ].join("\n")
-  });
+  try {
+    await resend.emails.send({
+      from: site.resendFrom,
+      to: site.ownerEmail,
+      subject: `Nou onboarding Apareix: ${input.restaurantName}`,
+      text: [
+        "Nou onboarding completat.",
+        "",
+        `Restaurant: ${input.restaurantName}`,
+        `Zona: ${input.area}`,
+        `Client: ${input.email}`,
+        `Telefon: ${input.phone || "No indicat"}`,
+        `Google Maps: ${input.googleMapsUrl}`,
+        `Estat acces GBP: ${input.accessStatus || "pendent"}`,
+        "",
+        "Prioritat primer mes:",
+        input.firstMonthPriority || "No indicada",
+        "",
+        "Seguent accio: revisar onboarding, validar acces a GBP i preparar calendari inicial."
+      ].join("\n")
+    });
+  } catch (error) {
+    console.error("Onboarding notification failed", error);
+  }
 }
 
 function value(formData: FormData, key: string) {
@@ -90,5 +112,47 @@ function value(formData: FormData, key: string) {
 }
 
 function values(formData: FormData, key: string) {
-  return formData.getAll(key).map((item) => String(item));
+  return formData
+    .getAll(key)
+    .map((item) => String(item).trim())
+    .filter(Boolean);
+}
+
+function buildOperationalBrief(formData: FormData) {
+  const sections = [
+    section("Links i conversio", [
+      field("Web", value(formData, "website_url")),
+      field("Reserves", value(formData, "reservation_url")),
+      field("Carta/menu", value(formData, "menu_url")),
+      field("Demanar ressenyes", value(formData, "review_request_url"))
+    ]),
+    section("Contingut", [
+      field("Temes recomanats", value(formData, "preferred_post_topics")),
+      field("Temes a evitar", value(formData, "forbidden_topics"))
+    ]),
+    section("Operacio mensual", [
+      field("Horaris", value(formData, "business_hours")),
+      field("Dates especials", value(formData, "special_dates")),
+      field("Prioritat primer mes", value(formData, "first_month_priority"))
+    ]),
+    section("Accessos i aprovacio", [
+      field("Email propietari GBP", value(formData, "google_access_owner_email")),
+      field("Estat acces GBP", value(formData, "google_access_status")),
+      field("Contacte aprovacio", value(formData, "approval_contact")),
+      field("Canal aprovacio", value(formData, "approval_channel"))
+    ]),
+    section("Notes del client", [value(formData, "notes")])
+  ].filter(Boolean);
+
+  return sections.join("\n\n");
+}
+
+function section(title: string, rows: string[]) {
+  const content = rows.filter(Boolean);
+  if (content.length === 0) return "";
+  return [`## ${title}`, ...content].join("\n");
+}
+
+function field(label: string, content: string) {
+  return content ? `- ${label}: ${content}` : "";
 }

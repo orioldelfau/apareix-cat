@@ -30,6 +30,14 @@ export default async function PortalPage({
         .limit(6)
     : { data: [] };
 
+  const { data: onboarding } = restaurant
+    ? await supabase
+        .from("onboarding_responses")
+        .select("id,assets_url,updated_at")
+        .eq("restaurant_id", restaurant.id)
+        .maybeSingle()
+    : { data: null };
+
   return (
     <main className="portal-page">
       <header className="portal-header">
@@ -48,7 +56,10 @@ export default async function PortalPage({
       </header>
 
       {params?.onboarding === "completed" ? (
-        <p className="success-banner">Onboarding rebut. Ara prepararem la configuració inicial.</p>
+        <p className="success-banner">
+          Onboarding rebut. El seguent pas es validar l'acces a Google Business Profile i preparar
+          el primer calendari.
+        </p>
       ) : null}
 
       <section className="portal-hero">
@@ -67,6 +78,10 @@ export default async function PortalPage({
             <>
               <p className="status-pill">{restaurant.status}</p>
               <p>{restaurant.area}</p>
+              <p>
+                Seguent pas: validar acces a Google Business Profile i preparar la primera proposta
+                de posts.
+              </p>
               <a href={restaurant.google_maps_url} target="_blank" rel="noreferrer">
                 Obrir fitxa de Google Maps
               </a>
@@ -84,11 +99,30 @@ export default async function PortalPage({
         <article className="portal-card">
           <h2>Properes tasques</h2>
           <ul className="task-list">
-            <li className={restaurant ? "done" : ""}>Completar onboarding</li>
+            <li className={onboarding ? "done" : ""}>Completar onboarding</li>
+            <li className={onboarding?.assets_url ? "done" : ""}>Rebre fotos, carta o carpeta Drive</li>
             <li>Validar accés a Google Business Profile</li>
             <li>Preparar calendari inicial de posts</li>
             <li>Activar informe mensual</li>
           </ul>
+        </article>
+
+        <article className="portal-card">
+          <h2>Materials rebuts</h2>
+          {onboarding ? (
+            <>
+              <p>Tenim el briefing operatiu del restaurant.</p>
+              {onboarding.assets_url ? (
+                <a href={onboarding.assets_url} target="_blank" rel="noreferrer">
+                  Obrir carpeta de materials
+                </a>
+              ) : (
+                <p>Encara falta afegir una carpeta amb fotos, carta o material visual.</p>
+              )}
+            </>
+          ) : (
+            <p>Quan completis l'onboarding, apareixera aqui el resum de materials.</p>
+          )}
         </article>
 
         <article className="portal-card wide-card">
