@@ -84,6 +84,21 @@ reports/outreach-batches/
 
 El lot no envia res. Serveix per revisar missatges abans de contactar restaurants manualment.
 
+## Com preparar un pack d'aprovació
+
+```bash
+npm run lead:approval
+```
+
+Genera:
+
+```text
+reports/approval-packs/YYYY-MM-DD-approval-pack.md
+reports/approval-packs/YYYY-MM-DD-approval-pack.html
+```
+
+El HTML inclou missatges finals, enllaços `mailto:` i checklist abans d'enviar. Tampoc envia res automaticament.
+
 ## Regla abans de contactar
 
 No enviar cap missatge real fins que:

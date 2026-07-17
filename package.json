@@ -19,6 +19,7 @@
     "lead:audit": "node scripts/create-lead-audit.js",
     "lead:outreach": "node scripts/create-outreach-batch.js",
     "lead:proposal": "node scripts/create-pilot-proposal.js",
+    "lead:approval": "node scripts/create-approval-pack.js",
     "lead:record": "node scripts/record-lead-activity.js",
     "lead:status": "node scripts/lead-pipeline-status.js",
     "report:monthly": "node scripts/create-monthly-report.js",
