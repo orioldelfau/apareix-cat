@@ -145,6 +145,28 @@ Serveix per gestionar respostes sense improvisar:
 
 El kit inclou missatges i comandes `lead:record` per actualitzar el pipeline.
 
+## Com preparar el kit d'activacio del pilot
+
+```bash
+npm run lead:activation-kit -- --name first-pilot-activation-kit
+```
+
+Genera:
+
+```text
+reports/pilot-activation-kits/YYYY-MM-DD-first-pilot-activation-kit.md
+reports/pilot-activation-kits/YYYY-MM-DD-first-pilot-activation-kit.html
+```
+
+Serveix quan un restaurant diu que vol començar:
+
+- Email de confirmacio.
+- Missatge de pagament manual.
+- Dades fiscals a demanar.
+- Abast del pilot de 30 dies.
+- Checklist abans de començar.
+- Comandes per registrar `won`, `payment_pending` o `payment_confirmed`.
+
 ## Regla abans de contactar
 
 No enviar cap missatge real fins que:

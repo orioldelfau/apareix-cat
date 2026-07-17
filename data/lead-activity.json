@@ -160,6 +160,16 @@
       "summary": "Kit de respostes creat per gestionar interessats, preu, reunions, objeccions i activacio del pilot.",
       "nextAction": "Quan hi hagi una resposta, usar reports/sales-response-kits/2026-07-17-first-pilot-response-kit.html i registrar l'estat corresponent.",
       "owner": "oriol"
+    },
+    {
+      "id": "evt-2026-07-17-batch-activation-kit-created-17",
+      "date": "2026-07-17",
+      "leadId": "batch",
+      "type": "activation_kit_created",
+      "channel": "internal",
+      "summary": "Kit d'activacio creat per convertir un si comercial en pagament, onboarding i setup.",
+      "nextAction": "Quan un lead accepti, usar reports/pilot-activation-kits/2026-07-17-first-pilot-activation-kit.html i registrar won/payment.",
+      "owner": "oriol"
     }
   ]
 }
