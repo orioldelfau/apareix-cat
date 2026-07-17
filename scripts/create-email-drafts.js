@@ -134,11 +134,35 @@ function finalMessage(lead) {
 
 He estat revisant ${lead.name} i crec que hi ha algunes millores concretes perquè Google Maps us ajudi més quan algú busca on menjar per ${lead.area}.
 
+${specificObservation(lead)}
+
 No parlo de fer una web nova ni anuncis. Parlo de tenir la fitxa més viva: posts, ressenyes, fotos, carta/reserva i una mica més de control mensual.
 
 He preparat una auditoria curta amb 5 punts. Te la puc enviar?
 
 Oriol`;
+}
+
+function specificObservation(lead) {
+  const text = `${lead.segment} ${lead.initialObservation}`.toLowerCase();
+
+  if (text.includes("sitges") || text.includes("tur")) {
+    return "En el vostre cas, la combinació de zona turística i menú/proposta setmanal fa que Google Maps pugui ser un canal molt directe per captar decisions ràpides.";
+  }
+
+  if (text.includes("menu") || text.includes("migdia") || text.includes("diari")) {
+    return "El punt que em sembla més aprofitable és el menú: pot donar molt joc per posts recurrents i cerques locals de migdia si la fitxa ho comunica bé.";
+  }
+
+  if (text.includes("reserva")) {
+    return "El punt que miraria primer és la connexió entre fitxa, web i reserva, perquè la persona que arriba des de Maps hauria de decidir ràpid sense perdre's.";
+  }
+
+  if (text.includes("fotos") || text.includes("horaris")) {
+    return "El punt que miraria primer és si la fitxa transmet la mateixa confiança que el restaurant: fotos, horaris, ressenyes i activitat recent.";
+  }
+
+  return "El punt que miraria primer és si la fitxa està prou activa i orientada a accions: trucar, reservar, veure carta o demanar indicacions.";
 }
 
 function readActivity() {
