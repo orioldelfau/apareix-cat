@@ -6,6 +6,7 @@ const BACKLOG_PATH = path.join(ROOT, "data", "operator-backlog.json");
 
 const backlog = JSON.parse(fs.readFileSync(BACKLOG_PATH, "utf8"));
 const now = [...backlog.now].sort((a, b) => a.priority - b.priority);
+const active = now.filter((item) => item.status !== "done");
 
 console.log(`# Apareix Operator Status`);
 console.log("");
@@ -16,10 +17,20 @@ console.log(`North Star: ${backlog.northStar.target30Days} paying pilot in 30 da
 console.log("");
 console.log("## Next Actions");
 
-for (const item of now.slice(0, 5)) {
-  console.log(`- [${item.id}] P${item.priority} ${item.area}: ${item.title}`);
+for (const item of active.slice(0, 5)) {
+  console.log(`- [${item.id}] P${item.priority} ${item.area} (${item.status}): ${item.title}`);
   console.log(`  Why: ${item.why}`);
   console.log(`  Done: ${item.definitionOfDone}`);
+  if (item.progress) console.log(`  Progress: ${item.progress}`);
+}
+
+const done = now.filter((item) => item.status === "done");
+if (done.length) {
+  console.log("");
+  console.log("## Completed");
+  for (const item of done) {
+    console.log(`- [${item.id}] ${item.title}`);
+  }
 }
 
 console.log("");

@@ -23,18 +23,20 @@
       "area": "sales",
       "priority": 1,
       "title": "Crear llista de 30 restaurants objectiu",
-      "status": "todo",
+      "status": "in_progress",
       "why": "Sense pipeline comercial no hi ha facturacio.",
-      "definitionOfDone": "Fitxer o taula amb nom, zona, URL Google Maps, observacio inicial i canal de contacte."
+      "definitionOfDone": "Fitxer o taula amb nom, zona, URL Google Maps, observacio inicial i canal de contacte.",
+      "progress": "10 restaurants identificats a data 2026-07-17 a data/restaurant-leads.json. Falta arribar a 30."
     },
     {
       "id": "rev-002",
       "area": "sales",
       "priority": 2,
       "title": "Preparar plantilla d'auditoria ultra rapida",
-      "status": "todo",
+      "status": "done",
       "why": "L'auditoria gratis es el principal ganxo de venda.",
-      "definitionOfDone": "Auditoria de 5 punts que es pot completar en menys de 20 minuts."
+      "definitionOfDone": "Auditoria de 5 punts que es pot completar en menys de 20 minuts.",
+      "progress": "Creat scripts/create-lead-audit.js i docs/lead-pipeline.md."
     },
     {
       "id": "rev-003",
@@ -85,4 +87,3 @@
     }
   ]
 }
-
