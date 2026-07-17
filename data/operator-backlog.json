@@ -53,9 +53,10 @@
       "area": "operations",
       "priority": 4,
       "title": "Crear primer informe mensual base",
-      "status": "todo",
+      "status": "done",
       "why": "El client ha de percebre producte i control, no tasques soltes.",
-      "definitionOfDone": "Plantilla PDF o markdown reutilitzable per qualsevol restaurant."
+      "definitionOfDone": "Plantilla PDF o markdown reutilitzable per qualsevol restaurant.",
+      "progress": "Creat docs/monthly-report-template.md, scripts/create-monthly-report.js i exemple per Kaguya-Hime."
     },
     {
       "id": "prod-001",

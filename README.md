@@ -57,6 +57,8 @@ Fer que el restaurant aparegui millor, comuniqui millor i converteixi millor qua
 - [docs/sales-outreach.md](docs/sales-outreach.md): emails, trucades i missatges per vendre els primers clients.
 - [docs/audit-template.md](docs/audit-template.md): plantilla per auditar una fitxa de Google Maps.
 - [docs/lead-pipeline.md](docs/lead-pipeline.md): pipeline comercial, estats i generacio d'auditories curtes.
+- [docs/pilot-proposal.md](docs/pilot-proposal.md): proposta pilot de 30 dies per convertir auditories en clients.
+- [docs/monthly-report-template.md](docs/monthly-report-template.md): estructura d'informe mensual per demostrar feina recurrent.
 - [docs/mvp-operating-system.md](docs/mvp-operating-system.md): sistema manual per operar els primers clients abans del software complet.
 - [docs/product-backlog.md](docs/product-backlog.md): versions del producte i criteris de fet.
 - [docs/founder-decisions.md](docs/founder-decisions.md): decisions pendents per prioritzar el negoci i el primer sprint.
