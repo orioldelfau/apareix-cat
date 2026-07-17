@@ -140,6 +140,16 @@
       "summary": "Creat pack unic amb els primers 10 contactes preparats i pla d'enviament manual.",
       "nextAction": "Oriol ha de validar missatges, enviar manualment i registrar contacted.",
       "owner": "oriol"
+    },
+    {
+      "id": "evt-2026-07-17-batch-send-queue-created-15",
+      "date": "2026-07-17",
+      "leadId": "batch",
+      "type": "send_queue_created",
+      "channel": "internal",
+      "summary": "Cua executable creada amb 10 leads, 8 emails directes i 2 contactes per telefon.",
+      "nextAction": "Obrir reports/sales-queues/2026-07-17-first-10-send-queue.html, enviar manualment i registrar contacted.",
+      "owner": "oriol"
     }
   ]
 }

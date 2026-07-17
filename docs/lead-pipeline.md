@@ -6,6 +6,7 @@ Objectiu: convertir restaurants identificats en auditories enviades i converses 
 
 - `data/restaurant-leads.json`: tracker de restaurants objectiu.
 - `scripts/create-lead-audit.js`: genera una auditoria curta a partir d'un lead.
+- `scripts/create-send-queue.js`: genera una cua d'enviament executable, sense enviar res.
 - `reports/lead-audits/`: sortida de les auditories en markdown.
 
 ## Estats
@@ -98,6 +99,28 @@ reports/approval-packs/YYYY-MM-DD-approval-pack.html
 ```
 
 El HTML inclou missatges finals, enllaços `mailto:` i checklist abans d'enviar. Tampoc envia res automaticament.
+
+## Com preparar una cua d'enviament
+
+```bash
+npm run lead:send-queue -- --limit 10 --name first-10-send-queue
+```
+
+Genera:
+
+```text
+reports/sales-queues/YYYY-MM-DD-first-10-send-queue.md
+reports/sales-queues/YYYY-MM-DD-first-10-send-queue.html
+```
+
+La cua ordena els leads `contact_ready`, prioritza els que tenen email directe i inclou:
+
+- Botons `mailto:` o `tel:`.
+- Missatge recomanat.
+- Enllaç a auditoria i proposta.
+- Comanda exacta per registrar el contacte després d'enviar-lo.
+
+La cua no envia emails ni truca automaticament.
 
 ## Regla abans de contactar
 
