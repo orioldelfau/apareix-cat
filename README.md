@@ -59,3 +59,6 @@ Fer que el restaurant aparegui millor, comuniqui millor i converteixi millor qua
 - [docs/mvp-operating-system.md](docs/mvp-operating-system.md): sistema manual per operar els primers clients abans del software complet.
 - [docs/product-backlog.md](docs/product-backlog.md): versions del producte i criteris de fet.
 - [docs/founder-decisions.md](docs/founder-decisions.md): decisions pendents per prioritzar el negoci i el primer sprint.
+- [docs/operator-mode.md](docs/operator-mode.md): regles per operar Apareix amb Codex com a operador proactiu.
+- [docs/30-day-revenue-sprint.md](docs/30-day-revenue-sprint.md): sprint comercial per aconseguir el primer pilot pagant.
+- [data/operator-backlog.json](data/operator-backlog.json): backlog priorititzat per facturacio, operacio i producte.

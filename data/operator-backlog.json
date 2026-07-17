@@ -1,0 +1,88 @@
+{
+  "objective": "Facturar amb Apareix reduint al minim el temps d'Oriol i mantenint costos mensuals baixos.",
+  "budget": {
+    "monthlyTargetEur": 20,
+    "monthlyMaxEur": 50,
+    "excluded": ["Google Ads spend", "Codex", "Cloud subscriptions already paid elsewhere"]
+  },
+  "northStar": {
+    "metric": "paying_restaurant_pilots",
+    "target30Days": 1,
+    "target90Days": 5
+  },
+  "currentStrategy": "Vendre i operar manualment abans de construir mes SaaS.",
+  "constraints": [
+    "No demanar contrasenyes de clients; usar permisos delegats.",
+    "No publicar respostes sensibles a ressenyes sense revisio.",
+    "No afegir eines de pagament sense impacte directe en vendes o entrega.",
+    "No prometre posicions concretes a Google Maps."
+  ],
+  "now": [
+    {
+      "id": "rev-001",
+      "area": "sales",
+      "priority": 1,
+      "title": "Crear llista de 30 restaurants objectiu",
+      "status": "todo",
+      "why": "Sense pipeline comercial no hi ha facturacio.",
+      "definitionOfDone": "Fitxer o taula amb nom, zona, URL Google Maps, observacio inicial i canal de contacte."
+    },
+    {
+      "id": "rev-002",
+      "area": "sales",
+      "priority": 2,
+      "title": "Preparar plantilla d'auditoria ultra rapida",
+      "status": "todo",
+      "why": "L'auditoria gratis es el principal ganxo de venda.",
+      "definitionOfDone": "Auditoria de 5 punts que es pot completar en menys de 20 minuts."
+    },
+    {
+      "id": "rev-003",
+      "area": "sales",
+      "priority": 3,
+      "title": "Contactar 10 restaurants",
+      "status": "todo",
+      "why": "Cal conversa real per validar oferta.",
+      "definitionOfDone": "10 contactes registrats amb estat: enviat, respost, interessat, no, follow-up."
+    },
+    {
+      "id": "ops-001",
+      "area": "operations",
+      "priority": 4,
+      "title": "Crear primer informe mensual base",
+      "status": "todo",
+      "why": "El client ha de percebre producte i control, no tasques soltes.",
+      "definitionOfDone": "Plantilla PDF o markdown reutilitzable per qualsevol restaurant."
+    },
+    {
+      "id": "prod-001",
+      "area": "product",
+      "priority": 5,
+      "title": "Portal minim d'onboarding per client pilot",
+      "status": "todo",
+      "why": "Redueix friccio quan hi hagi el primer client.",
+      "definitionOfDone": "Formulari/portal per recollir dades, links, fotos, competidors i objectius."
+    }
+  ],
+  "later": [
+    {
+      "id": "prod-002",
+      "area": "product",
+      "title": "Generador de calendari mensual de posts per restaurant",
+      "trigger": "Quan hi hagi 2 clients o quan preparar posts consumeixi mes de 20 minuts per client."
+    },
+    {
+      "id": "prod-003",
+      "area": "product",
+      "title": "Generador d'informes PDF",
+      "trigger": "Quan hi hagi almenys 1 client actiu i un informe manual validat."
+    },
+    {
+      "id": "api-001",
+      "area": "integrations",
+      "title": "Google Business Profile OAuth",
+      "trigger": "Quan el proces manual estigui validat amb 3 clients o l'API deixi de bloquejar."
+    }
+  ]
+}
+

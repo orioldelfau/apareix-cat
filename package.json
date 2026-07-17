@@ -16,6 +16,7 @@
     "google:insights:dry-run": "node scripts/google-growth-insights.js --dry-run",
     "ads:keywords": "node scripts/google-ads-keyword-ideas.js",
     "ads:keywords:dry-run": "node scripts/google-ads-keyword-ideas.js --dry-run",
+    "operator:status": "node scripts/operator-status.js",
     "plan:content": "node scripts/plan-content.js",
     "analyze:growth": "node scripts/analyze-growth-data.js",
     "serve": "python3 -m http.server 4173 -d dist",
