@@ -1,0 +1,75 @@
+{
+  "updatedAt": "2026-07-17",
+  "events": [
+    {
+      "id": "evt-2026-07-17-kaguya-audit",
+      "date": "2026-07-17",
+      "leadId": "lead-kaguya-hime-barcelona",
+      "type": "audit_created",
+      "channel": "internal",
+      "summary": "Auditoria curta generada per validar angle de menú del dia i Google Maps a Gràcia.",
+      "nextAction": "Revisar manualment la fitxa abans d'enviar el primer contacte.",
+      "owner": "codex"
+    },
+    {
+      "id": "evt-2026-07-17-first-outreach-batch",
+      "date": "2026-07-17",
+      "leadId": "batch",
+      "type": "outreach_batch_created",
+      "channel": "internal",
+      "summary": "Creat el primer lot de contacte per Kaguya-Hime, Fukuoka, Patrón, Café Sardina i Rubion.",
+      "nextAction": "Validació humana abans d'enviar missatges reals.",
+      "owner": "codex"
+    },
+    {
+      "id": "evt-2026-07-17-kaguya-contact-ready",
+      "date": "2026-07-17",
+      "leadId": "lead-kaguya-hime-barcelona",
+      "type": "contact_ready",
+      "channel": "internal",
+      "summary": "Auditoria, proposta i informe base preparats; falta validació abans de contacte real.",
+      "nextAction": "Validar missatge i enviar primer contacte manual.",
+      "owner": "codex"
+    },
+    {
+      "id": "evt-2026-07-17-fukuoka-contact-ready",
+      "date": "2026-07-17",
+      "leadId": "lead-fukuoka-barcelona",
+      "type": "contact_ready",
+      "channel": "internal",
+      "summary": "Auditoria curta preparada dins del primer lot de contacte.",
+      "nextAction": "Validar missatge i enviar contacte manual.",
+      "owner": "codex"
+    },
+    {
+      "id": "evt-2026-07-17-patron-contact-ready",
+      "date": "2026-07-17",
+      "leadId": "lead-patron-barcelona",
+      "type": "contact_ready",
+      "channel": "internal",
+      "summary": "Auditoria curta preparada dins del primer lot de contacte.",
+      "nextAction": "Validar missatge i enviar contacte manual.",
+      "owner": "codex"
+    },
+    {
+      "id": "evt-2026-07-17-cafe-sardina-contact-ready",
+      "date": "2026-07-17",
+      "leadId": "lead-cafe-sardina-sitges",
+      "type": "contact_ready",
+      "channel": "internal",
+      "summary": "Auditoria curta preparada dins del primer lot de contacte.",
+      "nextAction": "Validar missatge i enviar contacte manual.",
+      "owner": "codex"
+    },
+    {
+      "id": "evt-2026-07-17-rubion-contact-ready",
+      "date": "2026-07-17",
+      "leadId": "lead-rubion-sabadell",
+      "type": "contact_ready",
+      "channel": "internal",
+      "summary": "Auditoria curta preparada dins del primer lot de contacte.",
+      "nextAction": "Validar missatge i enviar contacte manual.",
+      "owner": "codex"
+    }
+  ]
+}

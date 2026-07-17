@@ -123,14 +123,14 @@
       "name": "Kaguya-Hime BCN",
       "area": "Gràcia, Barcelona",
       "segment": "restaurant japonès / menu del dia",
-      "status": "identified",
+      "status": "contact_ready",
       "priority": "high",
       "website": "https://www.kaguyahimebcn.es/",
       "googleMapsUrl": "",
       "publicContact": "reservas@kaguyahimebcn.es / 934 36 16 94",
       "sourceUrl": "https://www.kaguyahimebcn.es/",
       "initialObservation": "Web amb menu del dia, reserves i ubicacio; bon candidat per posts recurrents de menu i Google Maps per Gràcia.",
-      "nextAction": "Preparar auditoria curta i missatge amb angle de menu del dia."
+      "nextAction": "Validar missatge i enviar primer contacte manual."
     },
     {
       "id": "lead-mordisco-barcelona",
@@ -165,14 +165,14 @@
       "name": "Fukuoka BCN",
       "area": "Gràcia, Barcelona",
       "segment": "restaurant japonès / fusió brasilera / menú del dia",
-      "status": "identified",
+      "status": "contact_ready",
       "priority": "high",
       "website": "https://fukuokabcn.es/nuestra-carta",
       "googleMapsUrl": "",
       "publicContact": "fukuokasushingrill@gmail.com / 932 851 568",
       "sourceUrl": "https://fukuokabcn.es/nuestra-carta",
       "initialObservation": "Web amb carta, menu del dia, reserva i contacte; bon angle per posts recurrents de menu i cerques de sushi/japonès a Gràcia.",
-      "nextAction": "Preparar auditoria curta amb focus en menu del dia, reserves i Google Maps a Gràcia."
+      "nextAction": "Validar missatge i enviar contacte manual."
     },
     {
       "id": "lead-la-granja-de-gracia-barcelona",
@@ -207,14 +207,14 @@
       "name": "Patrón",
       "area": "Sarrià-Sant Gervasi / Diagonal, Barcelona",
       "segment": "restaurant mediterrani / menú del dia / terrassa",
-      "status": "identified",
+      "status": "contact_ready",
       "priority": "high",
       "website": "https://patronrestaurante.com/restaurante-con-menu-del-dia/",
       "googleMapsUrl": "",
       "publicContact": "booking@patron-restaurant.com / +34 934 14 66 22",
       "sourceUrl": "https://patronrestaurante.com/restaurante-con-menu-del-dia/",
       "initialObservation": "Pagina específica de menú del dia amb FAQ i reserves; angle fort per Google Maps, posts setmanals i cerques de migdia prop de Diagonal.",
-      "nextAction": "Preparar auditoria curta amb focus en menu de migdia, terrassa i conversio."
+      "nextAction": "Validar missatge i enviar contacte manual."
     },
     {
       "id": "lead-congracia-barcelona",
@@ -277,14 +277,14 @@
       "name": "Rubion",
       "area": "Centre, Sabadell",
       "segment": "cuina de mercat / menú diari",
-      "status": "identified",
+      "status": "contact_ready",
       "priority": "high",
       "website": "https://rubion.es/",
       "googleMapsUrl": "",
       "publicContact": "restaurant@rubion.es / 937 27 88 77",
       "sourceUrl": "https://rubion.es/",
       "initialObservation": "Web amb menú diari, carta, reserves per telèfon i proposta de cuina de mercat; bon candidat per SEO local fora de Barcelona.",
-      "nextAction": "Preparar auditoria curta amb focus en menú diari i trucades des de Maps."
+      "nextAction": "Validar missatge i enviar contacte manual."
     },
     {
       "id": "lead-garry-sabadell",
@@ -375,14 +375,14 @@
       "name": "Café Sardina",
       "area": "Sitges",
       "segment": "arrossos / menú setmanal / primera línia",
-      "status": "identified",
+      "status": "contact_ready",
       "priority": "high",
       "website": "https://www.cafesardina.com/en",
       "googleMapsUrl": "",
       "publicContact": "reservations@cafesardinas.com / +34 936 59 86 86",
       "sourceUrl": "https://www.cafesardina.com/en",
       "initialObservation": "Publica menú setmanal i està en zona turística; molt bon angle per posts recurrents i cerques de menjar a Sitges.",
-      "nextAction": "Preparar auditoria curta amb focus en menú setmanal, arrossos i turisme."
+      "nextAction": "Validar missatge i enviar contacte manual."
     },
     {
       "id": "lead-sanbo-girona",

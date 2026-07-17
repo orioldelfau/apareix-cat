@@ -20,6 +20,44 @@ Objectiu: convertir restaurants identificats en auditories enviades i converses 
 - `won`: client guanyat.
 - `lost`: no encaixa o no respon.
 
+## Registrar activitat
+
+Cada contacte, resposta o canvi important s'ha de registrar a:
+
+```text
+data/lead-activity.json
+```
+
+Comanda:
+
+```bash
+npm run lead:record -- \
+  --lead lead-kaguya-hime-barcelona \
+  --type contacted \
+  --channel email \
+  --summary "Enviat primer missatge amb auditoria curta." \
+  --next-action "Fer seguiment en 3 dies." \
+  --status contacted
+```
+
+La comanda pot actualitzar l'estat del lead amb `--status`.
+
+Important: executar registres d'activitat de forma seqüencial. No llançar diversos `lead:record` en paral·lel perquè tots escriuen sobre els mateixos fitxers JSON.
+
+## Veure resum del pipeline
+
+```bash
+npm run lead:status
+```
+
+Mostra:
+
+- Total de leads.
+- Leads amb contacte públic.
+- Distribució per estat i prioritat.
+- Propers candidats contactables.
+- Últimes activitats.
+
 ## Com generar una auditoria curta
 
 ```bash
