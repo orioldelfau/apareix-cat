@@ -21,6 +21,7 @@
     "lead:proposal": "node scripts/create-pilot-proposal.js",
     "lead:approval": "node scripts/create-approval-pack.js",
     "lead:send-queue": "node scripts/create-send-queue.js",
+    "lead:email-drafts": "node scripts/create-email-drafts.js",
     "lead:response-kit": "node scripts/create-sales-response-kit.js",
     "lead:activation-kit": "node scripts/create-pilot-activation-kit.js",
     "lead:record": "node scripts/record-lead-activity.js",

@@ -122,6 +122,26 @@ La cua ordena els leads `contact_ready`, prioritza els que tenen email directe i
 
 La cua no envia emails ni truca automaticament.
 
+## Com preparar esborranys locals d'email
+
+```bash
+npm run lead:email-drafts -- --limit 8 --name first-8-email-drafts
+```
+
+Genera fitxers `.eml` a:
+
+```text
+reports/email-drafts/YYYY-MM-DD-first-8-email-drafts/
+```
+
+Els fitxers `.eml` inclouen destinatari, assumpte i cos del missatge, però no envien res. S'han d'obrir, revisar i enviar manualment.
+
+Després d'enviar cada email, registrar:
+
+```bash
+npm run lead:record -- --lead LEAD_ID --type contacted --channel email --summary "Primer email enviat manualment." --next-action "Fer seguiment en 3 dies." --status contacted
+```
+
 ## Com preparar el kit de respostes
 
 ```bash

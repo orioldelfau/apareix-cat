@@ -170,6 +170,16 @@
       "summary": "Kit d'activacio creat per convertir un si comercial en pagament, onboarding i setup.",
       "nextAction": "Quan un lead accepti, usar reports/pilot-activation-kits/2026-07-17-first-pilot-activation-kit.html i registrar won/payment.",
       "owner": "oriol"
+    },
+    {
+      "id": "evt-2026-07-17-batch-email-drafts-created-18",
+      "date": "2026-07-17",
+      "leadId": "batch",
+      "type": "email_drafts_created",
+      "channel": "internal",
+      "summary": "Creats 8 esborranys .eml locals per als leads amb email directe.",
+      "nextAction": "Obrir reports/email-drafts/2026-07-17-first-8-email-drafts, revisar, enviar manualment i registrar contacted.",
+      "owner": "oriol"
     }
   ]
 }
