@@ -70,6 +70,76 @@
       "summary": "Auditoria curta preparada dins del primer lot de contacte.",
       "nextAction": "Validar missatge i enviar contacte manual.",
       "owner": "codex"
+    },
+    {
+      "id": "evt-2026-07-17-lead-lescala-barcelona-contact-ready-8",
+      "date": "2026-07-17",
+      "leadId": "lead-lescala-barcelona",
+      "type": "contact_ready",
+      "channel": "internal",
+      "summary": "Auditoria curta preparada per al segon lot de contacte.",
+      "nextAction": "Validar missatge i enviar contacte manual.",
+      "owner": "oriol"
+    },
+    {
+      "id": "evt-2026-07-17-lead-thai-barcelona-contact-ready-9",
+      "date": "2026-07-17",
+      "leadId": "lead-thai-barcelona",
+      "type": "contact_ready",
+      "channel": "internal",
+      "summary": "Auditoria curta preparada per al segon lot de contacte.",
+      "nextAction": "Validar missatge i enviar contacte manual.",
+      "owner": "oriol"
+    },
+    {
+      "id": "evt-2026-07-17-lead-la-gilda-barcelona-contact-ready-10",
+      "date": "2026-07-17",
+      "leadId": "lead-la-gilda-barcelona",
+      "type": "contact_ready",
+      "channel": "internal",
+      "summary": "Auditoria curta preparada per al segon lot de contacte.",
+      "nextAction": "Validar missatge i enviar contacte manual.",
+      "owner": "oriol"
+    },
+    {
+      "id": "evt-2026-07-17-lead-haninjung-barcelona-contact-ready-11",
+      "date": "2026-07-17",
+      "leadId": "lead-haninjung-barcelona",
+      "type": "contact_ready",
+      "channel": "internal",
+      "summary": "Auditoria curta preparada per al segon lot de contacte.",
+      "nextAction": "Validar missatge i enviar contacte manual.",
+      "owner": "oriol"
+    },
+    {
+      "id": "evt-2026-07-17-lead-la-granja-de-gracia-barcelona-contact-ready-12",
+      "date": "2026-07-17",
+      "leadId": "lead-la-granja-de-gracia-barcelona",
+      "type": "contact_ready",
+      "channel": "internal",
+      "summary": "Auditoria curta preparada per al segon lot de contacte.",
+      "nextAction": "Validar missatge i enviar contacte manual.",
+      "owner": "oriol"
+    },
+    {
+      "id": "evt-2026-07-17-batch-outreach-batch-created-13",
+      "date": "2026-07-17",
+      "leadId": "batch",
+      "type": "outreach_batch_created",
+      "channel": "internal",
+      "summary": "Creat el segon lot de contacte per L'Escala, Thai Barcelona, La Gilda, Haninjung i La Granja de Gracia.",
+      "nextAction": "Validacio humana abans d'enviar missatges reals.",
+      "owner": "oriol"
+    },
+    {
+      "id": "evt-2026-07-17-batch-approval-pack-created-14",
+      "date": "2026-07-17",
+      "leadId": "batch",
+      "type": "approval_pack_created",
+      "channel": "internal",
+      "summary": "Creat pack unic amb els primers 10 contactes preparats i pla d'enviament manual.",
+      "nextAction": "Oriol ha de validar missatges, enviar manualment i registrar contacted.",
+      "owner": "oriol"
     }
   ]
 }

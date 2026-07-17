@@ -8,6 +8,7 @@ const OUT_DIR = path.join(ROOT, "reports", "approval-packs");
 const leadIds = readListArg("--leads");
 const limit = Number(readArg("--limit") || 5);
 const date = readArg("--date") || new Date().toISOString().slice(0, 10);
+const packName = slugify(readArg("--name") || "approval-pack");
 
 main();
 
@@ -17,8 +18,8 @@ function main() {
   if (!leads.length) throw new Error("No leads selected.");
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
-  const markdownPath = path.join(OUT_DIR, `${date}-approval-pack.md`);
-  const htmlPath = path.join(OUT_DIR, `${date}-approval-pack.html`);
+  const markdownPath = path.join(OUT_DIR, `${date}-${packName}.md`);
+  const htmlPath = path.join(OUT_DIR, `${date}-${packName}.html`);
 
   fs.writeFileSync(markdownPath, renderMarkdown(leads), "utf8");
   fs.writeFileSync(htmlPath, renderHtml(leads), "utf8");
@@ -213,3 +214,11 @@ function readListArg(name) {
     .filter(Boolean);
 }
 
+function slugify(value) {
+  return String(value)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}

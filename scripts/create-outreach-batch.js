@@ -7,6 +7,7 @@ const OUT_DIR = path.join(ROOT, "reports", "outreach-batches");
 
 const leadIds = readListArg("--leads");
 const limit = Number(readArg("--limit") || 5);
+const batchName = slugify(readArg("--name") || "first-contact");
 
 main();
 
@@ -20,7 +21,7 @@ function main() {
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
   const date = new Date().toISOString().slice(0, 10);
-  const outputPath = path.join(OUT_DIR, `${date}-first-contact.md`);
+  const outputPath = path.join(OUT_DIR, `${date}-${batchName}.md`);
   fs.writeFileSync(outputPath, renderBatch(leads, date), "utf8");
 
   console.log(
@@ -144,3 +145,11 @@ function readListArg(name) {
     .filter(Boolean);
 }
 
+function slugify(value) {
+  return String(value)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}

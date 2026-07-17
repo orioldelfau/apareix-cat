@@ -53,42 +53,42 @@
       "name": "L'Escala",
       "area": "Eixample, Barcelona",
       "segment": "cuina catalana / grups / menu",
-      "status": "identified",
+      "status": "contact_ready",
       "priority": "high",
       "website": "https://lescalabcn.com/",
       "googleMapsUrl": "",
       "publicContact": "info@lescalabcn.com / +34 934 87 47 65",
       "sourceUrl": "https://lescalabcn.com/",
       "initialObservation": "Web amb menu, promocions, grups i contacte; bon candidat perquè Apareix pot connectar Google Maps amb reserves, menu i cerques locals.",
-      "nextAction": "Preparar auditoria curta i usar email public si encaixa."
+      "nextAction": "Validar missatge i enviar contacte manual."
     },
     {
       "id": "lead-thai-barcelona",
       "name": "Thai Barcelona",
       "area": "Passeig de Gràcia, Barcelona",
       "segment": "restaurant tailandès / menu de migdia",
-      "status": "identified",
+      "status": "contact_ready",
       "priority": "high",
       "website": "https://www.thaibarcelona.es/menu-mediodia/",
       "googleMapsUrl": "",
       "publicContact": "+34 934 879 898",
       "sourceUrl": "https://www.thaibarcelona.es/menu-mediodia/",
       "initialObservation": "Te pagina especifica de menu de migdia; bon angle comercial per posts setmanals i captacio de cerques de migdia.",
-      "nextAction": "Auditar presencia del menu de migdia a Google Maps."
+      "nextAction": "Validar missatge i enviar contacte manual."
     },
     {
       "id": "lead-la-gilda-barcelona",
       "name": "La Gilda",
       "area": "Gràcia / Eixample Dret, Barcelona",
       "segment": "tapes i vins",
-      "status": "identified",
+      "status": "contact_ready",
       "priority": "high",
       "website": "https://www.lagildabcn.com/",
       "googleMapsUrl": "",
       "publicContact": "+34 931 180 354",
       "sourceUrl": "https://www.lagildabcn.com/",
       "initialObservation": "Restaurant de tapes amb horaris, fotos i mapa a la web; bon candidat per auditar fotos, ressenyes i consistencia local.",
-      "nextAction": "Preparar auditoria curta i revisar ressenyes visibles."
+      "nextAction": "Validar missatge i enviar contacte manual."
     },
     {
       "id": "lead-amaltea-barcelona",
@@ -109,14 +109,14 @@
       "name": "Haninjung",
       "area": "Eixample, Barcelona",
       "segment": "restaurant coreà / reserves",
-      "status": "identified",
+      "status": "contact_ready",
       "priority": "high",
       "website": "https://www.haninjung.com/reservas",
       "googleMapsUrl": "",
       "publicContact": "ugnoos@gmail.com / 934 54 05 63",
       "sourceUrl": "https://www.haninjung.com/reservas",
       "initialObservation": "Te reserva propia i Google Maps visible des de la web; bon candidat per optimitzar conversio local i posts de proposta diferencial.",
-      "nextAction": "Preparar auditoria curta amb focus en reserves i cuina coreana a Eixample."
+      "nextAction": "Validar missatge i enviar contacte manual."
     },
     {
       "id": "lead-kaguya-hime-barcelona",
@@ -179,14 +179,14 @@
       "name": "La Granja de Gràcia",
       "area": "Gràcia, Barcelona",
       "segment": "restaurant de mercat / menú del dia / tapes",
-      "status": "identified",
+      "status": "contact_ready",
       "priority": "high",
       "website": "https://www.lagranjadegracia.com/",
       "googleMapsUrl": "",
       "publicContact": "info@lagranjadegracia.com / 931 78 19 69",
       "sourceUrl": "https://www.lagranjadegracia.com/",
       "initialObservation": "Web amb menu del dia, plats de mercat, contacte i horaris; bon candidat per treballar cerques de menu i restaurant de barri.",
-      "nextAction": "Auditar si Google Maps reflecteix menu, horaris i proposta de mercat."
+      "nextAction": "Validar missatge i enviar contacte manual."
     },
     {
       "id": "lead-bar-alegria-barcelona",
