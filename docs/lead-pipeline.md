@@ -32,6 +32,20 @@ Aixo genera:
 reports/lead-audits/lead-kaguya-hime-barcelona.md
 ```
 
+## Com preparar un lot de contacte
+
+```bash
+npm run lead:outreach -- --leads lead-kaguya-hime-barcelona,lead-fukuoka-barcelona,lead-patron-barcelona
+```
+
+Aixo genera un markdown revisable a:
+
+```text
+reports/outreach-batches/
+```
+
+El lot no envia res. Serveix per revisar missatges abans de contactar restaurants manualment.
+
 ## Regla abans de contactar
 
 No enviar cap missatge real fins que:
@@ -59,4 +73,3 @@ Fins arribar al primer pilot:
 - Preparar 3 auditories.
 - Contactar 5 restaurants.
 - Fer seguiment als contactes oberts.
-

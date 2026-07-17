@@ -23,10 +23,10 @@
       "area": "sales",
       "priority": 1,
       "title": "Crear llista de 30 restaurants objectiu",
-      "status": "in_progress",
+      "status": "done",
       "why": "Sense pipeline comercial no hi ha facturacio.",
       "definitionOfDone": "Fitxer o taula amb nom, zona, URL Google Maps, observacio inicial i canal de contacte.",
-      "progress": "10 restaurants identificats a data 2026-07-17 a data/restaurant-leads.json. Falta arribar a 30."
+      "progress": "31 restaurants identificats a data 2026-07-17 a data/restaurant-leads.json."
     },
     {
       "id": "rev-002",
@@ -43,9 +43,10 @@
       "area": "sales",
       "priority": 3,
       "title": "Contactar 10 restaurants",
-      "status": "todo",
+      "status": "in_progress",
       "why": "Cal conversa real per validar oferta.",
-      "definitionOfDone": "10 contactes registrats amb estat: enviat, respost, interessat, no, follow-up."
+      "definitionOfDone": "10 contactes registrats amb estat: enviat, respost, interessat, no, follow-up.",
+      "progress": "Hi ha 31 leads, 5 auditories generades i 1 lot de contacte preparat. Falta validacio humana abans d'enviar missatges reals."
     },
     {
       "id": "ops-001",
