@@ -122,6 +122,29 @@ La cua ordena els leads `contact_ready`, prioritza els que tenen email directe i
 
 La cua no envia emails ni truca automaticament.
 
+## Com preparar el kit de respostes
+
+```bash
+npm run lead:response-kit -- --name first-pilot-response-kit
+```
+
+Genera:
+
+```text
+reports/sales-response-kits/YYYY-MM-DD-first-pilot-response-kit.md
+reports/sales-response-kits/YYYY-MM-DD-first-pilot-response-kit.html
+```
+
+Serveix per gestionar respostes sense improvisar:
+
+- Si demanen l'auditoria.
+- Si pregunten preu.
+- Si volen parlar.
+- Si diuen que ara no.
+- Si accepten començar el pilot.
+
+El kit inclou missatges i comandes `lead:record` per actualitzar el pipeline.
+
 ## Regla abans de contactar
 
 No enviar cap missatge real fins que:

@@ -20,7 +20,7 @@ Criteri de fet:
 
 - Es pot contactar un restaurant amb una proposta clara.
 - Es pot entregar una auditoria inicial en menys de 20 minuts.
-- Es pot explicar el pilot de 90 dies en una trucada.
+- Es pot explicar el pilot de 30 dies en una trucada.
 
 ## Versio 0.2 - Panell Intern Local
 

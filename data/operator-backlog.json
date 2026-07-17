@@ -46,7 +46,7 @@
       "status": "in_progress",
       "why": "Cal conversa real per validar oferta.",
       "definitionOfDone": "10 contactes registrats amb estat: enviat, respost, interessat, no, follow-up.",
-      "progress": "Hi ha 31 leads, 10 auditories generades, 10 leads en estat contact_ready, 2 lots de contacte, 3 packs d'aprovació amb mailto, 1 pla d'enviament i 1 cua executable amb 8 emails directes i 2 contactes per telefon. Falta validacio humana abans d'enviar missatges reals i registrar contacted."
+      "progress": "Hi ha 31 leads, 10 auditories generades, 10 leads en estat contact_ready, 2 lots de contacte, 3 packs d'aprovació amb mailto, 1 pla d'enviament, 1 cua executable amb 8 emails directes i 2 contactes per telefon, i 1 kit de respostes per convertir interessats en pilot de 30 dies. Falta validacio humana abans d'enviar missatges reals i registrar contacted."
     },
     {
       "id": "ops-001",

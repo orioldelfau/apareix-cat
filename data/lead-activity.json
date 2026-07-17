@@ -150,6 +150,16 @@
       "summary": "Cua executable creada amb 10 leads, 8 emails directes i 2 contactes per telefon.",
       "nextAction": "Obrir reports/sales-queues/2026-07-17-first-10-send-queue.html, enviar manualment i registrar contacted.",
       "owner": "oriol"
+    },
+    {
+      "id": "evt-2026-07-17-batch-response-kit-created-16",
+      "date": "2026-07-17",
+      "leadId": "batch",
+      "type": "response_kit_created",
+      "channel": "internal",
+      "summary": "Kit de respostes creat per gestionar interessats, preu, reunions, objeccions i activacio del pilot.",
+      "nextAction": "Quan hi hagi una resposta, usar reports/sales-response-kits/2026-07-17-first-pilot-response-kit.html i registrar l'estat corresponent.",
+      "owner": "oriol"
     }
   ]
 }

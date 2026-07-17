@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kit de respostes Apareix - 2026-07-17</title>
+  <style>
+    :root{--green:#064733;--deep:#071d15;--cream:#f7f1e8;--card:#fffaf2;--line:#e4dacb;--ink:#17221c;--muted:#66736b;--gold:#bd8029}
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#fff8ea,var(--cream));color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    header{background:var(--deep);color:white;padding:52px 22px}
+    header div,main{width:min(1120px,100%);margin:0 auto}
+    .eyebrow{margin:0 0 10px;color:#9ee0b7;font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    h1{max-width:840px;margin:0;font-family:Georgia,serif;font-size:clamp(42px,7vw,78px);line-height:.9;letter-spacing:-.06em}
+    header p{max-width:760px;color:rgba(255,255,255,.76);font-size:18px;line-height:1.55}
+    main{padding:24px 18px 72px}
+    .offer,.card{border:1px solid var(--line);background:rgba(255,250,242,.94);box-shadow:0 18px 50px rgba(33,27,18,.08);border-radius:24px}
+    .offer{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:-44px;margin-bottom:20px;padding:16px}
+    .offer div{background:white;border:1px solid var(--line);border-radius:18px;padding:14px}.offer strong{display:block;color:var(--green);font-family:Georgia,serif;font-size:28px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .card{padding:22px}.wide{grid-column:1/-1}
+    h2{margin:0 0 12px;color:var(--green);font-family:Georgia,serif;font-size:34px;line-height:1}
+    pre{white-space:pre-wrap;background:var(--deep);color:#fff7eb;border-radius:18px;padding:18px;line-height:1.55;font-family:inherit}
+    code{display:block;overflow:auto;background:white;border:1px dashed #cdbb9d;border-radius:14px;padding:12px;font-size:12px}
+    .lead-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.lead{background:white;border:1px solid var(--line);border-radius:16px;padding:14px}
+    .lead strong{color:var(--green)}
+    @media(max-width:820px){.offer,.grid,.lead-list{grid-template-columns:1fr}.wide{grid-column:auto}}
+  </style>
+</head>
+<body>
+  <header><div>
+    <p class="eyebrow">Apareix sales response kit</p>
+    <h1>Respondre rapid i tancar el pilot.</h1>
+    <p>Plantilles per passar d'interes a pilot de 30 dies sense improvisar ni prometre resultats que no controlem.</p>
+  </div></header>
+  <main>
+    <section class="offer">
+      <div><strong>50 EUR</strong><span>al mes</span></div>
+      <div><strong>30 dies</strong><span>pilot inicial</span></div>
+      <div><strong>Inclòs</strong><span>setup</span></div>
+      <div><strong>0</strong><span>permanencia</span></div>
+    </section>
+    <section class="grid">
+      <article class="card">
+  <h2>Envien interes</h2>
+  <pre>Perfecte, t'ho envio.
+
+Ho he preparat en format curt: 5 punts sobre fitxa, posts, ressenyes i conversio local. La idea no és vendre't una web ni anuncis, sinó veure si Google Maps pot estar més actiu i més clar.
+
+Si després de veure-ho té sentit, et proposo provar Apareix 30 dies per 50 EUR i ho deixem tot molt simple.</pre>
+  <code>npm run lead:record -- --lead LEAD_ID --type responded --channel email --summary "Resposta gestionada." --next-action "Seguent pas definit." --status responded</code>
+</article>
+<article class="card">
+  <h2>Pregunten preu</h2>
+  <pre>El pilot són 50 EUR/mes, sense permanència i amb setup inclòs.
+
+Inclou revisió inicial de la fitxa, 4 posts mensuals, revisió de ressenyes, respostes suggerides i un informe simple amb què s'ha fet i què prioritzar el mes següent.
+
+No inclou anuncis ni prometo una posició concreta a Google Maps. L'objectiu és que la fitxa estigui més cuidada, activa i orientada a generar accions.</pre>
+  <code>npm run lead:record -- --lead LEAD_ID --type proposal_sent --channel email --summary "Resposta gestionada." --next-action "Seguent pas definit." --status proposal_sent</code>
+</article>
+<article class="card">
+  <h2>Volen parlar</h2>
+  <pre>Sí, fem-ho simple.
+
+Podem fer una trucada de 15 minuts. Només necessito entendre qui gestiona ara la fitxa, si teniu accés a Google Business Profile i quin objectiu us interessa més: reserves, trucades, ressenyes o visibilitat al barri.
+
+Si encaixa, ho activem com a pilot de 30 dies.</pre>
+  <code>npm run lead:record -- --lead LEAD_ID --type meeting --channel email --summary "Resposta gestionada." --next-action "Seguent pas definit." --status meeting</code>
+</article>
+<article class="card">
+  <h2>Ara no</h2>
+  <pre>Cap problema.
+
+T'ho deixo apuntat i més endavant et puc enviar una observació concreta de Google Maps si veig alguna oportunitat clara. No cal tocar web ni anuncis per començar; és una rutina petita sobre la fitxa.</pre>
+  <code>npm run lead:record -- --lead LEAD_ID --type follow_up --channel email --summary "Resposta gestionada." --next-action "Seguent pas definit." --status contacted</code>
+</article>
+<article class="card">
+  <h2>Accepten començar</h2>
+  <pre>Perfecte. Ho activem com a Apareix Maps - Pilot 30 dies: 50 EUR/mes, 30 dies, sense permanència.
+
+Següent pas:
+
+1. Completar l'onboarding: https://apareix.cat/onboarding
+2. Donar accés de gestor a Google Business Profile, sense compartir contrasenyes.
+3. Enviar fotos/carta o carpeta Drive si en teniu.
+
+Quan tingui això, preparo la revisió inicial i el primer calendari de 4 posts.</pre>
+  <code>npm run lead:record -- --lead LEAD_ID --type won --channel email --summary "Resposta gestionada." --next-action "Seguent pas definit." --status won</code>
+</article>
+      <article class="card wide">
+        <h2>Leads actius</h2>
+        <div class="lead-list"><div class="lead"><strong>Café Sardina</strong><br>Sitges<br>reservations@cafesardinas.com / +34 936 59 86 86<br><small>contact_ready</small></div>
+<div class="lead"><strong>Fukuoka BCN</strong><br>Gràcia, Barcelona<br>fukuokasushingrill@gmail.com / 932 851 568<br><small>contact_ready</small></div>
+<div class="lead"><strong>Haninjung</strong><br>Eixample, Barcelona<br>ugnoos@gmail.com / 934 54 05 63<br><small>contact_ready</small></div>
+<div class="lead"><strong>Kaguya-Hime BCN</strong><br>Gràcia, Barcelona<br>reservas@kaguyahimebcn.es / 934 36 16 94<br><small>contact_ready</small></div>
+<div class="lead"><strong>L'Escala</strong><br>Eixample, Barcelona<br>info@lescalabcn.com / +34 934 87 47 65<br><small>contact_ready</small></div>
+<div class="lead"><strong>La Gilda</strong><br>Gràcia / Eixample Dret, Barcelona<br>+34 931 180 354<br><small>contact_ready</small></div>
+<div class="lead"><strong>La Granja de Gràcia</strong><br>Gràcia, Barcelona<br>info@lagranjadegracia.com / 931 78 19 69<br><small>contact_ready</small></div>
+<div class="lead"><strong>Patrón</strong><br>Sarrià-Sant Gervasi / Diagonal, Barcelona<br>booking@patron-restaurant.com / +34 934 14 66 22<br><small>contact_ready</small></div>
+<div class="lead"><strong>Rubion</strong><br>Centre, Sabadell<br>restaurant@rubion.es / 937 27 88 77<br><small>contact_ready</small></div>
+<div class="lead"><strong>Thai Barcelona</strong><br>Passeig de Gràcia, Barcelona<br>+34 934 879 898<br><small>contact_ready</small></div></div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

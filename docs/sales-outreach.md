@@ -53,7 +53,7 @@ Pregunta:
 
 Tancament:
 
-"Si em passes un email o WhatsApp, t'envio 5 punts concrets que podeu millorar. Si te sentit, despres parlem del pilot de 90 dies."
+"Si em passes un email o WhatsApp, t'envio 5 punts concrets que podeu millorar. Si te sentit, despres parlem del pilot de 30 dies."
 
 ## WhatsApp Despres de Parlar
 
@@ -85,11 +85,11 @@ Entendre si el restaurant te dolor real i si pagaria per resoldre'l.
 
 ### 4. Oferta Pilot
 
-"Per validar-ho, estem fent pilots de 90 dies amb restaurants seleccionats. El cost es [preu] al mes i inclou setup, gestio mensual i informe. Al final veiem abans/despres i decidim si continua."
+"Per validar-ho, estem fent pilots de 30 dies amb restaurants seleccionats. El cost es 50 EUR/mes i inclou setup, gestio mensual i informe. Al final veiem abans/despres i decidim si continua."
 
 ### 5. Tancament
 
-- Te sentit provar-ho 90 dies?
+- Te sentit provar-ho 30 dies?
 - Qui hauria d'aprovar-ho?
 - Teniu acces a la fitxa de Google?
 - Quan podem fer el setup?
