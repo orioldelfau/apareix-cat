@@ -15,6 +15,7 @@ type ContactPayload = {
   email?: string;
   phone?: string;
   area?: string;
+  mapsUrl?: string;
   message?: string;
   consent?: boolean;
   source?: string;
@@ -68,7 +69,8 @@ export async function POST(request: Request) {
       `Persona: ${lead.name}`,
       `Email: ${lead.email}`,
       `Telefon: ${lead.phone}`,
-      `Zona/barri: ${lead.area || "No indicat"}`,
+      `Poblacio/zona: ${lead.area || "No indicat"}`,
+      `Google Maps: ${lead.mapsUrl || "No indicat"}`,
       `Origen: ${lead.source || "Web"}`,
       "",
       "Missatge:",
@@ -104,6 +106,7 @@ function normalizePayload(payload: ContactPayload) {
     email: clean(payload.email).toLowerCase(),
     phone: clean(payload.phone),
     area: clean(payload.area),
+    mapsUrl: clean(payload.mapsUrl, 500),
     message: clean(payload.message, 1200),
     consent: payload.consent === true,
     source: clean(payload.source)

@@ -13,6 +13,7 @@
     "wp:draft": "node scripts/create-wp-editorial-draft.js",
     "wp:draft:dry-run": "node scripts/create-wp-editorial-draft.js --dry-run",
     "wp:apply-css": "node scripts/apply-wordpress-custom-css.js",
+    "wp:apply-landing": "node scripts/apply-wordpress-landing.js",
     "google:insights": "node scripts/google-growth-insights.js",
     "google:insights:dry-run": "node scripts/google-growth-insights.js --dry-run",
     "ads:keywords": "node scripts/google-ads-keyword-ideas.js",
