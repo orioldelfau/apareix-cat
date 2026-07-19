@@ -1,0 +1,267 @@
+/* Apareix live landing fixes - 2026-07-19
+   Scope: public WordPress/Elementor home page only. */
+
+html,
+body.home,
+body.home #page,
+body.home .site,
+body.home .site-main,
+body.home .page-content,
+body.home .entry-content,
+body.home .elementor,
+body.home .elementor-section,
+body.home .elementor-container,
+body.home .elementor-column,
+body.home .elementor-widget-wrap,
+body.home .elementor-widget-html,
+body.home .elementor-widget-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+body.home {
+  background: #f5efe4;
+}
+
+body.home .site-main {
+  padding-block: 0 !important;
+}
+
+body.home .apx {
+  background: #f5efe4;
+}
+
+body.home .apx-wrap {
+  width: min(1120px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+body.home .apx-nav {
+  top: 0;
+  margin: 0 !important;
+  border-top: 0;
+  box-shadow: 0 8px 30px rgba(6, 71, 51, 0.04);
+}
+
+body.admin-bar.home .apx-nav {
+  top: 32px;
+}
+
+body.home .apx-nav .apx-wrap {
+  height: 64px;
+}
+
+body.home .apx-hero {
+  padding: 62px 0 78px;
+}
+
+body.home .apx-hero-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 460px);
+  gap: clamp(38px, 5vw, 66px);
+  justify-content: center;
+}
+
+body.home .apx h1 {
+  max-width: 650px;
+}
+
+body.home .apx-lead {
+  max-width: 610px;
+}
+
+body.home .apx-map-card {
+  width: min(100%, 455px);
+  justify-self: center;
+  transform: none;
+}
+
+body.home .apx-floating {
+  right: -8px;
+  bottom: 28px;
+}
+
+body.home .apx-proof {
+  max-width: 610px;
+}
+
+body.home .apx-band {
+  padding: 88px 0 92px;
+}
+
+body.home .apx-band h2 {
+  max-width: 760px;
+}
+
+body.home .apx-band p {
+  max-width: 690px;
+}
+
+body.home .apx-stats {
+  max-width: 930px;
+  margin-inline: auto;
+}
+
+body.home .apx-section {
+  padding: 84px 0;
+}
+
+body.home .apx-title,
+body.home .apx-center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+body.home .apx-grid,
+body.home .apx-blog-grid,
+body.home .apx-process {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.home .apx-card,
+body.home .apx-step,
+body.home .apx-blog-card {
+  box-shadow: 0 18px 48px rgba(25, 34, 28, 0.06);
+}
+
+body.home .apx-price {
+  max-width: 930px;
+  margin-inline: auto;
+  grid-template-columns: minmax(280px, 405px) minmax(320px, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+body.home .apx-price-card,
+body.home .apx-checks {
+  border-radius: 28px;
+}
+
+body.home .apx-checks {
+  display: flex;
+  align-items: center;
+}
+
+body.home .apx-contact {
+  padding: 96px 0;
+}
+
+body.home .apx-contact-shell {
+  max-width: 980px;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(360px, 460px);
+  gap: clamp(34px, 6vw, 72px);
+  justify-content: center;
+  align-items: center;
+}
+
+body.home .apx-contact-copy {
+  padding: 0;
+}
+
+body.home .apx-contact h2 {
+  max-width: 430px;
+}
+
+body.home .apx-contact-card {
+  width: 100%;
+  max-width: 460px;
+  justify-self: center;
+  border-radius: 28px;
+  padding: 30px;
+}
+
+body.home .apx-contact-card h3 {
+  line-height: 1.04;
+}
+
+body.home .apx-form {
+  gap: 12px;
+}
+
+body.home .apx-form .two {
+  gap: 10px;
+}
+
+body.home .apx-form input,
+body.home .apx-form textarea {
+  min-height: 43px;
+  border-radius: 12px;
+}
+
+body.home .apx-form textarea {
+  min-height: 104px;
+}
+
+body.home .apx-footer .apx-wrap {
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  body.home .apx-wrap {
+    width: min(100% - 32px, 640px);
+  }
+
+  body.admin-bar.home .apx-nav {
+    top: 46px;
+  }
+
+  body.home .apx-hero,
+  body.home .apx-section,
+  body.home .apx-band,
+  body.home .apx-contact {
+    padding: 58px 0;
+  }
+
+  body.home .apx-hero-grid,
+  body.home .apx-price,
+  body.home .apx-contact-shell {
+    grid-template-columns: 1fr;
+  }
+
+  body.home .apx-map-card,
+  body.home .apx-contact-card {
+    max-width: 520px;
+  }
+
+  body.home .apx-contact-copy {
+    text-align: center;
+  }
+
+  body.home .apx-contact h2 {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  body.home .apx-wrap {
+    width: min(100% - 28px, 520px);
+  }
+
+  body.home .apx-nav .apx-wrap {
+    height: 58px;
+  }
+
+  body.home .apx h1 {
+    font-size: clamp(42px, 13vw, 54px);
+  }
+
+  body.home .apx h2 {
+    font-size: clamp(32px, 10vw, 42px);
+  }
+
+  body.home .apx-actions,
+  body.home .apx-btn {
+    width: 100%;
+  }
+
+  body.home .apx-form .two {
+    grid-template-columns: 1fr;
+  }
+
+  body.home .apx-contact-card {
+    padding: 24px;
+    border-radius: 24px;
+  }
+}
