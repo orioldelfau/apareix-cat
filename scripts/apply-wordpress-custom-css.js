@@ -61,20 +61,35 @@ async function updatePageContent() {
 
   const page = JSON.parse(pageBody);
   const raw = page.content && page.content.raw;
-  if (!raw) {
+  const elementorData = page.meta && page.meta._elementor_data;
+  if (!raw && !elementorData) {
     console.error("WordPress page did not return editable raw content.");
     process.exit(1);
   }
 
-  const nextContent = injectCssBlock(raw, css);
-  if (nextContent === raw) {
+  const payload = {};
+  if (raw) {
+    const nextContent = injectCssBlock(raw, css);
+    if (nextContent !== raw) {
+      payload.content = nextContent;
+    }
+  }
+
+  if (elementorData) {
+    const nextElementorData = injectCssIntoElementorData(elementorData, css);
+    if (nextElementorData !== elementorData) {
+      payload.meta = {
+        _elementor_data: nextElementorData
+      };
+    }
+  }
+
+  if (Object.keys(payload).length === 0) {
     console.log("WordPress page already contains the latest design fixes.");
     return;
   }
 
-  const updateResponse = await postJson(pageEndpoint, {
-    content: nextContent
-  });
+  const updateResponse = await postJson(pageEndpoint, payload);
 
   const updateBody = await updateResponse.text();
   if (!updateResponse.ok) {
@@ -85,6 +100,38 @@ async function updatePageContent() {
 
   const updated = JSON.parse(updateBody);
   console.log(`Injected design fixes into WordPress page ${pageId}: ${updated.link || pageEndpoint}`);
+}
+
+function injectCssIntoElementorData(rawData, nextCss) {
+  let data;
+  try {
+    data = JSON.parse(rawData);
+  } catch (error) {
+    console.error("Could not parse _elementor_data JSON.");
+    throw error;
+  }
+
+  let changed = false;
+  visitElementorNodes(data, (node) => {
+    const html = node && node.settings && node.settings.html;
+    if (typeof html !== "string" || !html.includes('<div class="apx">')) return;
+
+    const nextHtml = injectCssBlock(html, nextCss);
+    if (nextHtml !== html) {
+      node.settings.html = nextHtml;
+      changed = true;
+    }
+  });
+
+  return changed ? JSON.stringify(data) : rawData;
+}
+
+function visitElementorNodes(nodes, callback) {
+  if (!Array.isArray(nodes)) return;
+  for (const node of nodes) {
+    callback(node);
+    visitElementorNodes(node.elements, callback);
+  }
 }
 
 function injectCssBlock(content, nextCss) {
