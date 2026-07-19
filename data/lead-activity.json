@@ -180,6 +180,16 @@
       "summary": "Creats 8 esborranys .eml locals per als leads amb email directe.",
       "nextAction": "Obrir reports/email-drafts/2026-07-17-first-8-email-drafts, revisar, enviar manualment i registrar contacted.",
       "owner": "oriol"
+    },
+    {
+      "id": "evt-2026-07-17-batch-contacts-enriched-19",
+      "date": "2026-07-17",
+      "leadId": "batch",
+      "type": "contacts_enriched",
+      "channel": "research",
+      "summary": "Afegits emails publics per Thai Barcelona i La Gilda; regenerats 10 drafts .eml i cua amb 10 emails directes.",
+      "nextAction": "Enviar manualment els 10 drafts i registrar contacted.",
+      "owner": "oriol"
     }
   ]
 }

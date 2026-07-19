@@ -12,8 +12,8 @@ Regles:
 ## Resum
 
 - Leads a contactar: 10
-- Amb email directe: 8
-- Només telefon/pendent email: 2
+- Amb email directe: 10
+- Només telefon/pendent email: 0
 
 ## 1. Café Sardina
 
@@ -155,7 +155,35 @@ npm run lead:record -- --lead lead-lescala-barcelona --type contacted --channel 
 ```
 
 
-## 6. La Granja de Gràcia
+## 6. La Gilda
+
+- Prioritat: high
+- Zona: Gràcia / Eixample Dret, Barcelona
+- Contacte public: hola@lagildabcn.com / +34 931 180 354
+- Canal recomanat: email (hola@lagildabcn.com)
+- Auditoria: reports/lead-audits/lead-la-gilda-barcelona.md
+- Proposta: reports/pilot-proposals/lead-la-gilda-barcelona.md
+
+### Missatge
+
+Hola,
+
+He estat revisant La Gilda i crec que hi ha algunes millores concretes perquè Google Maps us ajudi més quan algú busca on menjar per Gràcia / Eixample Dret, Barcelona.
+
+No parlo de fer una web nova ni anuncis. Parlo de tenir la fitxa més viva: posts, ressenyes, fotos, carta/reserva i una mica més de control mensual.
+
+He preparat una auditoria curta amb 5 punts. Te la puc enviar?
+
+Mailto: mailto:hola%40lagildabcn.com?subject=Una%20cosa%20rapida%20sobre%20Google%20Maps%20de%20La%20Gilda&body=Hola%2C%0A%0AHe%20estat%20revisant%20La%20Gilda%20i%20crec%20que%20hi%20ha%20algunes%20millores%20concretes%20perqu%C3%A8%20Google%20Maps%20us%20ajudi%20m%C3%A9s%20quan%20alg%C3%BA%20busca%20on%20menjar%20per%20Gr%C3%A0cia%20%2F%20Eixample%20Dret%2C%20Barcelona.%0A%0ANo%20parlo%20de%20fer%20una%20web%20nova%20ni%20anuncis.%20Parlo%20de%20tenir%20la%20fitxa%20m%C3%A9s%20viva%3A%20posts%2C%20ressenyes%2C%20fotos%2C%20carta%2Freserva%20i%20una%20mica%20m%C3%A9s%20de%20control%20mensual.%0A%0AHe%20preparat%20una%20auditoria%20curta%20amb%205%20punts.%20Te%20la%20puc%20enviar%3F
+
+### Registrar despres
+
+```bash
+npm run lead:record -- --lead lead-la-gilda-barcelona --type contacted --channel email --summary "Primer contacte manual fet." --next-action "Fer seguiment en 3 dies." --status contacted
+```
+
+
+## 7. La Granja de Gràcia
 
 - Prioritat: high
 - Zona: Gràcia, Barcelona
@@ -183,7 +211,7 @@ npm run lead:record -- --lead lead-la-granja-de-gracia-barcelona --type contacte
 ```
 
 
-## 7. Patrón
+## 8. Patrón
 
 - Prioritat: high
 - Zona: Sarrià-Sant Gervasi / Diagonal, Barcelona
@@ -211,7 +239,7 @@ npm run lead:record -- --lead lead-patron-barcelona --type contacted --channel e
 ```
 
 
-## 8. Rubion
+## 9. Rubion
 
 - Prioritat: high
 - Zona: Centre, Sabadell
@@ -239,40 +267,12 @@ npm run lead:record -- --lead lead-rubion-sabadell --type contacted --channel em
 ```
 
 
-## 9. La Gilda
-
-- Prioritat: high
-- Zona: Gràcia / Eixample Dret, Barcelona
-- Contacte public: +34 931 180 354
-- Canal recomanat: telefon (+34931180354)
-- Auditoria: reports/lead-audits/lead-la-gilda-barcelona.md
-- Proposta: reports/pilot-proposals/lead-la-gilda-barcelona.md
-
-### Missatge
-
-Hola,
-
-He estat revisant La Gilda i crec que hi ha algunes millores concretes perquè Google Maps us ajudi més quan algú busca on menjar per Gràcia / Eixample Dret, Barcelona.
-
-No parlo de fer una web nova ni anuncis. Parlo de tenir la fitxa més viva: posts, ressenyes, fotos, carta/reserva i una mica més de control mensual.
-
-He preparat una auditoria curta amb 5 punts. Te la puc enviar?
-
-Telefon: tel:+34931180354
-
-### Registrar despres
-
-```bash
-npm run lead:record -- --lead lead-la-gilda-barcelona --type contacted --channel phone --summary "Primer contacte manual fet." --next-action "Fer seguiment en 3 dies." --status contacted
-```
-
-
 ## 10. Thai Barcelona
 
 - Prioritat: high
 - Zona: Passeig de Gràcia, Barcelona
-- Contacte public: +34 934 879 898
-- Canal recomanat: telefon (+34934879898)
+- Contacte public: info@thaibarcelona.com / +34 934 879 898
+- Canal recomanat: email (info@thaibarcelona.com)
 - Auditoria: reports/lead-audits/lead-thai-barcelona.md
 - Proposta: reports/pilot-proposals/lead-thai-barcelona.md
 
@@ -286,11 +286,11 @@ No parlo de fer una web nova ni anuncis. Parlo de tenir la fitxa més viva: post
 
 He preparat una auditoria curta amb 5 punts. Te la puc enviar?
 
-Telefon: tel:+34934879898
+Mailto: mailto:info%40thaibarcelona.com?subject=Una%20cosa%20rapida%20sobre%20Google%20Maps%20de%20Thai%20Barcelona&body=Hola%2C%0A%0AHe%20estat%20revisant%20Thai%20Barcelona%20i%20crec%20que%20hi%20ha%20algunes%20millores%20concretes%20perqu%C3%A8%20Google%20Maps%20us%20ajudi%20m%C3%A9s%20quan%20alg%C3%BA%20busca%20on%20menjar%20per%20Passeig%20de%20Gr%C3%A0cia%2C%20Barcelona.%0A%0ANo%20parlo%20de%20fer%20una%20web%20nova%20ni%20anuncis.%20Parlo%20de%20tenir%20la%20fitxa%20m%C3%A9s%20viva%3A%20posts%2C%20ressenyes%2C%20fotos%2C%20carta%2Freserva%20i%20una%20mica%20m%C3%A9s%20de%20control%20mensual.%0A%0AHe%20preparat%20una%20auditoria%20curta%20amb%205%20punts.%20Te%20la%20puc%20enviar%3F
 
 ### Registrar despres
 
 ```bash
-npm run lead:record -- --lead lead-thai-barcelona --type contacted --channel phone --summary "Primer contacte manual fet." --next-action "Fer seguiment en 3 dies." --status contacted
+npm run lead:record -- --lead lead-thai-barcelona --type contacted --channel email --summary "Primer contacte manual fet." --next-action "Fer seguiment en 3 dies." --status contacted
 ```
 
