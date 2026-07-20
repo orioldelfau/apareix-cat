@@ -24,13 +24,23 @@ jobs:
         with:
           node-version: 24
 
-      - name: Validate Google credentials
-        run: test -n "$GOOGLE_SERVICE_ACCOUNT_JSON"
+      - name: Check Google credentials
+        id: config
+        run: |
+          if [ -z "$GOOGLE_SERVICE_ACCOUNT_JSON" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Google growth insights skipped::Missing GOOGLE_SERVICE_ACCOUNT_JSON secret. Add a service account JSON with Search Console and GA4 access to enable this automation."
+            exit 0
+          fi
+
+          echo "enabled=true" >> "$GITHUB_OUTPUT"
 
       - name: Generate Google growth insights
+        if: steps.config.outputs.enabled == 'true'
         run: npm run google:insights
 
       - name: Create pull request
+        if: steps.config.outputs.enabled == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           branch: automation/google-growth-insights

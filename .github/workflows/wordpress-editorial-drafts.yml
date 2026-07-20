@@ -25,10 +25,17 @@ jobs:
         with:
           node-version: 24
 
-      - name: Validate WordPress credentials
+      - name: Check WordPress credentials
+        id: config
         run: |
-          test -n "$WP_USER"
-          test -n "$WP_APP_PASSWORD"
+          if [ -z "$WP_USER" ] || [ -z "$WP_APP_PASSWORD" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=WordPress editorial draft skipped::Missing WP_USER or WP_APP_PASSWORD secrets. Add both to enable daily WordPress draft creation."
+            exit 0
+          fi
+
+          echo "enabled=true" >> "$GITHUB_OUTPUT"
 
       - name: Create WordPress editorial draft
+        if: steps.config.outputs.enabled == 'true'
         run: npm run wp:draft

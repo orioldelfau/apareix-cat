@@ -29,18 +29,31 @@ jobs:
         with:
           node-version: 24
 
-      - name: Validate Google Ads credentials
+      - name: Check Google Ads credentials
+        id: config
         run: |
-          test -n "$GOOGLE_ADS_DEVELOPER_TOKEN"
-          test -n "$GOOGLE_ADS_CLIENT_ID"
-          test -n "$GOOGLE_ADS_CLIENT_SECRET"
-          test -n "$GOOGLE_ADS_REFRESH_TOKEN"
-          test -n "$GOOGLE_ADS_CUSTOMER_ID"
+          missing=()
+
+          [ -n "$GOOGLE_ADS_DEVELOPER_TOKEN" ] || missing+=("GOOGLE_ADS_DEVELOPER_TOKEN")
+          [ -n "$GOOGLE_ADS_CLIENT_ID" ] || missing+=("GOOGLE_ADS_CLIENT_ID")
+          [ -n "$GOOGLE_ADS_CLIENT_SECRET" ] || missing+=("GOOGLE_ADS_CLIENT_SECRET")
+          [ -n "$GOOGLE_ADS_REFRESH_TOKEN" ] || missing+=("GOOGLE_ADS_REFRESH_TOKEN")
+          [ -n "$GOOGLE_ADS_CUSTOMER_ID" ] || missing+=("GOOGLE_ADS_CUSTOMER_ID")
+
+          if [ "${#missing[@]}" -gt 0 ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Google Ads keyword ideas skipped::Missing secrets: ${missing[*]}."
+            exit 0
+          fi
+
+          echo "enabled=true" >> "$GITHUB_OUTPUT"
 
       - name: Generate keyword ideas
+        if: steps.config.outputs.enabled == 'true'
         run: npm run ads:keywords
 
       - name: Create pull request
+        if: steps.config.outputs.enabled == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           branch: automation/google-ads-keywords

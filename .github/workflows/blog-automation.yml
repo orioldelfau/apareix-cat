@@ -25,13 +25,31 @@ jobs:
         with:
           node-version: 24
 
+      - name: Check OpenAI configuration
+        id: config
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Blog automation skipped::Missing OPENAI_API_KEY secret. Add it in GitHub repository secrets to enable scheduled blog generation."
+            exit 0
+          fi
+
+          echo "enabled=true" >> "$GITHUB_OUTPUT"
+
       - name: Generate blog post
+        if: steps.config.outputs.enabled == 'true'
         run: npm run generate:blog
 
+      - name: Install dependencies
+        if: steps.config.outputs.enabled == 'true'
+        run: npm ci
+
       - name: Build public site
+        if: steps.config.outputs.enabled == 'true'
         run: npm run build
 
       - name: Create pull request
+        if: steps.config.outputs.enabled == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           branch: automation/blog-post
