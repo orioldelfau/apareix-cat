@@ -1,0 +1,38 @@
+name: Sales autopilot
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Number of leads/follow-ups to include"
+        required: false
+        default: "5"
+  schedule:
+    - cron: "0 6 * * 1-5"
+
+permissions:
+  contents: read
+
+jobs:
+  prepare-sales-plan:
+    runs-on: ubuntu-latest
+    env:
+      LIMIT: ${{ github.event.inputs.limit || '5' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Create daily sales autopilot report
+        run: npm run sales:autopilot -- --github-summary --limit "$LIMIT"
+
+      - name: Upload sales autopilot report
+        uses: actions/upload-artifact@v4
+        with:
+          name: sales-autopilot-report
+          path: reports/sales-autopilot/

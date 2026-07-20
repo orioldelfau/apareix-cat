@@ -32,6 +32,7 @@
     "lead:activation-kit": "node scripts/create-pilot-activation-kit.js",
     "lead:record": "node scripts/record-lead-activity.js",
     "lead:status": "node scripts/lead-pipeline-status.js",
+    "sales:autopilot": "node scripts/create-sales-autopilot.js",
     "report:monthly": "node scripts/create-monthly-report.js",
     "operator:status": "node scripts/operator-status.js",
     "plan:content": "node scripts/plan-content.js",
