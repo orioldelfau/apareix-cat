@@ -8,6 +8,7 @@ const QUEUE_PATH = process.env.EDITORIAL_QUEUE_PATH
   : path.join(ROOT, "data", "editorial-queue.json");
 const DRY_RUN = process.argv.includes("--dry-run");
 const FORCE_SLUG = readArg("--slug") || process.env.ARTICLE_SLUG;
+const UPDATE_EXISTING = process.argv.includes("--update-existing") || process.env.UPDATE_EXISTING === "true";
 const WP_URL = (process.env.WP_URL || "https://apareix.cat").replace(/\/$/, "");
 const WP_USER = process.env.WP_USER;
 const WP_APP_PASSWORD = process.env.WP_APP_PASSWORD || process.env.WP_PASS;
@@ -43,7 +44,7 @@ async function main() {
 
   const categoryId = await ensureCategory(client, topic.category);
   const media = await uploadFeaturedImage(client, topic);
-  const post = await createDraftPost(client, draft, categoryId, media);
+  const post = await saveDraftPost(client, draft, categoryId, media);
   const verified = await verifyYoast(client, post.id);
 
   console.log(
@@ -113,7 +114,7 @@ function buildDraft(topic) {
     slug: topic.slug,
     title: topic.title,
     excerpt: topic.metaDescription,
-    content: plainText(topic),
+    content: html,
     elementorHtml: html,
     yoast: {
       focusKeyphrase: topic.focusKeyphrase,
@@ -179,28 +180,47 @@ async function uploadFeaturedImage(wp, topic) {
   return body;
 }
 
-async function createDraftPost(wp, draft, categoryId, media) {
+async function saveDraftPost(wp, draft, categoryId, media) {
+  const payload = {
+    status: "draft",
+    slug: draft.slug,
+    title: draft.title,
+    excerpt: draft.excerpt,
+    content: draft.content,
+    categories: [categoryId],
+    featured_media: media?.id || 0,
+    meta: {
+      _yoast_wpseo_focuskw: draft.yoast.focusKeyphrase,
+      _yoast_wpseo_title: draft.yoast.title,
+      _yoast_wpseo_metadesc: draft.yoast.description,
+      _elementor_edit_mode: "builder",
+      _elementor_template_type: "wp-post",
+      _elementor_data: JSON.stringify(elementorHtml(draft.elementorHtml)),
+      _elementor_page_settings: { hide_title: "yes" }
+    }
+  };
+
+  if (UPDATE_EXISTING) {
+    const existing = await findPostBySlug(wp, draft.slug);
+    if (existing) {
+      return wp(`/posts/${existing.id}`, {
+        method: "POST",
+        body: JSON.stringify(payload)
+      });
+    }
+  }
+
   return wp("/posts", {
     method: "POST",
-    body: JSON.stringify({
-      status: "draft",
-      slug: draft.slug,
-      title: draft.title,
-      excerpt: draft.excerpt,
-      content: draft.content,
-      categories: [categoryId],
-      featured_media: media?.id || 0,
-      meta: {
-        _yoast_wpseo_focuskw: draft.yoast.focusKeyphrase,
-        _yoast_wpseo_title: draft.yoast.title,
-        _yoast_wpseo_metadesc: draft.yoast.description,
-        _elementor_edit_mode: "builder",
-        _elementor_template_type: "wp-post",
-        _elementor_data: JSON.stringify(elementorHtml(draft.elementorHtml)),
-        _elementor_page_settings: { hide_title: "yes" }
-      }
-    })
+    body: JSON.stringify(payload)
   });
+}
+
+async function findPostBySlug(wp, slug) {
+  const posts = await wp(
+    `/posts?slug=${encodeURIComponent(slug)}&status=publish,draft,future,pending,private&context=edit&_fields=id,slug,status`
+  );
+  return posts[0] || null;
 }
 
 async function verifyYoast(wp, postId) {
@@ -264,6 +284,7 @@ function renderArticle(topic) {
     .join("");
   const geoEntities = renderGeoEntities(topic);
   const internalLinks = renderInternalLinks(topic);
+  const externalLinks = renderExternalLinks(topic);
   const intro = topic.intro ? `<p>${escapeHtml(topic.intro)}</p>` : "";
   const nextSteps = renderNextSteps(topic);
   const schema = renderSchema(topic);
@@ -276,9 +297,9 @@ function renderArticle(topic) {
     topic.focusKeyphrase
   )}</span><span>Restaurants</span></div>${geoEntities}</div></header><div class="body"><div class="wrap layout"><aside><strong>En aquesta guia</strong>${toc}${internalLinks}</aside><main>${intro}<div class="callout"><strong>Resposta curta</strong><p>${escapeHtml(
     topic.directAnswer
-  )}</p></div>${sections}${nextSteps}<section><h2>Preguntes frequents</h2>${faqs}</section><div class="cta"><h2>Vols que Apareix ho revisi cada mes?</h2><p>${escapeHtml(
+  )}</p></div>${sections}${nextSteps}${externalLinks}<section><h2>Preguntes frequents</h2>${faqs}</section><div class="cta"><h2>Vols que Apareix ho revisi cada mes?</h2><p>${escapeHtml(
     topic.cta
-  )}</p><a href="/#contacte">Sol·licitar el pla de 50€/mes</a></div></main></div></div></article>${schema}`;
+  )}</p><a href="${WP_URL}/#contacte">Sol·licitar el pla de 50€/mes</a></div></main></div></div></article>${schema}`;
 }
 
 function renderFeaturedPng(topic) {
@@ -342,12 +363,25 @@ function renderGeoEntities(topic) {
 
 function renderInternalLinks(topic) {
   const links = topic.internalLinks || [
-    { label: "Pla mensual Apareix", url: "/#contacte" },
-    { label: "Blog de SEO local", url: "/blog/" }
+    { label: "Pla mensual Apareix", url: `${WP_URL}/#contacte` },
+    { label: "Blog de SEO local", url: `${WP_URL}/blog/` }
   ];
   return `<div class="internal-links"><strong>Relacionat</strong>${links
     .map((link) => `<a href="${escapeHtml(link.url)}">${escapeHtml(link.label)}</a>`)
     .join("")}</div>`;
+}
+
+function renderExternalLinks(topic) {
+  const links = topic.externalLinks || [
+    { label: "Guia oficial de Google Business Profile", url: "https://support.google.com/business/answer/3038063" }
+  ];
+
+  return `<section class="resources"><h2>Fonts i recursos útils</h2><p>Per validar els criteris basics de la fitxa, consulta també aquests recursos oficials.</p><ul>${links
+    .map(
+      (link) =>
+        `<li><a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a></li>`
+    )
+    .join("")}</ul></section>`;
 }
 
 function renderNextSteps(topic) {

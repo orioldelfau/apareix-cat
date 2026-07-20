@@ -17,6 +17,10 @@ on:
         description: "Set true to only trash old posts"
         required: false
         default: "false"
+      update_existing:
+        description: "Set true to update an existing post with the same slug"
+        required: false
+        default: "false"
   schedule:
     - cron: "15 7 * * *"
 
@@ -34,6 +38,7 @@ jobs:
       ARTICLE_SLUG: ${{ github.event.inputs.article_slug }}
       TRASH_SLUGS: ${{ github.event.inputs.trash_slugs }}
       SKIP_CREATE: ${{ github.event.inputs.skip_create || 'false' }}
+      UPDATE_EXISTING: ${{ github.event.inputs.update_existing || 'false' }}
 
     steps:
       - name: Checkout
