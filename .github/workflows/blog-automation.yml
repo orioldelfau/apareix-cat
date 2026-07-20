@@ -49,7 +49,9 @@ jobs:
         run: npm run build
 
       - name: Create pull request
+        id: create_pr
         if: steps.config.outputs.enabled == 'true'
+        continue-on-error: true
         uses: peter-evans/create-pull-request@v6
         with:
           branch: automation/blog-post
@@ -64,3 +66,8 @@ jobs:
             - It does not promise guaranteed Google Maps positions.
             - The CTA points to Apareix Maps at 50 EUR/month.
             - The tone sounds specific, not generic.
+
+      - name: Report pull request fallback
+        if: steps.config.outputs.enabled == 'true' && steps.create_pr.outcome == 'failure'
+        run: |
+          echo "::warning title=Pull request not created::The blog post was generated and pushed to automation/blog-post, but this repository does not allow GitHub Actions to create pull requests. Enable Settings > Actions > General > Allow GitHub Actions to create and approve pull requests, or open https://github.com/orioldelfau/apareix-cat/pull/new/automation/blog-post manually."
