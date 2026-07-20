@@ -10,6 +10,13 @@ on:
       article_slug:
         description: "Optional article slug to draft"
         required: false
+      trash_slugs:
+        description: "Optional space-separated old post slugs to move to trash"
+        required: false
+      skip_create:
+        description: "Set true to only trash old posts"
+        required: false
+        default: "false"
   schedule:
     - cron: "15 7 * * *"
 
@@ -25,6 +32,8 @@ jobs:
       WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
       EDITORIAL_QUEUE_PATH: ${{ github.event.inputs.queue_path || 'data/seo-geo-drafts.json' }}
       ARTICLE_SLUG: ${{ github.event.inputs.article_slug }}
+      TRASH_SLUGS: ${{ github.event.inputs.trash_slugs }}
+      SKIP_CREATE: ${{ github.event.inputs.skip_create || 'false' }}
 
     steps:
       - name: Checkout
@@ -46,6 +55,10 @@ jobs:
 
           echo "enabled=true" >> "$GITHUB_OUTPUT"
 
+      - name: Trash old WordPress posts
+        if: steps.config.outputs.enabled == 'true' && env.TRASH_SLUGS != ''
+        run: npm run wp:trash-posts -- $TRASH_SLUGS
+
       - name: Create WordPress editorial draft
-        if: steps.config.outputs.enabled == 'true'
+        if: steps.config.outputs.enabled == 'true' && env.SKIP_CREATE != 'true'
         run: npm run wp:draft
