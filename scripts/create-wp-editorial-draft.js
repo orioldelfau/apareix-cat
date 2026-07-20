@@ -3,7 +3,9 @@ const path = require("path");
 const zlib = require("zlib");
 
 const ROOT = process.cwd();
-const QUEUE_PATH = path.join(ROOT, "data", "editorial-queue.json");
+const QUEUE_PATH = process.env.EDITORIAL_QUEUE_PATH
+  ? path.resolve(ROOT, process.env.EDITORIAL_QUEUE_PATH)
+  : path.join(ROOT, "data", "editorial-queue.json");
 const DRY_RUN = process.argv.includes("--dry-run");
 const FORCE_SLUG = readArg("--slug") || process.env.ARTICLE_SLUG;
 const WP_URL = (process.env.WP_URL || "https://apareix.cat").replace(/\/$/, "");
@@ -18,12 +20,19 @@ main().catch((error) => {
 });
 
 async function main() {
+  if (DRY_RUN && (!WP_USER || !WP_APP_PASSWORD)) {
+    const topic = pickTopic(new Set());
+    const draft = buildDraft(topic);
+    console.log(JSON.stringify({ queuePath: QUEUE_PATH, topic, draft: previewDraft(draft) }, null, 2));
+    return;
+  }
+
   if (!WP_USER || !WP_APP_PASSWORD) {
     throw new Error("Missing WP_USER and WP_APP_PASSWORD. Use a WordPress Application Password.");
   }
 
   const client = createWordPressClient();
-  const existingSlugs = await getExistingSlugs(client);
+  const existingSlugs = FORCE_SLUG ? new Set() : await getExistingSlugs(client);
   const topic = pickTopic(existingSlugs);
   const draft = buildDraft(topic);
 
@@ -92,7 +101,7 @@ function pickTopic(existingSlugs) {
 
   const topic = queue.topics.find((item) => !existingSlugs.has(item.slug));
   if (!topic) {
-    throw new Error("No unused topics left in data/editorial-queue.json.");
+    throw new Error(`No unused topics left in ${QUEUE_PATH}.`);
   }
 
   return topic;
@@ -245,7 +254,7 @@ function renderArticle(topic) {
     .map(
       (section) => `<section id="${slugify(section.heading)}"><h2>${escapeHtml(section.heading)}</h2><p>${escapeHtml(
         section.body
-      )}</p></section>`
+      )}</p>${renderBullets(section.bullets)}</section>`
     )
     .join("");
   const faqs = topic.faqs
@@ -253,6 +262,11 @@ function renderArticle(topic) {
       (faq) => `<details><summary>${escapeHtml(faq.question)}</summary><p>${escapeHtml(faq.answer)}</p></details>`
     )
     .join("");
+  const geoEntities = renderGeoEntities(topic);
+  const internalLinks = renderInternalLinks(topic);
+  const intro = topic.intro ? `<p>${escapeHtml(topic.intro)}</p>` : "";
+  const nextSteps = renderNextSteps(topic);
+  const schema = renderSchema(topic);
 
   return `${articleCss()}<article class="apx-article"><div class="article-nav"><div class="wrap"><a href="/">Apareix.</a><a href="/blog/">Tornar al blog</a></div></div><header class="hero"><div class="wrap"><div class="crumb">${escapeHtml(
     topic.category
@@ -260,29 +274,30 @@ function renderArticle(topic) {
     topic.directAnswer
   )}</p><div class="meta"><span>Esborrany editorial</span><span>${escapeHtml(
     topic.focusKeyphrase
-  )}</span><span>Restaurants</span></div></div></header><div class="body"><div class="wrap layout"><aside><strong>En aquesta guia</strong>${toc}</aside><main><div class="callout"><strong>Resposta curta</strong><p>${escapeHtml(
+  )}</span><span>Restaurants</span></div>${geoEntities}</div></header><div class="body"><div class="wrap layout"><aside><strong>En aquesta guia</strong>${toc}${internalLinks}</aside><main>${intro}<div class="callout"><strong>Resposta curta</strong><p>${escapeHtml(
     topic.directAnswer
-  )}</p></div>${sections}<section><h2>Preguntes frequents</h2>${faqs}</section><div class="cta"><h2>Vols que Apareix ho revisi cada mes?</h2><p>${escapeHtml(
+  )}</p></div>${sections}${nextSteps}<section><h2>Preguntes frequents</h2>${faqs}</section><div class="cta"><h2>Vols que Apareix ho revisi cada mes?</h2><p>${escapeHtml(
     topic.cta
-  )}</p><a href="/#contacte">Sol·licitar el pla de 50€/mes</a></div></main></div></div></article>`;
+  )}</p><a href="/#contacte">Sol·licitar el pla de 50€/mes</a></div></main></div></div></article>${schema}`;
 }
 
 function renderFeaturedPng(topic) {
   const width = 1200;
   const height = 675;
   const pixels = Buffer.alloc(width * height * 4);
-  const palette = paletteFor(topic.category);
+  const seed = hashString(topic.slug);
+  const palette = paletteFor(topic.category, seed);
 
   for (let y = 0; y < height; y += 1) {
     for (let x = 0; x < width; x += 1) {
       const t = (x / width + y / height) / 2;
-      const base = mixColor([255, 249, 238], [224, 238, 228], t);
+      const base = mixColor(palette.backgroundA, palette.backgroundB, t);
       setPixel(pixels, width, x, y, base[0], base[1], base[2], 255);
     }
   }
 
-  drawCircle(pixels, width, height, 1030, 105, 175, [239, 214, 163, 160]);
-  drawCircle(pixels, width, height, 90, 610, 225, [220, 235, 225, 180]);
+  drawCircle(pixels, width, height, 1030 - (seed % 90), 105 + (seed % 70), 155 + (seed % 45), palette.halo);
+  drawCircle(pixels, width, height, 90 + (seed % 120), 610 - (seed % 75), 180 + (seed % 55), palette.wash);
   drawRoundedRect(pixels, width, height, 70, 78, 510, 420, 34, [255, 250, 241, 246]);
   drawRoundedRect(pixels, width, height, 620, 130, 420, 370, 38, [255, 255, 255, 255]);
   drawRoundedRect(pixels, width, height, 660, 176, 340, 135, 22, [220, 235, 225, 255]);
@@ -297,17 +312,147 @@ function renderFeaturedPng(topic) {
   const accentCount = Math.min(5, Math.max(3, topic.sections.length));
   for (let index = 0; index < accentCount; index += 1) {
     const y = 155 + index * 56;
-    drawRoundedRect(pixels, width, height, 112, y, 340 - index * 18, 16, 8, index === 0 ? palette.primary : [100, 116, 107, 210]);
+    drawRoundedRect(
+      pixels,
+      width,
+      height,
+      112,
+      y,
+      250 + ((seed + index * 47) % 110),
+      16,
+      8,
+      index === 0 ? palette.primary : palette.secondary
+    );
   }
 
+  drawMotif(pixels, width, height, seed, palette);
   return encodePng(width, height, pixels);
 }
 
-function paletteFor(category) {
-  if (category === "Ressenyes") return { primary: [153, 96, 38, 255] };
-  if (category === "Contingut") return { primary: [194, 139, 44, 255] };
-  if (category === "Metriques") return { primary: [20, 80, 107, 255] };
-  return { primary: [6, 71, 51, 255] };
+function renderBullets(bullets = []) {
+  if (!bullets.length) return "";
+  return `<ul class="checklist">${bullets.map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join("")}</ul>`;
+}
+
+function renderGeoEntities(topic) {
+  const entities = topic.geoEntities || topic.entities || [];
+  if (!entities.length) return "";
+  return `<div class="geo-entities">${entities.map((entity) => `<span>${escapeHtml(entity)}</span>`).join("")}</div>`;
+}
+
+function renderInternalLinks(topic) {
+  const links = topic.internalLinks || [
+    { label: "Pla mensual Apareix", url: "/#contacte" },
+    { label: "Blog de SEO local", url: "/blog/" }
+  ];
+  return `<div class="internal-links"><strong>Relacionat</strong>${links
+    .map((link) => `<a href="${escapeHtml(link.url)}">${escapeHtml(link.label)}</a>`)
+    .join("")}</div>`;
+}
+
+function renderNextSteps(topic) {
+  if (!topic.nextSteps?.length) return "";
+  return `<section><h2>Prioritat practica</h2><ol class="steps">${topic.nextSteps
+    .map((step) => `<li>${escapeHtml(step)}</li>`)
+    .join("")}</ol></section>`;
+}
+
+function renderSchema(topic) {
+  const article = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: topic.title,
+    description: topic.metaDescription,
+    inLanguage: "ca",
+    about: topic.geoEntities || topic.entities || [topic.focusKeyphrase],
+    mainEntityOfPage: `https://apareix.cat/${topic.slug}/`
+  };
+  const faq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: topic.faqs.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer }
+    }))
+  };
+  return `<script type="application/ld+json">${escapeScript(JSON.stringify([article, faq]))}</script>`;
+}
+
+function drawMotif(pixels, width, height, seed, palette) {
+  const mode = seed % 4;
+  if (mode === 0) {
+    for (let index = 0; index < 4; index += 1) {
+      const x = 700 + index * 62;
+      const y = 205 + ((seed + index * 31) % 72);
+      drawCircle(pixels, width, height, x, y, 18, palette.primary);
+      drawLine(pixels, width, height, x, y + 16, x - 13, y + 52, palette.primary, 8);
+      drawLine(pixels, width, height, x, y + 16, x + 13, y + 52, palette.primary, 8);
+    }
+    return;
+  }
+
+  if (mode === 1) {
+    for (let index = 0; index < 5; index += 1) {
+      drawCircle(pixels, width, height, 714 + index * 42, 230, 16, palette.primary);
+    }
+    drawRoundedRect(pixels, width, height, 704, 280, 220, 28, 14, palette.secondary);
+    return;
+  }
+
+  if (mode === 2) {
+    for (let index = 0; index < 4; index += 1) {
+      drawRoundedRect(pixels, width, height, 700 + index * 62, 266 - index * 22, 34, 88 + index * 22, 17, palette.primary);
+    }
+    return;
+  }
+
+  for (let index = 0; index < 4; index += 1) {
+    const y = 218 + index * 34;
+    drawRoundedRect(pixels, width, height, 702, y, 214 - index * 22, 18, 9, index === 0 ? palette.primary : palette.secondary);
+  }
+}
+
+function paletteFor(category, seed) {
+  const alpha = 255;
+  if (category === "Ressenyes") {
+    return {
+      primary: [153, 96 + (seed % 18), 38, alpha],
+      secondary: [191, 132, 74, 210],
+      backgroundA: [255, 247, 235],
+      backgroundB: [241, 229, 211],
+      halo: [235, 191, 144, 160],
+      wash: [245, 229, 211, 190]
+    };
+  }
+  if (category === "Contingut") {
+    return {
+      primary: [194, 139, 44, alpha],
+      secondary: [221, 177, 83, 210],
+      backgroundA: [255, 250, 235],
+      backgroundB: [238, 236, 207],
+      halo: [239, 214, 163, 170],
+      wash: [230, 237, 214, 190]
+    };
+  }
+  if (category === "Metriques" || category === "SEO local") {
+    return {
+      primary: [20, 80, 107 + (seed % 28), alpha],
+      secondary: [65, 119, 136, 210],
+      backgroundA: [239, 248, 245],
+      backgroundB: [222, 234, 238],
+      halo: [188, 218, 227, 170],
+      wash: [222, 235, 225, 190]
+    };
+  }
+  return {
+    primary: [6, 71 + (seed % 18), 51, alpha],
+    secondary: [71, 111, 92, 210],
+    backgroundA: [255, 249, 238],
+    backgroundB: [224, 238, 228],
+    halo: [239, 214, 163, 160],
+    wash: [220, 235, 225, 180]
+  };
 }
 
 function encodePng(width, height, rgba) {
@@ -418,15 +563,19 @@ function articleCss() {
 .apx-article .hero{padding:72px 0;background:linear-gradient(135deg,#fff9ee,#edf4ea)}.apx-article .crumb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ap-green-2);font-weight:900}.apx-article h1{font-family:Georgia,serif;font-size:clamp(42px,6vw,76px);line-height:.95;letter-spacing:-.055em;color:var(--ap-green);max-width:930px;margin:14px 0 20px}.apx-article .dek{font-size:21px;line-height:1.55;color:#3d4c44;max-width:780px}.apx-article .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.apx-article .meta span{background:white;border:1px solid var(--ap-line);border-radius:999px;padding:9px 13px;color:#425149;font-weight:800;font-size:13px}
 .apx-article .body{padding:58px 0 86px}.apx-article .layout{display:grid;grid-template-columns:280px 1fr;gap:42px;align-items:start}.apx-article aside{position:sticky;top:92px;background:#fffaf1;border:1px solid var(--ap-line);border-radius:24px;padding:22px}.apx-article aside strong{display:block;font-family:Georgia,serif;color:var(--ap-green);font-size:22px;margin-bottom:12px}.apx-article aside a{display:block;color:#405048;padding:10px 0;border-top:1px solid #ece3d4;font-weight:750;text-decoration:none}
 .apx-article main{background:#fffaf1;border:1px solid var(--ap-line);border-radius:30px;padding:42px;box-shadow:0 18px 50px rgba(25,34,28,.06)}.apx-article h2{font-family:Georgia,serif;font-size:38px;line-height:1.05;color:var(--ap-green);letter-spacing:-.04em;margin:8px 0 16px}.apx-article p{font-size:18px;line-height:1.72;color:#3d4c44}.apx-article details{border-top:1px solid #e8decf;padding:16px 0}.apx-article summary{cursor:pointer;font-weight:900;color:var(--ap-green);font-size:18px}.apx-article .callout{background:#eaf3ec;border:1px solid #d4e4d8;border-radius:24px;padding:24px;margin:0 0 28px}.apx-article .callout strong{font-family:Georgia,serif;color:var(--ap-green);font-size:25px}.apx-article .cta{margin-top:34px;background:var(--ap-green);color:white;border-radius:26px;padding:30px}.apx-article .cta h2{color:white;margin:0 0 10px}.apx-article .cta p{color:rgba(255,255,255,.78);margin:0 0 18px}.apx-article .cta a{display:inline-flex;background:white;color:var(--ap-green);padding:13px 18px;border-radius:999px;font-weight:900;text-decoration:none}
+.apx-article .geo-entities{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.apx-article .geo-entities span{background:rgba(6,71,51,.08);border:1px solid rgba(6,71,51,.12);border-radius:999px;color:var(--ap-green);font-size:12px;font-weight:900;padding:8px 11px}.apx-article .internal-links{margin-top:22px;border-top:1px solid #ece3d4;padding-top:18px}.apx-article .internal-links strong{font-size:14px;margin-bottom:8px}.apx-article .checklist{display:grid;gap:10px;margin:18px 0 26px;padding:0;list-style:none}.apx-article .checklist li{position:relative;background:#fff;border:1px solid #ebe1d2;border-radius:16px;padding:13px 14px 13px 42px;color:#3d4c44;font-weight:750}.apx-article .checklist li:before{content:"";position:absolute;left:16px;top:17px;width:10px;height:10px;border-radius:999px;background:var(--ap-green)}.apx-article .steps{counter-reset:item;display:grid;gap:12px;margin:18px 0 26px;padding:0;list-style:none}.apx-article .steps li{counter-increment:item;background:#fff;border:1px solid #ebe1d2;border-radius:18px;padding:15px 16px;color:#3d4c44;font-weight:760}.apx-article .steps li:before{content:counter(item);display:inline-grid;place-items:center;width:24px;height:24px;margin-right:10px;border-radius:50%;background:var(--ap-green);color:white;font-size:12px;font-weight:900}
 @media(max-width:900px){.apx-article .layout{grid-template-columns:1fr}.apx-article aside{position:relative;top:auto}.apx-article main{padding:28px}.apx-article .article-nav .wrap{display:grid}}
 </style>`;
 }
 
 function plainText(topic) {
   return [
+    topic.intro || "",
+    "",
     topic.directAnswer,
     "",
-    ...topic.sections.flatMap((section) => [section.heading, section.body, ""]),
+    ...topic.sections.flatMap((section) => [section.heading, section.body, ...(section.bullets || []), ""]),
+    ...(topic.nextSteps?.length ? ["Prioritat practica", ...topic.nextSteps, ""] : []),
     "Preguntes frequents",
     ...topic.faqs.flatMap((faq) => [faq.question, faq.answer, ""]),
     topic.cta
@@ -448,6 +597,19 @@ function escapeHtml(value) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+function escapeScript(value) {
+  return value.replace(/</g, "\\u003c");
+}
+
+function hashString(value) {
+  let hash = 2166136261;
+  for (const char of value) {
+    hash ^= char.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
 }
 
 function readArg(name) {

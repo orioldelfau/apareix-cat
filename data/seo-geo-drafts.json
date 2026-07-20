@@ -1,0 +1,319 @@
+{
+  "cadence": "daily-drafts",
+  "language": "ca",
+  "audience": "propietaris i gerents de restaurants independents a Barcelona i Catalunya",
+  "qualityGate": {
+    "status": "draft",
+    "requiresHumanReview": true,
+    "minimumSections": 6,
+    "requiresFeaturedImage": true,
+    "requiresYoastFields": true,
+    "requiresInternalLinks": true,
+    "requiresCta": true,
+    "requiresFaqSchema": true,
+    "requiresGeoEntities": true
+  },
+  "topics": [
+    {
+      "slug": "errors-google-maps-restaurant-clients",
+      "title": "Errors a Google Maps que fan perdre clients a un restaurant",
+      "seoTitle": "Errors a Google Maps que fan perdre clients al restaurant",
+      "metaDescription": "Checklist SEO local per detectar errors a Google Maps en restaurants: horaris, carta, fotos, ressenyes, reserves i categories.",
+      "focusKeyphrase": "errors Google Maps restaurant",
+      "category": "Google Maps",
+      "intent": "problem-aware",
+      "imageTitle": "Checklist d'errors a Google Maps per restaurants",
+      "imageAlt": "Il·lustració editorial amb checklist d'errors habituals a Google Maps per restaurants",
+      "geoEntities": ["Google Maps", "Google Business Profile", "restaurants de Barcelona", "SEO local", "ressenyes de Google", "reserves"],
+      "internalLinks": [
+        { "label": "Pla mensual Apareix", "url": "/#contacte" },
+        { "label": "Blog de SEO local", "url": "/blog/" }
+      ],
+      "directAnswer": "Els errors que mes fan perdre clients a un restaurant a Google Maps son horaris incorrectes, carta o reserva desactualitzada, fotos poc representatives, ressenyes sense resposta, categories mal triades i una fitxa sense activitat recent.",
+      "intro": "Quan una persona busca restaurant a prop seu, Google Maps no nomes mostra una adreca. Mostra senyals de confiança: si el local esta obert, si la carta encaixa, si les fotos transmeten qualitat, si hi ha ressenyes recents i si reservar sembla facil. Per a un restaurant, una fitxa mal cuidada no sempre es veu com un problema tecnic, pero pot convertir-se en menys trucades, menys indicacions i menys reserves.",
+      "sections": [
+        {
+          "heading": "Horaris normals i especials sense revisar",
+          "body": "El primer error es deixar els horaris en automatic o no actualitzar festius, vacances, torns especials, ponts i canvis de temporada. Per Google, la informacio de disponibilitat es una part basica de l'experiencia. Per al client, veure un horari dubtos pot ser suficient per triar una altra opcio del barri.",
+          "bullets": ["Revisa horaris normals un cop al mes.", "Actualitza festius abans que arribin.", "Comprova que Google no suggereixi canvis incorrectes."]
+        },
+        {
+          "heading": "Carta, web i reserva amb friccio",
+          "body": "Moltes cerques locals tenen intencio immediata: mirar carta, trucar, reservar o calcular com arribar. Si el link de la carta obre un PDF vell, si la web carrega lentament o si la reserva no funciona be al mobil, la fitxa perd conversio. El SEO local no es nomes apareixer; es aconseguir que la persona faci el pas.",
+          "bullets": ["La carta ha d'estar actualitzada i ser llegible al mobil.", "El botó de reserva ha d'anar directe a l'accio.", "El telefon ha d'estar provat des de la mateixa fitxa."]
+        },
+        {
+          "heading": "Fotos que no expliquen l'experiencia real",
+          "body": "Una fitxa amb fotos fosques, antigues o pujades nomes pels clients pot transmetre una imatge pitjor que la realitat. Les fotos han de cobrir plats, sala, entrada, terrassa, ambient, equip i detalls que ajudin el client a imaginar la visita. Per GEO, les imatges tambe reforcen context: tipus de cuina, entorn i proposta.",
+          "bullets": ["Inclou fotos de plats actuals, no nomes d'inauguracio.", "Afegeix imatges de l'entrada per facilitar l'arribada.", "Renova fotos quan canviï carta, terrassa o decoracio."]
+        },
+        {
+          "heading": "Ressenyes sense resposta ni criteri",
+          "body": "Les ressenyes son una conversa publica. Quan un restaurant nomes respon les negatives, o no respon cap, transmet poca atencio. Les respostes no han de sonar robotitzades, pero si han de seguir un criteri: agrair, concretar, resoldre quan cal i evitar discussions publiques.",
+          "bullets": ["Respon tambe ressenyes positives importants.", "No improvisis respostes negatives en calent.", "Detecta patrons: servei, temps d'espera, preu, ambient o reserves."]
+        },
+        {
+          "heading": "Categories i serveis massa generics",
+          "body": "La categoria principal i les secundaries ajuden Google a entendre quan mostrar el negoci. Un restaurant de tapes, una braseria, una pizzeria o un restaurant japones no haurien de quedar descrits de forma massa generica si existeixen opcions mes precises. El mateix passa amb serveis, atributs, accessibilitat, recollida, entrega o opcions dietetiques.",
+          "bullets": ["Compara categories amb competidors ben posicionats.", "No triis categories que no representin l'oferta real.", "Actualitza serveis quan canviï el model de negoci."]
+        },
+        {
+          "heading": "Fitxa sense activitat recent",
+          "body": "Una fitxa abandonada pot semblar menys fiable encara que el restaurant funcioni be. Posts, fotos noves, respostes i petits ajustos indiquen activitat. No es tracta de publicar per publicar, sino de mantenir una rutina que Google i els clients puguin interpretar com a senyal de vida.",
+          "bullets": ["Publica almenys un post util cada setmana.", "Revisa ressenyes dos cops per setmana.", "Fes una revisio mensual de metriques i prioritats."]
+        }
+      ],
+      "nextSteps": [
+        "Fes una captura de l'estat actual de la fitxa i apunta horaris, links, fotos, categories i ressenyes pendents.",
+        "Prioritza errors que bloquegen conversio: telefon, reserva, carta i horaris.",
+        "Crea una rutina mensual abans de pensar en campanyes o canvis complexos."
+      ],
+      "faqs": [
+        {
+          "question": "Cada quan s'hauria de revisar Google Maps en un restaurant?",
+          "answer": "Com a minim un cop per setmana per ressenyes i activitat, i un cop al mes per horaris, fotos, carta, serveis, categories i metriques."
+        },
+        {
+          "question": "Un error a Google Maps pot fer perdre reserves?",
+          "answer": "Si. Un horari incorrecte, un link de reserva trencat o una carta antiga poden fer que el client esculli un altre restaurant proper."
+        },
+        {
+          "question": "Els posts de Google Maps ajuden a posicionar?",
+          "answer": "No garanteixen una posicio concreta, pero reforcen activitat, context i confiança, que poden ajudar a millorar la conversio de la fitxa."
+        },
+        {
+          "question": "Que es mes urgent: fotos, ressenyes o categories?",
+          "answer": "Primer cal corregir errors de conversio com horaris i reserva. Despres convé treballar fotos, ressenyes, categories i activitat recurrent."
+        }
+      ],
+      "cta": "Apareix converteix aquesta revisio en una rutina mensual per 50 euros al mes: fitxa ordenada, posts, ressenyes i informe simple per saber que esta passant."
+    },
+    {
+      "slug": "seo-local-restaurants-barcelona-barris",
+      "title": "SEO local per restaurants a Barcelona: com aparèixer millor al teu barri",
+      "seoTitle": "SEO local per restaurants a Barcelona i barris",
+      "metaDescription": "Guia de SEO local per restaurants de Barcelona: Google Maps, barris, ressenyes, contingut, web, entitats locals i mesura.",
+      "focusKeyphrase": "SEO local restaurants Barcelona",
+      "category": "SEO local",
+      "intent": "strategic-guide",
+      "imageTitle": "SEO local per restaurants de Barcelona",
+      "imageAlt": "Il·lustració editorial de SEO local per restaurants de Barcelona amb mapa i senyals de barri",
+      "geoEntities": ["Barcelona", "Gracia", "Eixample", "Sant Antoni", "Poblenou", "Google Maps", "SEO local restaurants"],
+      "internalLinks": [
+        { "label": "Pla mensual Apareix", "url": "/#contacte" },
+        { "label": "Articles de Google Maps", "url": "/blog/" }
+      ],
+      "directAnswer": "El SEO local per restaurants a Barcelona consisteix a reforçar tres coses: una fitxa de Google Maps completa i activa, senyals clars de barri i especialitat, i una web que confirmi a Google i al client que el restaurant encaixa amb la cerca.",
+      "intro": "Barcelona no es un unic mercat local. Per un restaurant, competir a Gracia no es igual que competir a l'Eixample, Sant Antoni, Sants o Poblenou. El client busca per proximitat, tipus de cuina, moment del dia i confiança. Per això el SEO local ha de treballar la fitxa, la web i el contingut amb una estrategia de barri, no amb textos generics.",
+      "sections": [
+        {
+          "heading": "Com pensa Google una cerca local",
+          "body": "Google acostuma a combinar proximitat, rellevancia i prominencia. En practica, això vol dir que el restaurant ha d'estar ben ubicat, ha d'explicar clarament què ofereix i ha de tenir prou senyals externs per semblar una opcio fiable. No es pot controlar la distancia del client, pero si es pot millorar la rellevancia i la confiança.",
+          "bullets": ["Proximitat: on es el client i on es el restaurant.", "Rellevancia: cuina, carta, serveis, categories i contingut.", "Prominencia: ressenyes, mencions, activitat i autoritat local."]
+        },
+        {
+          "heading": "Treballar el barri sense fer keyword stuffing",
+          "body": "Afegir el nom del barri a tot arreu no es una estrategia. El que funciona millor es donar context real: zones properes, mercats, carrers, teatres, hotels, oficines, plans de migdia o situacions que fan que un client busqui restaurant en aquella area. GEO no vol dir repetir 'restaurant a Barcelona' vint vegades; vol dir ajudar motors i assistents a entendre per a qui ets una bona resposta.",
+          "bullets": ["Explica quan te sentit venir al restaurant.", "Connecta la proposta amb el barri i el moment de consum.", "Evita crear pagines duplicades canviant nomes el nom del barri."]
+        },
+        {
+          "heading": "Fitxa de Google Maps: la base del SEO local",
+          "body": "La fitxa de Google Business Profile acostuma a ser el primer contacte. Ha d'incloure categoria principal precisa, categories secundaries coherents, atributs, serveis, carta, reserva, fotos actuals i ressenyes respostes. Si la fitxa no es fiable, la web pot tenir bon contingut pero perdre conversions.",
+          "bullets": ["Revisa categories i serveis cada mes.", "Publica fotos i posts amb regularitat.", "Respon ressenyes amb criteri editorial."]
+        },
+        {
+          "heading": "La web ha de reforçar el que diu Google Maps",
+          "body": "La web no ha de competir amb la fitxa; ha de completar-la. Una pagina de restaurant hauria d'explicar proposta, ubicacio, carta, reserves, horaris, preguntes freqüents i elements de confiança. Si el restaurant treballa un barri concret, la web ha de donar senyals locals naturals i útils.",
+          "bullets": ["Inclou NAP coherent: nom, adreca i telefon.", "Fes que reserva, carta i ubicacio siguin visibles al mobil.", "Afegeix schema LocalBusiness o Restaurant quan sigui possible."]
+        },
+        {
+          "heading": "Contingut local que pot posicionar",
+          "body": "Un blog per restaurants no ha de publicar receptes aleatories si l'objectiu es captar clients locals. Pot treballar guies de barri, menus de migdia, esdeveniments propers, tipus de cuina, preguntes habituals i comparatives útils. Cada article ha de tenir una intencio clara i connectar amb la fitxa o amb una accio comercial.",
+          "bullets": ["Prioritza cerques amb intencio local o comercial.", "Inclou preguntes reals dels clients.", "Enllaça cap a reserva, contacte o pagina principal."]
+        },
+        {
+          "heading": "Mesurar abans de canviar-ho tot",
+          "body": "El SEO local necessita rutina de dades. Cal mirar impressions, clics, trucades, indicacions, consultes de Search Console, visites de GA4 i conversions visibles. Sense mesura, el restaurant acaba prenent decisions per sensacions. Amb un informe simple, es pot detectar que ha pujat, que ha baixat i que convé provar el mes següent.",
+          "bullets": ["Compara dades mensuals, no nomes dies solts.", "Separa visibilitat de conversions.", "Apunta accions fetes per entendre canvis."]
+        }
+      ],
+      "nextSteps": [
+        "Tria una especialitat principal i un territori real: barri, zona o tipus de client.",
+        "Revisa si Google Maps, web i ressenyes expliquen la mateixa proposta.",
+        "Defineix 4 accions mensuals: un canvi de fitxa, un post, una revisio de ressenyes i una millora de contingut."
+      ],
+      "faqs": [
+        {
+          "question": "Un restaurant de Barcelona necessita blog per fer SEO local?",
+          "answer": "No sempre, pero un blog ben orientat pot ajudar a respondre cerques locals, reforçar entitats de barri i donar context que la fitxa de Google Maps no permet desenvolupar."
+        },
+        {
+          "question": "Que pesa mes: web o Google Maps?",
+          "answer": "Per cerques locals immediates, Google Maps acostuma a ser decisiu. La web reforça confiança, contingut, reserva i senyals que poden ajudar a convertir millor."
+        },
+        {
+          "question": "Es pot posicionar per diversos barris?",
+          "answer": "Si hi ha relacio real amb aquests barris. Crear contingut artificial per moltes zones sense aportar valor pot ser contraproduent."
+        },
+        {
+          "question": "Quant tarda el SEO local a donar senyals?",
+          "answer": "Depen de la competencia i del punt de partida. En molts casos, els primers senyals es poden veure en setmanes, pero el treball consistent es mensual."
+        }
+      ],
+      "cta": "Apareix treballa la fitxa, el contingut i l'informe mensual perquè el restaurant tingui una rutina de SEO local sense dedicar-hi hores cada setmana."
+    },
+    {
+      "slug": "respondre-ressenyes-google-restaurant-exemples",
+      "title": "Com respondre ressenyes de Google en un restaurant: criteris i exemples",
+      "seoTitle": "Com respondre ressenyes de Google en restaurants",
+      "metaDescription": "Apren a respondre ressenyes de Google en restaurants amb criteri: positives, negatives, neutres, exemples i errors a evitar.",
+      "focusKeyphrase": "respondre ressenyes Google restaurant",
+      "category": "Ressenyes",
+      "intent": "how-to",
+      "imageTitle": "Respostes a ressenyes de Google",
+      "imageAlt": "Il·lustració editorial amb targetes de ressenyes i respostes per a restaurants",
+      "geoEntities": ["ressenyes de Google", "Google Business Profile", "restaurants", "reputacio online", "SEO local"],
+      "internalLinks": [
+        { "label": "Pla mensual Apareix", "url": "/#contacte" },
+        { "label": "Google Maps per restaurants", "url": "/blog/" }
+      ],
+      "directAnswer": "Un restaurant ha de respondre les ressenyes de Google amb un to huma, breu i professional, adaptant la resposta al tipus de comentari i evitant discussions publiques que puguin perjudicar la confiança de futurs clients.",
+      "intro": "Les ressenyes de Google no son nomes una puntuacio. Són una pagina publica on futurs clients observen com el restaurant tracta els elogis, els dubtes i els conflictes. Respondre be ajuda a millorar percepcio, reputacio i conversio; respondre malament pot amplificar una critica.",
+      "sections": [
+        {
+          "heading": "Per que respondre tambe ajuda al SEO local",
+          "body": "Google no publica una formula simple, pero una fitxa activa i ben gestionada transmet confiança als usuaris. Les respostes ajuden a donar context, mostrar atencio i reforçar elements de la proposta: cuina, servei, ambient, terrassa, menu, reserves o ubicacio. El criteri es escriure per persones, no omplir respostes de paraules clau.",
+          "bullets": ["Respon de forma natural i concreta.", "Evita repetir sempre la mateixa plantilla.", "Inclou detalls reals quan aportin valor."]
+        },
+        {
+          "heading": "Com respondre una ressenya positiva",
+          "body": "Una ressenya positiva no necessita una resposta llarga. Ha de sonar humana, agrair el comentari i reforçar un detall si el client l'ha mencionat. Si parla del menu de migdia, la terrassa o el tracte, es pot recollir aquest element sense forçar.",
+          "bullets": ["Agraeix pel nom si apareix publicament.", "Menciona un detall concret de l'experiencia.", "Tanca amb una invitacio natural a tornar."]
+        },
+        {
+          "heading": "Com respondre una ressenya negativa",
+          "body": "La pitjor resposta negativa es la que intenta guanyar una discussio publica. El restaurant ha de reconeixer el comentari, evitar excuses llargues, mostrar voluntat de revisar el cas i oferir un canal directe si cal. El lector important no es nomes qui ha escrit la ressenya, sino tots els futurs clients.",
+          "bullets": ["No responguis en calent.", "No comparteixis dades privades del client.", "No prometis compensacions en public si no toca."]
+        },
+        {
+          "heading": "Com gestionar ressenyes injustes o sospitoses",
+          "body": "Algunes ressenyes poden semblar injustes, falses o poc concretes. Encara aixi, la resposta ha de mantenir to professional. Si hi ha indicis clars que vulnera politiques, es pot denunciar a Google, pero convé respondre igualment amb prudencia mentre es revisa.",
+          "bullets": ["Demana mes informacio sense acusar.", "Mantingues una resposta curta.", "Fes servir l'opcio d'informar a Google si vulnera normes."]
+        },
+        {
+          "heading": "Plantilles que no semblin plantilles",
+          "body": "Automatitzar no vol dir copiar sempre la mateixa resposta. Un bon sistema treballa variants, tons i criteris. Les positives poden tenir respostes semiautomatitzades; les negatives haurien de passar per revisio humana, sobretot si parlen de salut, tracte, reserves o incidents concrets.",
+          "bullets": ["Crea 8-10 variants base.", "Adapta una frase al contingut real de la ressenya.", "Marca casos delicats per revisar manualment."]
+        },
+        {
+          "heading": "Que mirar cada mes",
+          "body": "Les ressenyes tambe son una font de dades. Si molts clients mencionen temps d'espera, soroll, preu o tracte, hi ha una lectura de negoci. El valor no es nomes respondre, sino detectar patrons que ajudin a millorar experiencia i comunicacio.",
+          "bullets": ["Agrupa comentaris per temes.", "Detecta frases que es repeteixen.", "Converteix aprenentatges en accions operatives."]
+        }
+      ],
+      "nextSteps": [
+        "Defineix un to de resposta: proper, professional i sense entrar en conflicte.",
+        "Crea variants per positives, neutres i negatives.",
+        "Revisa patrons mensuals i converteix-los en millores concretes."
+      ],
+      "faqs": [
+        {
+          "question": "Cal respondre totes les ressenyes de Google?",
+          "answer": "Idealment si, sobretot les negatives i les que aporten detalls concrets. Si el volum es alt, es pot prioritzar amb criteri."
+        },
+        {
+          "question": "Es poden automatitzar respostes a ressenyes?",
+          "answer": "Les positives es poden semiautomatitzar amb variants. Les negatives o delicades haurien de passar per revisio humana abans de publicar."
+        },
+        {
+          "question": "Que faig amb una ressenya falsa?",
+          "answer": "Mantingues una resposta professional, demana mes informacio si cal i informa la ressenya a Google si vulnera les politiques."
+        },
+        {
+          "question": "Respondre ressenyes millora el posicionament?",
+          "answer": "No garanteix posicions, pero millora la percepcio de confiança i manté la fitxa activa, dos elements importants per convertir cerques locals en clients."
+        }
+      ],
+      "cta": "Apareix revisa ressenyes cada setmana, prepara respostes suggerides i resumeix patrons mensuals perquè el restaurant no hagi d'improvisar."
+    },
+    {
+      "slug": "posts-google-business-profile-restaurant-calendari",
+      "title": "Calendari de posts per Google Business Profile si tens un restaurant",
+      "seoTitle": "Posts de Google Business Profile per restaurants",
+      "metaDescription": "Calendari mensual de posts per Google Business Profile en restaurants: menu, plats, ressenyes, temporada, reserves i SEO local.",
+      "focusKeyphrase": "posts Google Business Profile restaurants",
+      "category": "Contingut",
+      "intent": "content-calendar",
+      "imageTitle": "Calendari de posts de Google Business Profile",
+      "imageAlt": "Il·lustració editorial d'un calendari mensual de posts de Google Business Profile per restaurants",
+      "geoEntities": ["Google Business Profile", "Google Maps", "posts de Google", "restaurants", "menu de migdia", "SEO local"],
+      "internalLinks": [
+        { "label": "Pla mensual Apareix", "url": "/#contacte" },
+        { "label": "Blog de contingut local", "url": "/blog/" }
+      ],
+      "directAnswer": "Un restaurant pot mantenir Google Business Profile actiu amb un calendari mensual simple: un post de menu o plat destacat, un post de prova social, un post de temporada i un post orientat a reserva o grups.",
+      "intro": "Els posts de Google Business Profile no han de substituir Instagram ni convertir-se en una feina pesada. Han de complir una funcio concreta: demostrar activitat, reforçar la proposta del restaurant i donar motius per trucar, reservar o demanar indicacions des de Google Maps.",
+      "sections": [
+        {
+          "heading": "Que ha de fer un post a Google Maps",
+          "body": "Un post no ha de ser un anunci generic. Ha de donar informacio útil en el moment de decisio: quin plat destaca, quin menu hi ha, si hi ha terrassa, si es pot reservar, si hi ha espai per grups o si passa alguna cosa rellevant aquesta setmana.",
+          "bullets": ["Una idea principal per post.", "Una foto clara i actual.", "Una accio: reservar, trucar, veure carta o demanar indicacions."]
+        },
+        {
+          "heading": "Setmana 1: menu, plat o producte destacat",
+          "body": "El primer post del mes pot parlar d'un plat, menu de migdia o producte de temporada. Funciona millor quan es concret: ingredients, moment ideal, disponibilitat i per que val la pena. No cal fer poesia; cal ajudar a decidir.",
+          "bullets": ["Menciona si es menu de migdia, sopar o cap de setmana.", "Afegeix preu nomes si ajuda a convertir.", "Evita fotos reciclades de baixa qualitat."]
+        },
+        {
+          "heading": "Setmana 2: prova social i confiança",
+          "body": "Una bona ressenya pot convertir-se en contingut, sempre sense copiar textos llargs ni exposar dades innecessaries. La idea es reforçar un atribut que ja diuen els clients: bon tracte, ambient, qualitat, terrassa, rapidesa o relacio qualitat-preu.",
+          "bullets": ["Resumeix la idea, no cal copiar tota la ressenya.", "Connecta-la amb una experiencia concreta.", "Mantingues to natural i no triomfalista."]
+        },
+        {
+          "heading": "Setmana 3: temporada, barri o moment de consum",
+          "body": "Aquest post ha de connectar amb context local: calor i terrassa, sopars de grup, Sant Joan, Nadal, fires del barri, caps de setmana, afterwork o menu per oficines properes. Aquesta es la part mes GEO: ajudar Google i el client a entendre quan el restaurant encaixa.",
+          "bullets": ["Fes referencia a situacions reals del barri.", "No forcis barris on no tens relacio.", "Relaciona el post amb una accio concreta."]
+        },
+        {
+          "heading": "Setmana 4: reserva, grups o recordatori comercial",
+          "body": "Un cop al mes convé publicar un post mes directe: reserves obertes, espai per grups, menu especial, carta actualitzada o trucada a l'accio. La clau es que no sigui agressiu, sino clar. Si el client ja esta comparant restaurants, cal reduir friccio.",
+          "bullets": ["Inclou enllaç o instruccio clara de reserva.", "Recorda horaris i dies forts si son rellevants.", "Comprova que el link funciona al mobil."]
+        },
+        {
+          "heading": "Com reaprofitar contingut sense semblar repetitiu",
+          "body": "Un restaurant no necessita inventar idees cada setmana. Pot crear una biblioteca de fotos, frases, plats i moments. La diferència la marca el calendari: ordenar el contingut perquè cada post tingui una funcio i no depengui de la inspiracio de l'ultim moment.",
+          "bullets": ["Crea una carpeta mensual de fotos.", "Guarda ressenyes útils per tema.", "Prepara textos curts amb variants."]
+        },
+        {
+          "heading": "Que mesurar despres de publicar",
+          "body": "Els posts s'han de mirar juntament amb la resta de la fitxa. Si pugen trucades, indicacions o clics despres d'un mes actiu, hi ha una senyal. Si no canvia res, potser cal revisar proposta, fotos, categories o ressenyes abans de publicar mes.",
+          "bullets": ["Mira clics, trucades i indicacions.", "Compara amb el mes anterior.", "Apunta quin tipus de post es va publicar."]
+        }
+      ],
+      "nextSteps": [
+        "Defineix quatre tipus de post mensuals abans d'escriure.",
+        "Prepara fotos i missatges curts en bloc, no cada setmana des de zero.",
+        "Revisa metriques mensuals i conserva els formats que generin mes accio."
+      ],
+      "faqs": [
+        {
+          "question": "Quants posts ha de publicar un restaurant a Google Business Profile?",
+          "answer": "Per començar, un post setmanal es una frequencia raonable. El mes important es que sigui constant i útil."
+        },
+        {
+          "question": "Els posts de Google Business Profile substitueixen Instagram?",
+          "answer": "No. Instagram treballa comunitat i marca; Google Business Profile treballa decisio local i conversio en Maps."
+        },
+        {
+          "question": "Cal posar paraules clau als posts?",
+          "answer": "Cal escriure naturalment sobre plats, serveis, zona i moment de consum. Repetir paraules clau de forma artificial pot empitjorar la qualitat."
+        },
+        {
+          "question": "Que passa si no tinc fotos noves cada setmana?",
+          "answer": "Es pot treballar amb una biblioteca mensual de fotos bones i variar angle, missatge i objectiu del post."
+        }
+      ],
+      "cta": "Apareix prepara 4 posts mensuals i els integra dins una rutina de Google Maps perquè la fitxa sembli viva sense consumir temps del restaurant."
+    }
+  ]
+}

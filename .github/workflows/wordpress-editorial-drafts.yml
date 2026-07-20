@@ -2,6 +2,14 @@ name: WordPress editorial drafts
 
 on:
   workflow_dispatch:
+    inputs:
+      queue_path:
+        description: "Editorial queue JSON path"
+        required: false
+        default: "data/seo-geo-drafts.json"
+      article_slug:
+        description: "Optional article slug to draft"
+        required: false
   schedule:
     - cron: "15 7 * * *"
 
@@ -15,6 +23,8 @@ jobs:
       WP_URL: https://apareix.cat
       WP_USER: ${{ secrets.WP_USER }}
       WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+      EDITORIAL_QUEUE_PATH: ${{ github.event.inputs.queue_path || 'data/seo-geo-drafts.json' }}
+      ARTICLE_SLUG: ${{ github.event.inputs.article_slug }}
 
     steps:
       - name: Checkout
