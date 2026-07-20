@@ -10,6 +10,8 @@
     "build:static": "node scripts/apply-site-config.js && node scripts/build-blog.js && node scripts/build-public-site.js",
     "build:blog": "node scripts/build-blog.js",
     "generate:blog": "node scripts/generate-blog-post.js",
+    "wp:generate-topic": "node scripts/generate-wp-editorial-topic.js",
+    "wp:generate-topic:dry-run": "node scripts/generate-wp-editorial-topic.js --dry-run",
     "wp:draft": "node scripts/create-wp-editorial-draft.js",
     "wp:draft:seo-geo": "EDITORIAL_QUEUE_PATH=data/seo-geo-drafts.json node scripts/create-wp-editorial-draft.js",
     "wp:draft:dry-run": "node scripts/create-wp-editorial-draft.js --dry-run",

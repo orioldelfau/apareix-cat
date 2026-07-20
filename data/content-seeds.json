@@ -2,7 +2,7 @@
   "audience": "propietaris i gerents de restaurants independents",
   "market": "Catalunya",
   "language": "ca",
-  "cadence": "1 article setmanal",
+  "cadence": "1 article diari en estat borrador",
   "pillars": [
     {
       "name": "Google Maps per restaurants",
@@ -10,7 +10,13 @@
         "errors habituals a la fitxa",
         "optimitzacio de dades basiques",
         "com aparèixer millor en cerques locals",
-        "horaris especials i temporada"
+        "horaris especials i temporada",
+        "categories principals i secundaries",
+        "fotos que ajuden a convertir",
+        "links de carta i reserva",
+        "atributs i serveis que Google enten",
+        "fitxa nova abans d'obrir",
+        "auditoria mensual de la fitxa"
       ]
     },
     {
@@ -19,7 +25,13 @@
         "com respondre ressenyes negatives",
         "com demanar ressenyes sense molestar",
         "plantilles de resposta",
-        "queixes recurrents en restauracio"
+        "queixes recurrents en restauracio",
+        "com respondre ressenyes positives",
+        "ressenyes falses o injustes",
+        "com aconseguir ressenyes recurrents",
+        "analisi de patrons en ressenyes",
+        "respostes per restaurants amb molt volum",
+        "errors de to en respostes publiques"
       ]
     },
     {
@@ -28,7 +40,13 @@
         "idees de posts setmanals",
         "menu de migdia",
         "plats de temporada",
-        "contingut per reserves i grups"
+        "contingut per reserves i grups",
+        "posts per terrassa i bon temps",
+        "posts per sopars d'empresa",
+        "posts per caps de setmana",
+        "posts amb prova social",
+        "calendari mensual de contingut",
+        "reaprofitar contingut d'Instagram a Google"
       ]
     },
     {
@@ -37,7 +55,28 @@
         "trucades i indicacions",
         "clics a web i reserves",
         "comparativa mensual",
-        "com saber si Google Maps porta clients"
+        "com saber si Google Maps porta clients",
+        "impressions sense clics",
+        "posicions i consultes de Search Console",
+        "GA4 per entendre visites locals",
+        "informe mensual per restaurants",
+        "que canviar quan baixen les trucades",
+        "com llegir dades sense complicar-se"
+      ]
+    },
+    {
+      "name": "SEO local i GEO",
+      "angles": [
+        "SEO local per restaurants a Barcelona",
+        "com treballar barris sense keyword stuffing",
+        "cerques prop de mi per restaurants",
+        "entitats locals que ajuden Google",
+        "contingut per assistents d'IA",
+        "schema Restaurant i LocalBusiness",
+        "pagines de barri per restaurants",
+        "com combinar Google Maps i web",
+        "intencio de cerca local",
+        "errors GEO en contingut generat amb IA"
       ]
     }
   ]
