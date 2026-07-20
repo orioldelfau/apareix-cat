@@ -1,13 +1,95 @@
 [
   {
+    "slug": "errors-habituals-a-la-fitxa-a-google-maps-si-tens-un-restaurant",
+    "title": "Errors habituals a la fitxa a Google Maps si tens un restaurant",
+    "description": "Descobreix els errors més comuns que cometen propietaris i gerents de restaurants a les seves fitxes de Google Maps i com evitar-los per millorar la presència digital local.",
+    "date": "2026-07-20",
+    "category": "Google Maps",
+    "readingMinutes": 6,
+    "keywords": [
+      "Google Maps",
+      "fitxa de restaurant",
+      "errors fitxa Google",
+      "menus Google Maps",
+      "reserves en línia",
+      "fotos restaurant",
+      "horaris Google Maps",
+      "ressenyes Google"
+    ],
+    "entities": [
+      "Google Maps",
+      "Fitxa de Google My Business",
+      "restaurant",
+      "menu digital",
+      "reserves",
+      "reserves en línia",
+      "barri",
+      "temporada",
+      "ressenyes d'usuaris"
+    ],
+    "directAnswer": "Els errors més habituals a la fitxa de Google Maps d'un restaurant inclouen informació incompleta o incorrecta com horaris mal posats, menús no actualitzats, fotos poc representatives, ignorar les ressenyes o no gestionar reserves en línia. Evitar aquests errors ajuda a millorar la visibilitat i la confiança dels clients potencials.",
+    "faqs": [
+      {
+        "question": "Per què és important tenir els horaris correctes a la fitxa?",
+        "answer": "Uns horaris incorrectes poden portar clients a intentar visitar el restaurant quan està tancat, generant mala experiència i mala imatge."
+      },
+      {
+        "question": "Com he de gestionar les ressenyes negatives?",
+        "answer": "Respondre sempre amb cortesia, oferint solucions o agraïments, mostra que el restaurant valora els clients i la seva opinió."
+      },
+      {
+        "question": "Cal actualitzar el menú a la fitxa?",
+        "answer": "Sí, mantenir el menú actualitzat evita confusions i pot atraure més clients interessats en plats específics o temporals."
+      },
+      {
+        "question": "Com afecta tenir fotos de qualitat a la fitxa?",
+        "answer": "Fotos clares i atractives mostren la atmosfera i els plats, ajudant a generar interès i confiança en els clients potencials."
+      }
+    ],
+    "intro": "Tenir una fitxa completament optimitzada a Google Maps és clau per a qualsevol restaurant que vulgui destacar a Catalunya, especialment en barris amb molta competència. Malgrat això, alguns errors comuns poden afectar negativament la imatge i la repercussió online del teu negoci. En aquest article t'expliquem quins són aquests errors més habituals i com pots evitar-los sense fer promeses impossibles.",
+    "sections": [
+      {
+        "heading": "1. Horaris incorrectes o incomplets",
+        "body": "És freqüent trobar horaris erronis a la fitxa, especialment quan el restaurant té horaris especials per temporada o dies festius. Per exemple, un restaurant al barri de Gràcia que obre només per sopars en dissabte a l'estiu i no actualitza aquesta informació pot desorientar els clients."
+      },
+      {
+        "heading": "2. No actualitzar el menú o no tenir-lo accessible",
+        "body": "Molts restaurants no penjen el menú o el mantenen desactualitzat. Això és un problema si tens plats de temporada o canvis constants. Recorda que el menú ha d'estar visible i fàcil de trobar per ajudar en la decisió del client."
+      },
+      {
+        "heading": "3. Fotos poc representatives o de baixa qualitat",
+        "body": "Les imatges són la primera impressió. Mostrar fotos poc atractives o antigues pot desmotivar. És important incloure fotos dels plats més populars o especialitats i també del local i l'ambient."
+      },
+      {
+        "heading": "4. No gestionar ni respondre ressenyes",
+        "body": "Les ressenyes són una font de confiança per als nous clients. No respondre o ignorar les crítiques, tant bones com dolentes, pot fer perdre oportunitats per connectar i millorar."
+      },
+      {
+        "heading": "5. No aprofitar les funcionalitats de reserves i comunicació",
+        "body": "Deixar de configurar i supervisar la possibilitat de fer reserves directament o via enllaç a pàgines externes redueix les opcions d'atraure clients que busquen agilitat i comoditat."
+      }
+    ],
+    "cta": "Vols que la teva fitxa de Google Maps estigui sempre optimitzada i actualitzada sense complicacions? Apareix Maps t'ajuda per només 50 EUR/mes a mantenir el teu restaurant visible i atractiu a Google Maps, gestionant horaris, fotos, ressenyes i més. Contacta'ns avui mateix!"
+  },
+  {
     "slug": "google-maps-restaurants-guia-basica",
     "title": "Google Maps per restaurants: la guia basica per no tenir la fitxa abandonada",
     "description": "Una guia practica per entendre que ha de revisar un restaurant a Google Maps abans de pensar en anuncis o campanyes complexes.",
     "date": "2026-07-15",
     "category": "Google Maps",
     "readingMinutes": 6,
-    "keywords": ["google maps restaurants", "google business profile restaurants", "seo local restaurants"],
-    "entities": ["Google Maps", "Google Business Profile", "restaurants", "SEO local", "ressenyes"],
+    "keywords": [
+      "google maps restaurants",
+      "google business profile restaurants",
+      "seo local restaurants"
+    ],
+    "entities": [
+      "Google Maps",
+      "Google Business Profile",
+      "restaurants",
+      "SEO local",
+      "ressenyes"
+    ],
     "directAnswer": "Un restaurant ha de revisar Google Maps cada setmana perquè la fitxa influeix en trucades, indicacions, reserves i confiança abans de la visita.",
     "faqs": [
       {
@@ -41,55 +123,23 @@
     "cta": "Apareix converteix aquesta rutina en una subscripcio mensual de 50 EUR: fitxa activa, posts, ressenyes i informe."
   },
   {
-    "slug": "ressenyes-google-restaurants-com-respondre",
-    "title": "Com respondre ressenyes de Google si tens un restaurant",
-    "description": "Criteris simples per respondre ressenyes positives, neutres i negatives sense improvisar cada vegada.",
-    "date": "2026-07-15",
-    "category": "Ressenyes",
-    "readingMinutes": 5,
-    "keywords": ["respondre ressenyes restaurant", "ressenyes google restaurant", "reputacio online restaurant"],
-    "entities": ["ressenyes de Google", "reputacio online", "restaurants", "Google Business Profile"],
-    "directAnswer": "Un restaurant ha de respondre ressenyes amb un to huma, breu i professional, diferenciant positives, neutres i negatives.",
-    "faqs": [
-      {
-        "question": "Es poden automatitzar les respostes a ressenyes?",
-        "answer": "Les positives es poden automatitzar parcialment amb variants, pero les negatives haurien de passar per revisio humana."
-      },
-      {
-        "question": "Com respondre una ressenya negativa d'un restaurant?",
-        "answer": "Cal evitar discutir, reconeixer la situacio, mostrar voluntat de revisar el cas i portar la conversa a un canal directe."
-      }
-    ],
-    "intro": "Les ressenyes no son nomes una puntuacio. Son una conversa publica amb futurs clients llegint en silenci. Respondre be pot millorar percepcio, confiança i conversio.",
-    "sections": [
-      {
-        "heading": "Ressenyes positives",
-        "body": "Una resposta positiva ha de sonar humana, concreta i breu. No cal escriure un text llarg. El mes important es agrair, reforcar algun element del restaurant i convidar a tornar sense semblar una plantilla repetida."
-      },
-      {
-        "heading": "Ressenyes neutres",
-        "body": "Les ressenyes de tres estrelles acostumen a contenir oportunitats. La resposta ha de reconeixer el comentari i mostrar voluntat de millora. Si hi ha un punt concret, cal mencionar-lo sense discutir."
-      },
-      {
-        "heading": "Ressenyes negatives",
-        "body": "Les ressenyes negatives necessiten prudencia. No s'ha de contestar en calent ni entrar en conflicte public. La resposta ha de reconeixer la situacio, demanar disculpes si toca i portar la conversa a un canal directe."
-      },
-      {
-        "heading": "Quan automatitzar i quan revisar",
-        "body": "Les respostes positives poden automatitzar-se parcialment amb variants. Les negatives han de passar per revisio humana, sobretot si parlen de salut, tracte del personal, reserves, preu o incidents concrets."
-      }
-    ],
-    "cta": "Apareix inclou revisio setmanal de ressenyes i respostes suggerides dins la subscripcio de 50 EUR/mes."
-  },
-  {
     "slug": "posts-google-business-profile-restaurants",
     "title": "Idees de posts per Google Business Profile en restaurants",
     "description": "Tipus de posts setmanals que un restaurant pot publicar a Google per mantenir la fitxa viva.",
     "date": "2026-07-15",
     "category": "Contingut",
     "readingMinutes": 5,
-    "keywords": ["posts google business profile restaurants", "google posts restaurant", "contingut google maps restaurant"],
-    "entities": ["Google Business Profile", "posts de Google", "restaurants", "contingut local"],
+    "keywords": [
+      "posts google business profile restaurants",
+      "google posts restaurant",
+      "contingut google maps restaurant"
+    ],
+    "entities": [
+      "Google Business Profile",
+      "posts de Google",
+      "restaurants",
+      "contingut local"
+    ],
     "directAnswer": "Els posts de Google Business Profile ajuden un restaurant a mostrar activitat, plats, reserves i moments de temporada dins de la seva fitxa.",
     "faqs": [
       {
@@ -121,5 +171,55 @@
       }
     ],
     "cta": "Apareix prepara 4 posts mensuals i els integra dins una rutina estable de Google Maps per 50 EUR/mes."
+  },
+  {
+    "slug": "ressenyes-google-restaurants-com-respondre",
+    "title": "Com respondre ressenyes de Google si tens un restaurant",
+    "description": "Criteris simples per respondre ressenyes positives, neutres i negatives sense improvisar cada vegada.",
+    "date": "2026-07-15",
+    "category": "Ressenyes",
+    "readingMinutes": 5,
+    "keywords": [
+      "respondre ressenyes restaurant",
+      "ressenyes google restaurant",
+      "reputacio online restaurant"
+    ],
+    "entities": [
+      "ressenyes de Google",
+      "reputacio online",
+      "restaurants",
+      "Google Business Profile"
+    ],
+    "directAnswer": "Un restaurant ha de respondre ressenyes amb un to huma, breu i professional, diferenciant positives, neutres i negatives.",
+    "faqs": [
+      {
+        "question": "Es poden automatitzar les respostes a ressenyes?",
+        "answer": "Les positives es poden automatitzar parcialment amb variants, pero les negatives haurien de passar per revisio humana."
+      },
+      {
+        "question": "Com respondre una ressenya negativa d'un restaurant?",
+        "answer": "Cal evitar discutir, reconeixer la situacio, mostrar voluntat de revisar el cas i portar la conversa a un canal directe."
+      }
+    ],
+    "intro": "Les ressenyes no son nomes una puntuacio. Son una conversa publica amb futurs clients llegint en silenci. Respondre be pot millorar percepcio, confiança i conversio.",
+    "sections": [
+      {
+        "heading": "Ressenyes positives",
+        "body": "Una resposta positiva ha de sonar humana, concreta i breu. No cal escriure un text llarg. El mes important es agrair, reforcar algun element del restaurant i convidar a tornar sense semblar una plantilla repetida."
+      },
+      {
+        "heading": "Ressenyes neutres",
+        "body": "Les ressenyes de tres estrelles acostumen a contenir oportunitats. La resposta ha de reconeixer el comentari i mostrar voluntat de millora. Si hi ha un punt concret, cal mencionar-lo sense discutir."
+      },
+      {
+        "heading": "Ressenyes negatives",
+        "body": "Les ressenyes negatives necessiten prudencia. No s'ha de contestar en calent ni entrar en conflicte public. La resposta ha de reconeixer la situacio, demanar disculpes si toca i portar la conversa a un canal directe."
+      },
+      {
+        "heading": "Quan automatitzar i quan revisar",
+        "body": "Les respostes positives poden automatitzar-se parcialment amb variants. Les negatives han de passar per revisio humana, sobretot si parlen de salut, tracte del personal, reserves, preu o incidents concrets."
+      }
+    ],
+    "cta": "Apareix inclou revisio setmanal de ressenyes i respostes suggerides dins la subscripcio de 50 EUR/mes."
   }
 ]
