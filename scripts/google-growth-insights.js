@@ -16,7 +16,7 @@ main().catch((error) => {
 });
 
 async function main() {
-  const credential = loadServiceAccount();
+  const auth = loadGoogleAuth();
   const dateRange = getDateRange();
 
   if (DRY_RUN) {
@@ -27,7 +27,8 @@ async function main() {
           mode: "dry-run",
           searchConsoleProperty: config.searchConsoleProperty,
           ga4PropertyId: config.googleAnalyticsPropertyId,
-          serviceAccountEmail: credential.client_email,
+          authType: auth.type,
+          principal: auth.principal,
           dateRange
         },
         null,
@@ -37,10 +38,7 @@ async function main() {
     return;
   }
 
-  const token = await getAccessToken(credential, [
-    "https://www.googleapis.com/auth/webmasters.readonly",
-    "https://www.googleapis.com/auth/analytics.readonly"
-  ]);
+  const token = await getAccessToken(auth);
 
   const [searchConsole, analytics] = await Promise.all([
     readSearchConsole(token, dateRange).catch((error) => ({ error: error.message, rows: [] })),
@@ -69,21 +67,60 @@ async function main() {
   );
 }
 
-function loadServiceAccount() {
+function loadGoogleAuth() {
   if (process.env.GOOGLE_SERVICE_ACCOUNT_JSON) {
-    return JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
+    const credential = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
+    return {
+      type: "service_account",
+      principal: credential.client_email,
+      credential,
+      scopes: [
+        "https://www.googleapis.com/auth/webmasters.readonly",
+        "https://www.googleapis.com/auth/analytics.readonly"
+      ]
+    };
   }
 
   if (process.env.GOOGLE_APPLICATION_CREDENTIALS) {
-    return JSON.parse(fs.readFileSync(process.env.GOOGLE_APPLICATION_CREDENTIALS, "utf8"));
+    const credential = JSON.parse(fs.readFileSync(process.env.GOOGLE_APPLICATION_CREDENTIALS, "utf8"));
+    return {
+      type: "service_account",
+      principal: credential.client_email,
+      credential,
+      scopes: [
+        "https://www.googleapis.com/auth/webmasters.readonly",
+        "https://www.googleapis.com/auth/analytics.readonly"
+      ]
+    };
+  }
+
+  if (
+    process.env.GOOGLE_OAUTH_CLIENT_ID &&
+    process.env.GOOGLE_OAUTH_CLIENT_SECRET &&
+    process.env.GOOGLE_OAUTH_REFRESH_TOKEN
+  ) {
+    return {
+      type: "oauth",
+      principal: process.env.GOOGLE_OAUTH_CLIENT_ID,
+      credential: {
+        clientId: process.env.GOOGLE_OAUTH_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_OAUTH_CLIENT_SECRET,
+        refreshToken: process.env.GOOGLE_OAUTH_REFRESH_TOKEN
+      }
+    };
   }
 
   throw new Error(
-    "Missing GOOGLE_SERVICE_ACCOUNT_JSON or GOOGLE_APPLICATION_CREDENTIALS. Create a Google service account and grant it Search Console + GA4 access."
+    "Missing Google credentials. Add GOOGLE_SERVICE_ACCOUNT_JSON, GOOGLE_APPLICATION_CREDENTIALS, or GOOGLE_OAUTH_CLIENT_ID + GOOGLE_OAUTH_CLIENT_SECRET + GOOGLE_OAUTH_REFRESH_TOKEN."
   );
 }
 
-async function getAccessToken(credential, scopes) {
+async function getAccessToken(auth) {
+  if (auth.type === "oauth") return getOAuthAccessToken(auth.credential);
+  return getServiceAccountAccessToken(auth.credential, auth.scopes);
+}
+
+async function getServiceAccountAccessToken(credential, scopes) {
   const now = Math.floor(Date.now() / 1000);
   const header = base64Url(JSON.stringify({ alg: "RS256", typ: "JWT" }));
   const claim = base64Url(
@@ -112,6 +149,27 @@ async function getAccessToken(credential, scopes) {
 
   if (!response.ok) {
     throw new Error(`Google auth failed: ${JSON.stringify(body)}`);
+  }
+
+  return body.access_token;
+}
+
+async function getOAuthAccessToken(credential) {
+  const response = await fetch("https://oauth2.googleapis.com/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      client_id: credential.clientId,
+      client_secret: credential.clientSecret,
+      refresh_token: credential.refreshToken,
+      grant_type: "refresh_token"
+    })
+  });
+
+  const body = await response.json();
+
+  if (!response.ok) {
+    throw new Error(`Google OAuth failed: ${JSON.stringify(body)}`);
   }
 
   return body.access_token;
