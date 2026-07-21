@@ -2,6 +2,7 @@
    Scope: public WordPress/Elementor home page only. */
 
 html,
+body,
 body.home,
 body.home #page,
 body.home .site,
@@ -17,6 +18,18 @@ body.home .elementor-widget-html,
 body.home .elementor-widget-container {
   margin-top: 0 !important;
   padding-top: 0 !important;
+}
+
+body.home .site-header,
+body.home header.site-header,
+body.home .elementor-location-header,
+body.home .wp-site-blocks > header {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
 }
 
 body.home {
