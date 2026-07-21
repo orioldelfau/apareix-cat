@@ -112,6 +112,23 @@ body.home .apx-center {
   text-align: center;
 }
 
+body.home .apx-title {
+  display: block;
+  width: 100%;
+  max-width: 850px;
+  text-align: center !important;
+  text-wrap: balance;
+}
+
+body.home .apx-section > .apx-wrap > .apx-kicker.apx-title {
+  margin-bottom: 14px !important;
+}
+
+body.home .apx-section > .apx-wrap > h2.apx-title {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 body.home .apx-grid,
 body.home .apx-blog-grid,
 body.home .apx-process {
@@ -146,6 +163,15 @@ body.home .apx-checks {
 
 body.home .apx-contact {
   padding: 96px 0;
+}
+
+body.home .apx-demo {
+  padding: 74px 0;
+}
+
+body.home .apx-demo-card {
+  max-width: 980px;
+  margin-inline: auto;
 }
 
 body.home .apx-contact-shell {
@@ -210,12 +236,14 @@ body.home .apx-footer .apx-wrap {
   body.home .apx-hero,
   body.home .apx-section,
   body.home .apx-band,
+  body.home .apx-demo,
   body.home .apx-contact {
     padding: 58px 0;
   }
 
   body.home .apx-hero-grid,
   body.home .apx-price,
+  body.home .apx-demo-card,
   body.home .apx-contact-shell {
     grid-template-columns: 1fr;
   }

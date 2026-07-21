@@ -8,7 +8,7 @@ const pageId = process.env.WP_PAGE_ID || "12";
 const htmlPath = process.argv[2] || "wordpress/apareix-landing.html";
 const title = "Apareix | Gestió de Google Maps per a restaurants";
 const excerpt =
-  "Gestionem cada mes la fitxa de Google Maps del teu restaurant: publicacions, ressenyes, SEO local, informació actualitzada i informe mensual.";
+  "Demo gratuïta d'Apareix per revisar la fitxa de Google Maps del teu restaurant i veure com millorar publicacions, ressenyes, SEO local i visibilitat.";
 
 if (!username || !appPassword) {
   console.error("Missing WP_USERNAME/WP_USER or WP_APP_PASSWORD.");
