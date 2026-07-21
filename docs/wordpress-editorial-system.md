@@ -111,6 +111,12 @@ Despres de publicar, el sistema deixa la URL final disponible al log del workflo
 
 La indexacio manual de Search Console no es pot automatitzar de forma fiable amb l'API publica normal. La URL Inspection API permet consultar l'estat d'una URL, pero no premer "Solicitar indexacion". La Indexing API de Google esta limitada a `JobPosting` i `BroadcastEvent` dins de `VideoObject`, i no s'ha d'usar per articles normals del blog.
 
+El workflow envia automaticament el sitemap de Yoast a Search Console:
+
+```text
+https://apareix.cat/sitemap_index.xml
+```
+
 Proces recomanat:
 
 1. Obrir la URL publicada.

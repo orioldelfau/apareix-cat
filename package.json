@@ -23,6 +23,7 @@
     "google:insights:dry-run": "node scripts/google-growth-insights.js --dry-run",
     "ads:keywords": "node scripts/google-ads-keyword-ideas.js",
     "ads:keywords:dry-run": "node scripts/google-ads-keyword-ideas.js --dry-run",
+    "gsc:submit-sitemap": "node scripts/submit-gsc-sitemap.js",
     "lead:audit": "node scripts/create-lead-audit.js",
     "lead:outreach": "node scripts/create-outreach-batch.js",
     "lead:proposal": "node scripts/create-pilot-proposal.js",
