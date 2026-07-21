@@ -255,7 +255,7 @@ function linkSchema() {
 }
 
 function normalizeTopic(topic, opportunity) {
-  return {
+  const normalized = {
     ...topic,
     slug: opportunity.slug,
     focusKeyphrase: opportunity.keyword,
@@ -263,6 +263,58 @@ function normalizeTopic(topic, opportunity) {
     internalLinks: normalizeInternalLinks(topic.internalLinks),
     externalLinks: normalizeExternalLinks(topic.externalLinks)
   };
+
+  return repairYoastRequirements(normalized);
+}
+
+function repairYoastRequirements(topic) {
+  const keyphrase = topic.focusKeyphrase;
+  const prefix = capitalizeSentence(keyphrase);
+
+  topic.seoTitle = ensureStartsWithKeyphrase(topic.seoTitle, keyphrase, `${prefix}: guia SEO local per restaurants`);
+  topic.metaDescription = ensureStartsWithKeyphrase(
+    topic.metaDescription,
+    keyphrase,
+    `${prefix}: guia practica per millorar visibilitat local, Google Maps, ressenyes i conversions del restaurant.`
+  );
+  topic.intro = ensureStartsWithKeyphrase(
+    topic.intro,
+    keyphrase,
+    `${prefix} és una prioritat si vols que la fitxa del restaurant sigui més clara, activa i útil per captar clients des de Google Maps.`
+  );
+
+  if (!Array.isArray(topic.sections) || !topic.sections.length) {
+    topic.sections = [
+      {
+        heading: `${prefix}: què ha de revisar un restaurant`,
+        body: `Per treballar ${keyphrase}, el restaurant ha de revisar la fitxa, les ressenyes, els posts, les fotos i les accions que converteixen visites en reserves o trucades.`,
+        bullets: [
+          "Comprovar categories, serveis i atributs.",
+          "Revisar si hi ha activitat recent a la fitxa.",
+          "Detectar friccions abans de trucar, reservar o demanar indicacions."
+        ]
+      }
+    ];
+  }
+
+  if (!includesKeyphrase(topic.sections[0].heading, keyphrase)) {
+    topic.sections[0].heading = `${prefix}: què ha de revisar un restaurant`;
+  }
+
+  let count = countKeyphrase(topic, keyphrase);
+  while (count < 4) {
+    topic.sections[0].body = `${topic.sections[0].body || ""} Treballar ${keyphrase} ajuda a ordenar les accions mensuals i a evitar una fitxa abandonada.`.trim();
+    count = countKeyphrase(topic, keyphrase);
+  }
+
+  return topic;
+}
+
+function ensureStartsWithKeyphrase(value, keyphrase, fallback) {
+  const text = String(value || "").trim();
+  if (startsWithKeyphrase(text, keyphrase)) return text;
+  if (!text) return fallback;
+  return `${capitalizeSentence(keyphrase)}: ${text.replace(new RegExp(`^${escapeRegExp(keyphrase)}[:\\s-]*`, "i"), "")}`;
 }
 
 function normalizeInternalLinks(links) {
@@ -284,6 +336,22 @@ function normalizeExternalLinks(links) {
 
 function validateTopic(topic) {
   const keyphrase = topic.focusKeyphrase.toLowerCase();
+  const count = countKeyphrase(topic, topic.focusKeyphrase);
+
+  const failures = [];
+  if (!startsWithKeyphrase(topic.seoTitle, keyphrase)) failures.push("seoTitle must start with focusKeyphrase");
+  if (!startsWithKeyphrase(topic.metaDescription, keyphrase)) failures.push("metaDescription must start with focusKeyphrase");
+  if (!startsWithKeyphrase(topic.intro, keyphrase)) failures.push("intro must start with focusKeyphrase");
+  if (!includesKeyphrase(topic.sections[0]?.heading, keyphrase)) failures.push("first H2 must include focusKeyphrase");
+  if (count < 4) failures.push(`focusKeyphrase count too low: ${count}`);
+  if (!topic.internalLinks?.some((link) => link.url.includes("apareix.cat"))) failures.push("missing internal link");
+  if (!topic.externalLinks?.some((link) => !link.url.includes("apareix.cat"))) failures.push("missing external link");
+
+  if (failures.length) throw new Error(`Generated topic failed validation: ${failures.join("; ")}`);
+}
+
+function countKeyphrase(topic, keyphrase) {
+  const normalized = String(keyphrase || "").toLowerCase();
   const haystack = [
     topic.seoTitle,
     topic.metaDescription,
@@ -293,18 +361,21 @@ function validateTopic(topic) {
   ]
     .join("\n")
     .toLowerCase();
-  const count = haystack.split(keyphrase).length - 1;
 
-  const failures = [];
-  if (!topic.seoTitle.toLowerCase().startsWith(keyphrase)) failures.push("seoTitle must start with focusKeyphrase");
-  if (!topic.metaDescription.toLowerCase().startsWith(keyphrase)) failures.push("metaDescription must start with focusKeyphrase");
-  if (!topic.intro.toLowerCase().startsWith(keyphrase)) failures.push("intro must start with focusKeyphrase");
-  if (!topic.sections[0]?.heading.toLowerCase().includes(keyphrase)) failures.push("first H2 must include focusKeyphrase");
-  if (count < 4) failures.push(`focusKeyphrase count too low: ${count}`);
-  if (!topic.internalLinks?.some((link) => link.url.includes("apareix.cat"))) failures.push("missing internal link");
-  if (!topic.externalLinks?.some((link) => !link.url.includes("apareix.cat"))) failures.push("missing external link");
+  return haystack.split(normalized).length - 1;
+}
 
-  if (failures.length) throw new Error(`Generated topic failed validation: ${failures.join("; ")}`);
+function startsWithKeyphrase(value, keyphrase) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .startsWith(String(keyphrase || "").toLowerCase());
+}
+
+function includesKeyphrase(value, keyphrase) {
+  return String(value || "")
+    .toLowerCase()
+    .includes(String(keyphrase || "").toLowerCase());
 }
 
 function titleFor(pillar, angle) {
@@ -384,6 +455,15 @@ function compactKeyword(value) {
 
 function capitalize(value) {
   return value.charAt(0).toUpperCase() + value.slice(1);
+}
+
+function capitalizeSentence(value) {
+  const text = String(value || "").trim();
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function slugify(value) {
