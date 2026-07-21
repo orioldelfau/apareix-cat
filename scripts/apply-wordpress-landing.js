@@ -2,16 +2,16 @@ const fs = require("fs");
 const path = require("path");
 
 const siteUrl = process.env.WP_SITE_URL || "https://apareix.cat";
-const username = process.env.WP_USERNAME;
+const username = process.env.WP_USERNAME || process.env.WP_USER;
 const appPassword = process.env.WP_APP_PASSWORD;
 const pageId = process.env.WP_PAGE_ID || "12";
 const htmlPath = process.argv[2] || "wordpress/apareix-landing.html";
 const title = "Apareix | Gestió de Google Maps per a restaurants";
 const excerpt =
-  "Gestionem cada mes la fitxa de Google Maps del teu restaurant: publicacions, ressenyes, SEO local, informació actualitzada i informe mensual per 50 € al mes.";
+  "Gestionem cada mes la fitxa de Google Maps del teu restaurant: publicacions, ressenyes, SEO local, informació actualitzada i informe mensual.";
 
 if (!username || !appPassword) {
-  console.error("Missing WP_USERNAME or WP_APP_PASSWORD.");
+  console.error("Missing WP_USERNAME/WP_USER or WP_APP_PASSWORD.");
   process.exit(1);
 }
 
