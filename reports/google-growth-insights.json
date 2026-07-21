@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-07-20T13:43:29.411Z",
+  "dateRange": {
+    "startDate": "2026-06-19",
+    "endDate": "2026-07-17"
+  },
+  "sources": {
+    "searchConsoleProperty": "https://apareix.cat/",
+    "ga4PropertyId": "532726049",
+    "ga4MeasurementId": "G-Q2CNN7YK1V"
+  },
+  "searchConsole": {
+    "rows": [
+      {
+        "query": "aforix",
+        "page": "https://apareix.cat/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "query": "apareix",
+        "page": "https://apareix.cat/",
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 5.6521739130434785
+      },
+      {
+        "query": "comparteix",
+        "page": "https://apareix.cat/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 54
+      }
+    ]
+  },
+  "analytics": {
+    "rows": [
+      {
+        "pagePath": "/",
+        "channel": "Direct",
+        "sessions": 11,
+        "pageViews": 14,
+        "engagementRate": 0.6363636363636364
+      },
+      {
+        "pagePath": "/",
+        "channel": "Paid Search",
+        "sessions": 3,
+        "pageViews": 3,
+        "engagementRate": 0
+      },
+      {
+        "pagePath": "/blog/",
+        "channel": "Direct",
+        "sessions": 3,
+        "pageViews": 3,
+        "engagementRate": 1
+      },
+      {
+        "pagePath": "/google-maps-restaurants-guia-basica/",
+        "channel": "Direct",
+        "sessions": 3,
+        "pageViews": 4,
+        "engagementRate": 1
+      },
+      {
+        "pagePath": "/sitemap-xml",
+        "channel": "Direct",
+        "sessions": 1,
+        "pageViews": 1,
+        "engagementRate": 1
+      }
+    ]
+  },
+  "opportunities": [
+    {
+      "query": "apareix",
+      "page": "https://apareix.cat/",
+      "clicks": 0,
+      "impressions": 23,
+      "ctr": 0,
+      "position": 5.6522,
+      "recommendedAction": "Rewrite SEO title and meta description",
+      "score": 90.9957
+    }
+  ],
+  "errors": []
+}
