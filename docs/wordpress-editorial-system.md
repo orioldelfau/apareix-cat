@@ -2,12 +2,12 @@
 
 ## Objectiu
 
-Crear esborranys de blog per Apareix directament a WordPress, sense publicar automaticament.
+Crear i publicar articles de blog per Apareix directament a WordPress amb revisio SEO/GEO previa.
 
-Cada esborrany inclou:
+Cada article inclou:
 
 - Layout editorial d'Apareix amb Elementor.
-- Estat `draft`.
+- Estat `publish` en el workflow diari.
 - Categoria.
 - Imatge destacada SVG 1200x675 amb alt text.
 - Camps Yoast SEO:
@@ -27,10 +27,26 @@ Previsualitzar el proper tema sense crear res:
 WP_USER="..." WP_APP_PASSWORD="..." npm run wp:draft:dry-run
 ```
 
-Crear el proper esborrany:
+Crear el proper article com a esborrany local/manual:
 
 ```bash
 WP_USER="..." WP_APP_PASSWORD="..." npm run wp:draft
+```
+
+Crear i publicar el proper article:
+
+```bash
+WP_POST_STATUS="publish" \
+NOTIFY_PUBLICATION="true" \
+WP_USER="..." \
+WP_APP_PASSWORD="..." \
+npm run wp:draft
+```
+
+Publicar tots els esborranys editorials d'Apareix ja existents:
+
+```bash
+WP_USER="..." WP_APP_PASSWORD="..." npm run wp:publish-editorial-drafts
 ```
 
 Forcar un tema concret:
@@ -52,9 +68,15 @@ data/editorial-queue.json
 
 El script tria el primer tema que encara no existeix a WordPress com a `publish`, `draft`, `future`, `pending` o `private`.
 
-## Regla de seguretat
+## Regla operativa
 
-No es publica automaticament. El sistema nomes crea esborranys.
+El workflow diari publica automaticament nomes si:
+
+- El tema supera la validacio SEO/GEO del generador.
+- WordPress accepta la imatge destacada i els camps Yoast.
+- Existeixen els secrets `WP_USER` i `WP_APP_PASSWORD`.
+
+Si falta `RESEND_API_KEY`, l'article es publica igual pero no s'envia email.
 
 ## Automatitzacio diaria
 
@@ -64,7 +86,7 @@ Hi ha un workflow preparat a:
 .github/workflows/wordpress-editorial-drafts.yml
 ```
 
-S'executa cada dia a les 07:15 UTC i tambe es pot executar manualment des de GitHub Actions.
+S'executa cada dia a les 07:15 UTC i tambe es pot executar manualment des de GitHub Actions. En horari d'estiu a Barcelona, aixo equival aproximadament a les 09:15.
 
 Secrets necessaris a GitHub:
 
@@ -75,11 +97,32 @@ WP_APP_PASSWORD
 
 `WP_APP_PASSWORD` ha de ser un WordPress Application Password, no la contrasenya normal del compte.
 
+Secrets/variables opcionals per notificacio:
+
+```text
+RESEND_API_KEY
+RESEND_FROM
+APAREIX_OWNER_EMAIL
+```
+
+## Search Console
+
+Despres de publicar, el sistema deixa la URL final disponible al log del workflow i envia email si Resend esta configurat.
+
+La indexacio manual de Search Console no es pot automatitzar de forma fiable amb l'API publica normal. La URL Inspection API permet consultar l'estat d'una URL, pero no premer "Solicitar indexacion". La Indexing API de Google esta limitada a `JobPosting` i `BroadcastEvent` dins de `VideoObject`, i no s'ha d'usar per articles normals del blog.
+
+Proces recomanat:
+
+1. Obrir la URL publicada.
+2. Entrar a Search Console.
+3. Fer `Inspeccionar URL`.
+4. Fer `Solicitar indexacion`.
+
 Quan validem qualitat durant unes setmanes, podem afegir:
 
 - Connectors de Search Console, GA4 i Google Ads per reordenar la cua segons dades reals.
 - Generacio d'imatges amb model d'imatge en lloc de SVG branded.
-- Notificacio email quan hi ha nou esborrany pendent de revisio.
+- Resum setmanal automatic del rendiment del blog.
 
 ## Checklist abans de publicar
 

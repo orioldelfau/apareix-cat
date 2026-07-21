@@ -15,6 +15,7 @@
     "wp:draft": "node scripts/create-wp-editorial-draft.js",
     "wp:draft:seo-geo": "EDITORIAL_QUEUE_PATH=data/seo-geo-drafts.json node scripts/create-wp-editorial-draft.js",
     "wp:draft:dry-run": "node scripts/create-wp-editorial-draft.js --dry-run",
+    "wp:publish-editorial-drafts": "node scripts/publish-wp-editorial-drafts.js",
     "wp:trash-posts": "node scripts/trash-wp-posts.js",
     "wp:apply-css": "node scripts/apply-wordpress-custom-css.js",
     "wp:apply-landing": "node scripts/apply-wordpress-landing.js",

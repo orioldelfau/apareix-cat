@@ -1,4 +1,4 @@
-name: WordPress editorial drafts
+name: WordPress editorial publishing
 
 on:
   workflow_dispatch:
@@ -21,6 +21,14 @@ on:
         description: "Set true to update an existing post with the same slug"
         required: false
         default: "false"
+      post_status:
+        description: "WordPress status for newly created posts"
+        required: false
+        default: "publish"
+      publish_existing:
+        description: "Set true to publish existing Apareix editorial drafts"
+        required: false
+        default: "false"
       generate_ai:
         description: "Set true to generate a fresh SEO/GEO topic before drafting"
         required: false
@@ -39,12 +47,17 @@ jobs:
       WP_USER: ${{ secrets.WP_USER }}
       WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      RESEND_FROM: ${{ vars.RESEND_FROM || 'Apareix <onboarding@resend.dev>' }}
+      APAREIX_OWNER_EMAIL: ${{ vars.APAREIX_OWNER_EMAIL || 'hola@orioldelfau.com' }}
       OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
       EDITORIAL_QUEUE_PATH: ${{ github.event.inputs.queue_path || 'data/seo-geo-drafts.json' }}
       ARTICLE_SLUG: ${{ github.event.inputs.article_slug }}
       TRASH_SLUGS: ${{ github.event.inputs.trash_slugs }}
       SKIP_CREATE: ${{ github.event.inputs.skip_create || 'false' }}
       UPDATE_EXISTING: ${{ github.event.inputs.update_existing || 'false' }}
+      WP_POST_STATUS: ${{ github.event.inputs.post_status || 'publish' }}
+      PUBLISH_EXISTING: ${{ github.event.inputs.publish_existing || 'false' }}
       GENERATE_AI: ${{ github.event.inputs.generate_ai || 'true' }}
 
     steps:
@@ -71,6 +84,10 @@ jobs:
         if: steps.config.outputs.enabled == 'true' && env.TRASH_SLUGS != ''
         run: npm run wp:trash-posts -- $TRASH_SLUGS
 
+      - name: Publish existing WordPress editorial drafts
+        if: steps.config.outputs.enabled == 'true' && env.PUBLISH_EXISTING == 'true'
+        run: npm run wp:publish-editorial-drafts
+
       - name: Generate daily SEO GEO topic
         if: steps.config.outputs.enabled == 'true' && env.SKIP_CREATE != 'true' && env.ARTICLE_SLUG == '' && env.GENERATE_AI == 'true'
         run: |
@@ -82,6 +99,6 @@ jobs:
           npm run wp:generate-topic
           echo "EDITORIAL_QUEUE_PATH=reports/generated-wp-topic.json" >> "$GITHUB_ENV"
 
-      - name: Create WordPress editorial draft
+      - name: Create WordPress editorial post
         if: steps.config.outputs.enabled == 'true' && env.SKIP_CREATE != 'true'
-        run: npm run wp:draft
+        run: npm run wp:draft -- --status "$WP_POST_STATUS" --notify-publication

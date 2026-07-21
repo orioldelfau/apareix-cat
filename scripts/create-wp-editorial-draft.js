@@ -12,6 +12,11 @@ const UPDATE_EXISTING = process.argv.includes("--update-existing") || process.en
 const WP_URL = (process.env.WP_URL || "https://apareix.cat").replace(/\/$/, "");
 const WP_USER = process.env.WP_USER;
 const WP_APP_PASSWORD = process.env.WP_APP_PASSWORD || process.env.WP_PASS;
+const WP_POST_STATUS = normalizePostStatus(process.env.WP_POST_STATUS || readArg("--status") || "draft");
+const NOTIFY_PUBLICATION = process.env.NOTIFY_PUBLICATION === "true" || process.argv.includes("--notify-publication");
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const NOTIFY_TO = process.env.APAREIX_OWNER_EMAIL || "hola@orioldelfau.com";
+const RESEND_FROM = process.env.RESEND_FROM || "Apareix <onboarding@resend.dev>";
 
 const queue = JSON.parse(fs.readFileSync(QUEUE_PATH, "utf8"));
 
@@ -46,6 +51,7 @@ async function main() {
   const media = await uploadFeaturedImage(client, topic);
   const post = await saveDraftPost(client, draft, categoryId, media);
   const verified = await verifyYoast(client, post.id);
+  const notification = await notifyPublication(post, topic);
 
   console.log(
     JSON.stringify(
@@ -56,7 +62,8 @@ async function main() {
         edit: `${WP_URL}/wp-admin/post.php?post=${post.id}&action=edit`,
         preview: post.link,
         featuredMedia: media?.id || null,
-        yoast: verified
+        yoast: verified,
+        notification
       },
       null,
       2
@@ -182,7 +189,7 @@ async function uploadFeaturedImage(wp, topic) {
 
 async function saveDraftPost(wp, draft, categoryId, media) {
   const payload = {
-    status: "draft",
+    status: WP_POST_STATUS,
     slug: draft.slug,
     title: draft.title,
     excerpt: draft.excerpt,
@@ -214,6 +221,55 @@ async function saveDraftPost(wp, draft, categoryId, media) {
     method: "POST",
     body: JSON.stringify(payload)
   });
+}
+
+async function notifyPublication(post, topic) {
+  if (!NOTIFY_PUBLICATION || post.status !== "publish") {
+    return { sent: false, reason: "not_requested_or_not_published" };
+  }
+
+  if (!RESEND_API_KEY) {
+    return { sent: false, reason: "missing_resend_api_key" };
+  }
+
+  const subject = `Nou article publicat a Apareix: ${topic.title}`;
+  const body = [
+    `S'ha publicat un nou article al blog d'Apareix.`,
+    "",
+    `Titol: ${topic.title}`,
+    `URL: ${post.link}`,
+    `Frase clau: ${topic.focusKeyphrase}`,
+    "",
+    "Proxim pas recomanat:",
+    "Revisa'l i, si vols forcar acceleracio manual, obre la URL a Google Search Console i fes Inspeccionar URL > Solicitar indexacion."
+  ].join("\n");
+
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${RESEND_API_KEY}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      from: RESEND_FROM,
+      to: NOTIFY_TO,
+      subject,
+      text: body,
+      html: `<p>S'ha publicat un nou article al blog d'Apareix.</p><p><strong>${escapeHtml(
+        topic.title
+      )}</strong></p><p><a href="${escapeHtml(post.link)}">${escapeHtml(
+        post.link
+      )}</a></p><p>Frase clau: ${escapeHtml(topic.focusKeyphrase)}</p>`
+    })
+  });
+
+  const text = await response.text();
+  if (!response.ok) {
+    return { sent: false, reason: `resend_${response.status}`, body: text.slice(0, 240) };
+  }
+
+  const json = text ? JSON.parse(text) : {};
+  return { sent: true, id: json.id || null, to: NOTIFY_TO };
 }
 
 async function findPostBySlug(wp, slug) {
@@ -644,6 +700,15 @@ function hashString(value) {
     hash = Math.imul(hash, 16777619);
   }
   return hash >>> 0;
+}
+
+function normalizePostStatus(value) {
+  const status = String(value || "").trim().toLowerCase();
+  const allowed = new Set(["draft", "publish", "pending", "private", "future"]);
+  if (!allowed.has(status)) {
+    throw new Error(`Invalid WP_POST_STATUS: ${value}. Use draft, publish, pending, private or future.`);
+  }
+  return status;
 }
 
 function readArg(name) {
