@@ -82,7 +82,7 @@ function visitElementorNodes(nodes, callback) {
 }
 
 async function getJson(url) {
-  const response = await fetch(url, {
+  const response = await fetchWithRetry(url, {
     headers: {
       Authorization: `Basic ${auth}`
     }
@@ -97,7 +97,7 @@ async function getJson(url) {
 }
 
 function postJson(url, body) {
-  return fetch(url, {
+  return fetchWithRetry(url, {
     method: "POST",
     headers: {
       Authorization: `Basic ${auth}`,
@@ -107,8 +107,28 @@ function postJson(url, body) {
   });
 }
 
+async function fetchWithRetry(url, options = {}, attempts = 4) {
+  let lastError;
+
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      return await fetch(url, options);
+    } catch (error) {
+      lastError = error;
+      if (attempt === attempts) break;
+      await sleep(1000 * attempt);
+    }
+  }
+
+  throw lastError;
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 async function purgeElementorCache() {
-  await fetch(`${baseUrl}/wp-json/elementor/v1/cache`, {
+  await fetchWithRetry(`${baseUrl}/wp-json/elementor/v1/cache`, {
     method: "DELETE",
     headers: {
       Authorization: `Basic ${auth}`
@@ -117,7 +137,7 @@ async function purgeElementorCache() {
 }
 
 async function purgeWpSuperCache() {
-  await fetch(`${baseUrl}/wp-json/wp-super-cache/v1/cache`, {
+  await fetchWithRetry(`${baseUrl}/wp-json/wp-super-cache/v1/cache`, {
     method: "POST",
     headers: {
       Authorization: `Basic ${auth}`,
