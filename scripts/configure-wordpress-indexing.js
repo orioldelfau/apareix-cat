@@ -20,6 +20,7 @@ async function main() {
 
   if (settings.url && settings.url.startsWith("http://")) updates.url = settings.url.replace(/^http:/, "https:");
   if (settings.home && settings.home.startsWith("http://")) updates.home = settings.home.replace(/^http:/, "https:");
+  if (!settings.home) updates.home = WP_URL;
 
   let settingsUpdated = false;
   let settingsUpdateError = "";
