@@ -44,6 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       WP_URL: https://apareix.cat
+      WP_BLOG_PAGE_ID: ${{ vars.WP_BLOG_PAGE_ID || '93' }}
       WP_USER: ${{ secrets.WP_USER }}
       WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -111,6 +112,18 @@ jobs:
         if: steps.config.outputs.enabled == 'true' && env.SKIP_CREATE != 'true'
         run: npm run wp:draft -- --status "$WP_POST_STATUS" --notify-publication
 
+      - name: Sync WordPress blog index
+        if: steps.config.outputs.enabled == 'true'
+        run: npm run wp:sync-blog-index
+
+      - name: Configure HTTPS indexing hints
+        if: steps.config.outputs.enabled == 'true'
+        run: npm run wp:configure-indexing
+
       - name: Submit sitemap to Google Search Console
         if: steps.config.outputs.enabled == 'true'
         run: npm run gsc:submit-sitemap
+
+      - name: Verify public WordPress posts
+        if: steps.config.outputs.enabled == 'true'
+        run: npm run wp:verify-public-posts
