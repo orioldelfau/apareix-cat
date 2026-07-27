@@ -101,8 +101,11 @@ jobs:
             exit 0
           fi
 
-          npm run wp:generate-topic
-          echo "EDITORIAL_QUEUE_PATH=reports/generated-wp-topic.json" >> "$GITHUB_ENV"
+          if npm run wp:generate-topic; then
+            echo "EDITORIAL_QUEUE_PATH=reports/generated-wp-topic.json" >> "$GITHUB_ENV"
+          else
+            echo "::warning title=Daily AI topic fallback::OpenAI topic generation failed. Falling back to the static SEO/GEO queue so WordPress publishing can continue."
+          fi
 
       - name: Create WordPress editorial post
         if: steps.config.outputs.enabled == 'true' && env.SKIP_CREATE != 'true'

@@ -2,8 +2,8 @@ name: Google Ads keyword ideas
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "30 5 * * *"
+  # Disabled until Google approves Basic Access for the Ads developer token.
+  # Scheduled runs fail with DEVELOPER_TOKEN_NOT_APPROVED and create inbox noise.
 
 permissions:
   contents: write
