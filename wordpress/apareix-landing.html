@@ -78,6 +78,13 @@ html{scroll-behavior:smooth}html,body{margin-top:0!important;padding-top:0!impor
   if (!form) return;
   var status = form.querySelector('.status');
   var faqItems = document.querySelectorAll('.apx-faq-item');
+  function trackDemoEvent(name) {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', name, {
+      event_category: 'Apareix demo',
+      event_label: 'WordPress landing demo'
+    });
+  }
   faqItems.forEach(function(item){
     item.addEventListener('toggle', function(){
       if (!item.open) return;
@@ -92,6 +99,7 @@ html{scroll-behavior:smooth}html,body{margin-top:0!important;padding-top:0!impor
     button.disabled = true;
     status.className = 'status';
     status.textContent = 'Generant demo automàtica...';
+    trackDemoEvent('demo_form_submit');
     try {
       var response = await fetch('https://apareix-cat.vercel.app/api/contact', {
         method: 'POST',
@@ -102,9 +110,11 @@ html{scroll-behavior:smooth}html,body{margin-top:0!important;padding-top:0!impor
       form.reset();
       status.className = 'status ok';
       status.textContent = 'Demo enviada. Revisa el teu correu.';
+      trackDemoEvent('demo_form_success');
     } catch (error) {
       status.className = 'status err';
       status.textContent = 'No s’ha pogut enviar. Escriu-nos a hola@orioldelfau.com.';
+      trackDemoEvent('demo_form_error');
     } finally {
       button.disabled = false;
     }
