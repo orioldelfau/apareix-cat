@@ -1,0 +1,218 @@
+{
+  "generatedAt": "2026-08-03T10:24:39.377Z",
+  "dateRange": {
+    "startDate": "2026-07-03",
+    "endDate": "2026-07-31"
+  },
+  "sources": {
+    "searchConsoleProperty": "https://apareix.cat/",
+    "ga4PropertyId": "532726049",
+    "ga4MeasurementId": "G-Q2CNN7YK1V"
+  },
+  "searchConsole": {
+    "rows": [
+      {
+        "query": "aforix",
+        "page": "https://apareix.cat/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "query": "apareix",
+        "page": "https://apareix.cat/",
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 4.722222222222222
+      },
+      {
+        "query": "auditoria a un restaurante",
+        "page": "https://apareix.cat/auditoria-mensual-de-la-fitxa-a-google-maps-si-tens-un-restaurant/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "query": "auditoria de un restaurante",
+        "page": "https://apareix.cat/auditoria-mensual-de-la-fitxa-a-google-maps-si-tens-un-restaurant/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 77
+      },
+      {
+        "query": "auditoria restaurante",
+        "page": "https://apareix.cat/auditoria-mensual-de-la-fitxa-a-google-maps-si-tens-un-restaurant/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 81
+      },
+      {
+        "query": "auditoria restaurantes",
+        "page": "https://apareix.cat/auditoria-mensual-de-la-fitxa-a-google-maps-si-tens-un-restaurant/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 95
+      },
+      {
+        "query": "categoría principal",
+        "page": "https://apareix.cat/categories-principals-i-secundaries-a-google-maps-si-tens-un-restaurant/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "query": "comparteix",
+        "page": "https://apareix.cat/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 54
+      },
+      {
+        "query": "google maps restaurantes",
+        "page": "https://apareix.cat/links-de-carta-i-reserva-a-google-maps-si-tens-un-restaurant/",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11.666666666666666
+      },
+      {
+        "query": "maps reserva",
+        "page": "https://apareix.cat/links-de-carta-i-reserva-a-google-maps-si-tens-un-restaurant/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "query": "millorar puntuació google maps",
+        "page": "https://apareix.cat/com-apareixer-millor-en-cerques-locals-a-google-maps-si-tens-un-restaurant/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 35
+      },
+      {
+        "query": "ressenyes google maps restaurants",
+        "page": "https://apareix.cat/com-apareixer-millor-en-cerques-locals-a-google-maps-si-tens-un-restaurant/",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 77
+      },
+      {
+        "query": "ressenyes google maps restaurants",
+        "page": "https://apareix.cat/errors-google-maps-restaurant-clients/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 59
+      },
+      {
+        "query": "ressenyes google maps restaurants",
+        "page": "https://apareix.cat/google-maps-restaurants-guia-basica/",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 70
+      },
+      {
+        "query": "ressenyes google maps restaurants",
+        "page": "https://apareix.cat/optimitzacio-de-dades-basiques-a-google-maps-si-tens-un-restaurant/",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "query": "restaurante google maps",
+        "page": "https://apareix.cat/links-de-carta-i-reserva-a-google-maps-si-tens-un-restaurant/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "query": "seo restaurantes costa brava",
+        "page": "https://apareix.cat/seo-local-restaurants-barcelona-barris/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 100
+      }
+    ]
+  },
+  "analytics": {
+    "rows": [
+      {
+        "pagePath": "/",
+        "channel": "Direct",
+        "sessions": 46,
+        "pageViews": 49,
+        "engagementRate": 0.2826086956521739
+      },
+      {
+        "pagePath": "/",
+        "channel": "Paid Search",
+        "sessions": 3,
+        "pageViews": 3,
+        "engagementRate": 0
+      },
+      {
+        "pagePath": "/blog/",
+        "channel": "Direct",
+        "sessions": 3,
+        "pageViews": 3,
+        "engagementRate": 1
+      },
+      {
+        "pagePath": "/google-maps-restaurants-guia-basica/",
+        "channel": "Direct",
+        "sessions": 3,
+        "pageViews": 4,
+        "engagementRate": 1
+      },
+      {
+        "pagePath": "/",
+        "channel": "Referral",
+        "sessions": 1,
+        "pageViews": 2,
+        "engagementRate": 1
+      },
+      {
+        "pagePath": "/com-apareixer-millor-en-cerques-locals-a-google-maps-si-tens-un-restaurant/",
+        "channel": "Direct",
+        "sessions": 1,
+        "pageViews": 1,
+        "engagementRate": 1
+      },
+      {
+        "pagePath": "/sitemap-xml",
+        "channel": "Direct",
+        "sessions": 1,
+        "pageViews": 1,
+        "engagementRate": 1
+      }
+    ]
+  },
+  "opportunities": [
+    {
+      "query": "apareix",
+      "page": "https://apareix.cat/",
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 4.7222,
+      "recommendedAction": "Rewrite SEO title and meta description",
+      "score": 97.5556
+    }
+  ],
+  "errors": []
+}
