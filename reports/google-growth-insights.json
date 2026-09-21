@@ -1,0 +1,82 @@
+{
+  "generatedAt": "2026-09-21T13:12:12.924Z",
+  "dateRange": {
+    "startDate": "2026-08-21",
+    "endDate": "2026-09-18"
+  },
+  "sources": {
+    "searchConsoleProperty": "https://apareix.cat/",
+    "ga4PropertyId": "532726049",
+    "ga4MeasurementId": "G-Q2CNN7YK1V"
+  },
+  "searchConsole": {
+    "rows": [
+      {
+        "query": "apareix",
+        "page": "https://apareix.cat/",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "error editor restaurant",
+        "page": "https://apareix.cat/errors-de-to-en-respostes-publiques-guia-practica-per-restaurants/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "query": "error restaurant",
+        "page": "https://apareix.cat/errors-de-to-en-respostes-publiques-guia-practica-per-restaurants/",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 7.6
+      },
+      {
+        "query": "maps google restaurants",
+        "page": "https://apareix.cat/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      }
+    ]
+  },
+  "analytics": {
+    "rows": [
+      {
+        "pagePath": "/",
+        "channel": "Direct",
+        "sessions": 7,
+        "pageViews": 8,
+        "engagementRate": 0.42857142857142855
+      }
+    ]
+  },
+  "opportunities": [
+    {
+      "query": "apareix",
+      "page": "https://apareix.cat/",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 5,
+      "recommendedAction": "Rewrite SEO title and meta description",
+      "score": 88.9
+    },
+    {
+      "query": "error restaurant",
+      "page": "https://apareix.cat/errors-de-to-en-respostes-publiques-guia-practica-per-restaurants/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 7.6,
+      "recommendedAction": "Rewrite SEO title and meta description",
+      "score": 75.3
+    }
+  ],
+  "errors": []
+}
