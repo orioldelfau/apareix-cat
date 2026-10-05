@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-10-05T15:10:05.747Z",
+  "dateRange": {
+    "startDate": "2026-09-04",
+    "endDate": "2026-10-02"
+  },
+  "sources": {
+    "searchConsoleProperty": "https://apareix.cat/",
+    "ga4PropertyId": "532726049",
+    "ga4MeasurementId": "G-Q2CNN7YK1V"
+  },
+  "searchConsole": {
+    "rows": [
+      {
+        "query": "apareix",
+        "page": "https://apareix.cat/",
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 5.75
+      }
+    ]
+  },
+  "analytics": {
+    "rows": [
+      {
+        "pagePath": "/",
+        "channel": "Direct",
+        "sessions": 6,
+        "pageViews": 7,
+        "engagementRate": 0.5
+      },
+      {
+        "pagePath": "/google-maps-restaurants-guia-basica/",
+        "channel": "Organic Search",
+        "sessions": 1,
+        "pageViews": 1,
+        "engagementRate": 0
+      }
+    ]
+  },
+  "opportunities": [
+    {
+      "query": "apareix",
+      "page": "https://apareix.cat/",
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 5.75,
+      "recommendedAction": "Rewrite SEO title and meta description",
+      "score": 85.7
+    }
+  ],
+  "errors": []
+}
