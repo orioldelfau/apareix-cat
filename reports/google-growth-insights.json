@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-10-26T13:27:28.906Z",
+  "dateRange": {
+    "startDate": "2026-09-25",
+    "endDate": "2026-10-23"
+  },
+  "sources": {
+    "searchConsoleProperty": "https://apareix.cat/",
+    "ga4PropertyId": "532726049",
+    "ga4MeasurementId": "G-Q2CNN7YK1V"
+  },
+  "searchConsole": {
+    "rows": [
+      {
+        "query": "aparaxi",
+        "page": "https://apareix.cat/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "apareix",
+        "page": "https://apareix.cat/",
+        "clicks": 0,
+        "impressions": 40,
+        "ctr": 0,
+        "position": 6.625
+      },
+      {
+        "query": "convertir apa",
+        "page": "https://apareix.cat/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 25
+      }
+    ]
+  },
+  "analytics": {
+    "rows": [
+      {
+        "pagePath": "/",
+        "channel": "Direct",
+        "sessions": 7,
+        "pageViews": 8,
+        "engagementRate": 0.2857142857142857
+      },
+      {
+        "pagePath": "/",
+        "channel": "Organic Search",
+        "sessions": 1,
+        "pageViews": 1,
+        "engagementRate": 1
+      },
+      {
+        "pagePath": "/contacto",
+        "channel": "Direct",
+        "sessions": 1,
+        "pageViews": 2,
+        "engagementRate": 1
+      },
+      {
+        "pagePath": "/contacto/",
+        "channel": "Direct",
+        "sessions": 1,
+        "pageViews": 2,
+        "engagementRate": 1
+      },
+      {
+        "pagePath": "/google-maps-restaurants-guia-basica/",
+        "channel": "Organic Search",
+        "sessions": 1,
+        "pageViews": 1,
+        "engagementRate": 0
+      }
+    ]
+  },
+  "opportunities": [
+    {
+      "query": "apareix",
+      "page": "https://apareix.cat/",
+      "clicks": 0,
+      "impressions": 40,
+      "ctr": 0,
+      "position": 6.625,
+      "recommendedAction": "Rewrite SEO title and meta description",
+      "score": 96.35
+    }
+  ],
+  "errors": []
+}
