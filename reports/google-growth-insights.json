@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-11-16T16:17:50.013Z",
+  "dateRange": {
+    "startDate": "2026-10-16",
+    "endDate": "2026-11-13"
+  },
+  "sources": {
+    "searchConsoleProperty": "https://apareix.cat/",
+    "ga4PropertyId": "532726049",
+    "ga4MeasurementId": "G-Q2CNN7YK1V"
+  },
+  "searchConsole": {
+    "rows": [
+      {
+        "query": "apareix",
+        "page": "https://apareix.cat/",
+        "clicks": 0,
+        "impressions": 47,
+        "ctr": 0,
+        "position": 6.1063829787234045
+      },
+      {
+        "query": "seo para restaurantes en barcelona",
+        "page": "https://apareix.cat/seo-local-restaurants-barcelona-barris/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 42
+      }
+    ]
+  },
+  "analytics": {
+    "rows": [
+      {
+        "pagePath": "/",
+        "channel": "Direct",
+        "sessions": 5,
+        "pageViews": 6,
+        "engagementRate": 0.2
+      }
+    ]
+  },
+  "opportunities": [
+    {
+      "query": "apareix",
+      "page": "https://apareix.cat/",
+      "clicks": 0,
+      "impressions": 47,
+      "ctr": 0,
+      "position": 6.1064,
+      "recommendedAction": "Rewrite SEO title and meta description",
+      "score": 100.2872
+    }
+  ],
+  "errors": []
+}
